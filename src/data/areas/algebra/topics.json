@@ -1,0 +1,123 @@
+[
+  {
+    "id": "operacoes-fundamentais",
+    "title": "Operações Fundamentais",
+    "description": "Aprenda as quatro operações básicas da matemática e a ordem correta dos cálculos.",
+    "icon": "Calculator",
+    "difficulty": "Fácil",
+    "area": "algebra",
+    "content": {
+      "explanation": "As operações fundamentais formam a base de toda a matemática. Quase qualquer cálculo mais avançado depende delas. As quatro operações são: adição, subtração, multiplicação e divisão.\n\nA adição é usada para juntar quantidades. Exemplo: 3 + 2 = 5.\n\nA subtração representa retirada ou diferença entre valores. Exemplo: 10 - 4 = 6.\n\nA multiplicação representa somas repetidas. Exemplo: 4 × 3 significa somar o número 4 três vezes: 4 + 4 + 4 = 12.\n\nA divisão representa repartição ou quantas vezes um número cabe em outro. Exemplo: 12 ÷ 3 = 4.\n\nTambém é muito importante entender a ordem das operações. Em uma expressão matemática, devemos resolver primeiro:\n\n1. Parênteses\n2. Potências e raízes\n3. Multiplicações e divisões\n4. Somas e subtrações\n\nResolver operações na ordem errada é um dos erros mais comuns entre estudantes.",
+      "formulas": [
+        "Adição: a + b",
+        "Subtração: a - b",
+        "Multiplicação: a × b",
+        "Divisão: a ÷ b",
+        "Ordem das operações: (), potências, × e ÷, + e -"
+      ],
+      "example": "Resolva a expressão:\n8 + 4 × 2\n\nPrimeiro fazemos a multiplicação:\n4 × 2 = 8\n\nDepois somamos:\n8 + 8 = 16\n\nResposta final: 16.",
+      "videoUrl": "https://www.youtube.com/embed/5z0-WWjk_Jc",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "conjuntos-numericos",
+    "title": "Conjuntos Numéricos",
+    "description": "Entenda os diferentes tipos de números utilizados na matemática.",
+    "icon": "Hash",
+    "difficulty": "Fácil",
+    "area": "algebra",
+    "content": {
+      "explanation": "Os conjuntos numéricos são classificações criadas para organizar os números de acordo com suas características.\n\nOs números naturais são usados para contagem. Exemplo: 0, 1, 2, 3...\n\nOs números inteiros incluem os negativos. Exemplo: -3, -2, -1, 0, 1, 2...\n\nOs números racionais são aqueles que podem ser escritos em forma de fração. Exemplo: 1/2, 0,75 e -3.\n\nOs números irracionais possuem infinitas casas decimais não periódicas. Exemplo: √2 e π.\n\nO conjunto dos números reais reúne todos os racionais e irracionais.\n\nCompreender os conjuntos numéricos é importante porque vários conteúdos da matemática dependem deles, como equações, funções e geometria.",
+      "formulas": [
+        "Naturais: N = {0,1,2,3,...}",
+        "Inteiros: Z = {...,-2,-1,0,1,2,...}",
+        "Racionais: Q",
+        "Irracionais: I",
+        "Reais: R"
+      ],
+      "example": "O número -5 pertence aos inteiros, racionais e reais.\n\nO número 0,5 pertence aos racionais e reais.\n\nO número √2 pertence aos irracionais e reais.",
+      "videoUrl": "https://www.youtube.com/embed/s5Xv1SIQnQE",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "fracoes",
+    "title": "Frações",
+    "description": "Aprenda a representar partes de um todo e realizar operações com frações.",
+    "icon": "PieChart",
+    "difficulty": "Fácil",
+    "area": "algebra",
+    "content": {
+      "explanation": "Frações representam partes de um inteiro. Elas são formadas por numerador e denominador.\n\nNa fração 3/4:\n- O número 3 é o numerador.\n- O número 4 é o denominador.\n\nIsso significa que o inteiro foi dividido em 4 partes iguais e estamos considerando 3 dessas partes.\n\nAs frações podem ser:\n- Próprias: numerador menor que o denominador.\n- Impróprias: numerador maior ou igual ao denominador.\n- Equivalentes: representam a mesma quantidade.\n\nPara somar ou subtrair frações, precisamos que os denominadores sejam iguais.\n\nNa multiplicação, multiplicamos numerador com numerador e denominador com denominador.\n\nNa divisão, multiplicamos pela fração inversa.\n\nFrações aparecem constantemente em porcentagem, razão, proporção, geometria e álgebra.",
+      "formulas": [
+        "Fração: a/b",
+        "Soma: a/b + c/d = (ad + bc)/bd",
+        "Multiplicação: (a/b) × (c/d) = ac/bd",
+        "Divisão: (a/b) ÷ (c/d) = ad/bc"
+      ],
+      "example": "Calcule:\n1/2 + 1/3\n\nMMC entre 2 e 3 = 6\n\n1/2 = 3/6\n1/3 = 2/6\n\n3/6 + 2/6 = 5/6\n\nResposta final: 5/6.",
+      "videoUrl": "https://www.youtube.com/embed/X1RmI4lXsvI",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "numeros-decimais",
+    "title": "Números Decimais",
+    "description": "Aprenda a trabalhar com números decimais e conversões.",
+    "icon": "Dot",
+    "difficulty": "Fácil",
+    "area": "algebra",
+    "content": {
+      "explanation": "Números decimais são números que possuem parte inteira e parte decimal, separadas por vírgula.\n\nExemplos:\n- 2,5\n- 0,75\n- 10,32\n\nOs números decimais são muito usados no cotidiano, principalmente em dinheiro, medidas e porcentagens.\n\nPodemos transformar frações em números decimais realizando a divisão.\n\nExemplo:\n1/2 = 0,5\n\nTambém podemos transformar números decimais em frações.\n\nExemplo:\n0,25 = 25/100 = 1/4\n\nNas operações com decimais, é importante alinhar corretamente as vírgulas.",
+      "formulas": [
+        "1/2 = 0,5",
+        "25% = 0,25",
+        "0,75 = 75/100"
+      ],
+      "example": "Calcule:\n2,5 + 1,75\n\nAlinhando as vírgulas:\n2,50\n1,75\n\nResultado:\n4,25.",
+      "videoUrl": "https://www.youtube.com/embed/lA1lVOBTSlQ",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "porcentagem",
+    "title": "Porcentagem",
+    "description": "Entenda cálculos percentuais e aplicações financeiras básicas.",
+    "icon": "Percent",
+    "difficulty": "Fácil",
+    "area": "algebra",
+    "content": {
+      "explanation": "Porcentagem representa uma razão de denominador 100.\n\nQuando dizemos 20%, estamos dizendo 20 em cada 100.\n\nA porcentagem é muito usada em:\n- Descontos\n- Juros\n- Impostos\n- Estatísticas\n- Pesquisas\n\nPara transformar porcentagem em decimal, dividimos por 100.\n\nExemplos:\n- 50% = 0,5\n- 25% = 0,25\n- 8% = 0,08\n\nPara calcular porcentagem de um valor, multiplicamos o valor pela taxa decimal.",
+      "formulas": [
+        "p% = p/100",
+        "Porcentagem de um valor: taxa × valor",
+        "Aumento: valor × (1 + taxa)",
+        "Desconto: valor × (1 - taxa)"
+      ],
+      "example": "Calcule 30% de 200.\n\n30% = 0,30\n\n0,30 × 200 = 60\n\nResposta final: 60.",
+      "videoUrl": "https://www.youtube.com/embed/CERiIwParX4",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "potenciacao-e-radiciacao",
+    "title": "Potenciação e Radiciação",
+    "description": "Aprenda potências, raízes e suas propriedades fundamentais.",
+    "icon": "Sigma",
+    "difficulty": "Médio",
+    "area": "algebra",
+    "content": {
+      "explanation": "A potenciação representa multiplicações repetidas.\n\nExemplo:\n2³ significa multiplicar o número 2 três vezes:\n2 × 2 × 2 = 8\n\nNa potência:\n- 2 é a base.\n- 3 é o expoente.\n\nA radiciação é a operação inversa da potência.\n\nExemplo:\n√25 = 5, porque 5² = 25.\n\nAs propriedades das potências ajudam a simplificar cálculos grandes e aparecem constantemente em álgebra, física e funções exponenciais.",
+      "formulas": [
+        "a^m × a^n = a^(m+n)",
+        "(a^m)^n = a^(m×n)",
+        "a^0 = 1",
+        "√a = a^(1/2)"
+      ],
+      "example": "Resolva:\n(2³)²\n\nPrimeiro usamos a propriedade:\n(2³)² = 2^(3×2)\n\n2⁶ = 64\n\nResposta final: 64.",
+      "videoUrl": "https://www.youtube.com/embed/m-_sIVXNnXU",
+      "pdfUrl": "#"
+    }
+  }
+]

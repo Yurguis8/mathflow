@@ -1,0 +1,83 @@
+[
+  {
+    "id": "e1",
+    "topicId": "operacoes-fundamentais",
+    "question": "Resolva a expressão numérica:\n72 ÷ 6 × (5 + 7) - 18.",
+    "options": ["126", "132", "144", "150"],
+    "correctIndex": 0,
+    "resolution": "Primeiro resolvemos o parêntese:\n5 + 7 = 12\n\nA expressão fica:\n72 ÷ 6 × 12 - 18\n\nAgora divisão e multiplicação da esquerda para direita:\n72 ÷ 6 = 12\n12 × 12 = 144\n\nPor fim:\n144 - 18 = 126."
+  },
+
+  {
+    "id": "e2",
+    "topicId": "operacoes-fundamentais",
+    "question": "Um caminhão transporta 48 caixas com 36 produtos em cada uma. Durante o trajeto, 275 produtos foram perdidos. Quantos produtos restaram?",
+    "options": ["1453", "1460", "1472", "1488"],
+    "correctIndex": 0,
+    "resolution": "Quantidade inicial:\n48 × 36 = 1728 produtos\n\nProdutos restantes:\n1728 - 275 = 1453."
+  },
+
+  {
+    "id": "e3",
+    "topicId": "operacoes-fundamentais",
+    "question": "Qual é o valor da expressão:\n150 - [24 ÷ (3 × 2)] + 7²?",
+    "options": ["191", "195", "203", "207"],
+    "correctIndex": 1,
+    "resolution": "Primeiro:\n3 × 2 = 6\n\nDepois:\n24 ÷ 6 = 4\n\nPotência:\n7² = 49\n\nAgora:\n150 - 4 + 49 = 195."
+  },
+
+  {
+    "id": "e4",
+    "topicId": "conjuntos-numericos",
+    "question": "Qual alternativa contém apenas números irracionais?",
+    "options": [
+      "π, √2, √5",
+      "π, 0,75, √3",
+      "√4, π, 2/3",
+      "0,333..., √9, π"
+    ],
+    "correctIndex": 0,
+    "resolution": "π, √2 e √5 possuem infinitas casas decimais não periódicas, portanto são irracionais."
+  },
+
+  {
+    "id": "e5",
+    "topicId": "conjuntos-numericos",
+    "question": "O número -3,75 pertence a quais conjuntos numéricos?",
+    "options": [
+      "Naturais e inteiros",
+      "Inteiros e reais",
+      "Racionais e reais",
+      "Somente irracionais"
+    ],
+    "correctIndex": 2,
+    "resolution": "-3,75 pode ser escrito como fração, então é racional. Todo racional também é real."
+  },
+
+  {
+    "id": "e6",
+    "topicId": "conjuntos-numericos",
+    "question": "Qual das alternativas apresenta um número racional não inteiro?",
+    "options": ["√16", "-8", "7/5", "π"],
+    "correctIndex": 2,
+    "resolution": "7/5 é racional porque é uma fração, mas não é inteiro."
+  },
+
+  {
+    "id": "e7",
+    "topicId": "fracoes",
+    "question": "Calcule:\n(3/4 + 2/5) ÷ (7/10).",
+    "options": ["23/14", "29/14", "31/14", "17/10"],
+    "correctIndex": 0,
+    "resolution": "Primeiro somamos:\n3/4 + 2/5\n\nMMC = 20\n15/20 + 8/20 = 23/20\n\nAgora dividimos:\n23/20 ÷ 7/10\n\nMultiplicamos pelo inverso:\n23/20 × 10/7 = 230/140 = 23/14."
+  },
+
+  {
+    "id": "e8",
+    "topicId": "fracoes",
+    "question": "Uma caixa de água estava cheia. João consumiu 2/7 da água e Maria consumiu 1/3 do restante. Que fração da água sobrou?",
+    "options": ["10/21", "5/7", "8/21", "13/21"],
+    "correctIndex": 0,
+    "resolution": "Após João:\n1 - 2/7 = 5/7\n\nMaria consumiu 1/3 do restante:\n1/3 × 5/7 = 5/21\n\nAgora:\n5/7 - 5/21\n\nMMC = 21\n15/21 - 5/21 = 10/21."
+  }
+]

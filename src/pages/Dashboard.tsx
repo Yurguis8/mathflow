@@ -22,7 +22,7 @@ export default function Dashboard() {
   useEffect(() => {
     async function fetchDashboard() {
       try {
-        const response = await fetch(`http://localhost:3000/progress/dashboard/${user.id}`);
+        const response = await fetch(`https://mathflow-l58o.onrender.com/progress/dashboard/${user.id}`);
         const result = await response.json();
         setData(result);
       } catch (error) {
@@ -52,6 +52,31 @@ export default function Dashboard() {
     progress: []
   };
 
+  const totalExercises = dashboardData.totalCompleted;
+
+let medal = {
+  label: "Bronze",
+  color: "text-amber-700 dark:text-amber-300",
+  bg: "bg-amber-100 dark:bg-amber-900/30",
+  border: "border-amber-300 dark:border-amber-700"
+};
+
+if (totalExercises >= 70) {
+  medal = {
+    label: "Ouro",
+    color: "text-yellow-600 dark:text-yellow-300",
+    bg: "bg-yellow-100 dark:bg-yellow-900/30",
+    border: "border-yellow-300 dark:border-yellow-700"
+  };
+} else if (totalExercises >= 20) {
+  medal = {
+    label: "Prata",
+    color: "text-slate-500 dark:text-slate-300",
+    bg: "bg-slate-200 dark:bg-slate-700/40",
+    border: "border-slate-300 dark:border-slate-600"
+  };
+}
+
   const stats = [
     { 
       label: "Exercícios Concluídos", 
@@ -75,11 +100,12 @@ export default function Dashboard() {
       bg: "bg-green-50 dark:bg-slate-800" 
     },
     { 
-      label: "Nível Local", 
-      value: dashboardData.totalCompleted > 50 ? "Ouro" : "Prata", 
+      label: "Nível", 
+      value: medal.label, 
       icon: Trophy, 
-      color: "text-purple-600 dark:text-purple-300", 
-      bg: "bg-purple-50 dark:bg-slate-800" 
+      color: medal.color, 
+      bg: medal.bg,
+      border: medal.border
     },
   ];
 
@@ -205,7 +231,7 @@ export default function Dashboard() {
           <div className="space-y-4">
             <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-5 rounded-2xl border-l-4 border-l-yellow-600 dark:border-l-yellow-300">
                <p className="text-xs font-bold text-yellow-600 dark:text-yellow-300 uppercase mb-2 tracking-widest">Recomendado</p>
-               <h4 className="font-bold text-slate-800 dark:text-slate-200 mb-1">Equações Exponenciais</h4>
+               <h4 className="font-bold text-slate-800 dark:text-slate-200 mb-1">Potenciação e Radiciação</h4>
                <p className="text-sm text-slate-500 dark:text-slate-400 mb-4 leading-relaxed">Útil para seus próximos simulados escolares.</p>
                <Link to="/topics" className="text-xs font-bold text-slate-400 hover:text-yellow-600 dark:hover:text-white transition-colors uppercase tracking-widest flex items-center gap-1">
                  Ver Detalhes <ChevronRight className="w-3 h-3" />
@@ -217,6 +243,13 @@ export default function Dashboard() {
             <h4 className="font-bold text-slate-900 dark:text-white mb-4">Dica de Estudo</h4>
             <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed italic">
               "Estudar 25 minutos e descansar 5 pode aumentar sua concentração em 20%."
+            </p>
+          </div>
+
+          <div className="bg-slate-50 dark:bg-slate-800/50 rounded-2xl p-6 border border-slate-200 dark:border-slate-800">
+            <h4 className="font-bold text-slate-900 dark:text-white mb-4">Aumente seu nível</h4>
+            <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed italic">
+              Complete 20 exercícios para subir de nível!
             </p>
           </div>
         </div>

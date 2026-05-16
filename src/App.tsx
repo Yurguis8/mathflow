@@ -1,52 +1,50 @@
 import React, { useState, useEffect } from "react";
-
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate
-} from "react-router-dom";
-
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
-
 import Dashboard from "./pages/Dashboard";
 import Topics from "./pages/Topics";
 import TopicDetail from "./pages/TopicDetail";
 import ExercisesList from "./pages/ExercisesList";
 import ExercisePlayer from "./pages/ExercisePlayer";
-
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-
-import {
-  AnimatePresence,
-  motion
-} from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
+import Areas from "./pages/Areas";
+import AreaDetail from "./pages/AreaDetail";
+import Simulados from "./pages/Simulados";
+import SimuladosPlayer from "./pages/SimulationPlayer";
 
 export default function App() {
-  // 1. Criamos um estado para o token
-  const [token, setToken] = useState(localStorage.getItem('token'));
+  // Inicializamos o estado verificando se o token já existe
+  const [token, setToken] = useState<string | null>(localStorage.getItem('token'));
 
-  // 2. Este efeito pode rodar para sincronizar o estado caso necessário
-  // Mas o truque principal é atualizar o estado após o login
+  // Este efeito vai monitorar o localStorage a cada segundo para garantir o redirecionamento
+  // É a forma mais segura quando não se usa Context API
   useEffect(() => {
-    const handleStorageChange = () => {
-      setToken(localStorage.getItem('token'));
+    const checkToken = () => {
+      const currentToken = localStorage.getItem('token');
+      if (currentToken !== token) {
+        setToken(currentToken);
+      }
     };
 
-    window.addEventListener('storage', handleStorageChange);
-    return () => window.removeEventListener('storage', handleStorageChange);
-  }, []);
+    const interval = setInterval(checkToken, 500); // Checa a cada 500ms
+    return () => clearInterval(interval);
+  }, [token]);
 
   return (
     <Router>
       <AnimatePresence mode="wait">
         <Routes>
-          <Route path="/login" element={<Login />} />
+          {/* Se houver token e o usuário tentar ir para o login, mandamos para a dashboard */}
+          <Route 
+            path="/login" 
+            element={token ? <Navigate to="/" replace /> : <Login />} 
+          />
           <Route path="/register" element={<Register />} />
 
-          {/* 3. Agora o React vai re-renderizar quando o token mudar */}
+          {/* Rota Protegida */}
           <Route
             path="/*"
             element={
@@ -62,9 +60,54 @@ export default function App() {
 }
 
 function ProtectedLayout() {
+  // Captura o usuário logado no localStorage
+  const user = JSON.parse(localStorage.getItem('user') || '{}');
+
+  useEffect(() => {
+    if (!user.id) return;
+
+    // Registra o exato milissegundo em que o usuário entrou no sistema
+    const startTime = Date.now();
+
+    const salvarTempoNoBanco = () => {
+      const endTime = Date.now();
+      // Transforma a diferença de milissegundos em segundos inteiros
+      const secondsSpent = Math.floor((endTime - startTime) / 1000);
+
+      if (secondsSpent > 0) {
+        const url = `https://mathflow-l58o.onrender.com/progress/track-time`;
+        const payload = JSON.stringify({
+          userId: user.id.toString(),
+          seconds: secondsSpent
+        });
+
+        // O 'navigator.sendBeacon' garante o envio assíncrono para o back-end 
+        // mesmo se o usuário fechar a aba do navegador de forma abrupta
+        if (navigator.sendBeacon) {
+          navigator.sendBeacon(url, new Blob([payload], { type: 'application/json' }));
+        } else {
+          // Fallback caso o navegador não suporte beacon
+          fetch(url, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: payload,
+            keepalive: true // Mantém o fetch vivo mesmo após fechar a janela
+          }).catch((err) => console.error(err));
+        }
+      }
+    };
+
+    // Escuta quando o usuário fecha a aba, muda de site ou atualiza a página (F5)
+    window.addEventListener("beforeunload", salvarTempoNoBanco);
+
+    // Executa ao deslogar ou desmontar o layout de dentro da aplicação
+    return () => {
+      window.removeEventListener("beforeunload", salvarTempoNoBanco);
+      salvarTempoNoBanco();
+    };
+  }, [user.id]);
 
   return (
-
     <div className="
       flex
       min-h-screen
@@ -73,7 +116,6 @@ function ProtectedLayout() {
       transition-colors
       duration-300
     ">
-
       <Sidebar />
 
       <div className="
@@ -83,7 +125,6 @@ function ProtectedLayout() {
         min-w-0
         md:ml-64
       ">
-
         <Header />
 
         <main className="
@@ -91,11 +132,8 @@ function ProtectedLayout() {
           p-4
           md:p-8
         ">
-
           <AnimatePresence mode="wait">
-
             <Routes>
-
               <Route
                 path="/"
                 element={
@@ -132,6 +170,20 @@ function ProtectedLayout() {
                 }
               />
 
+              <Route path="/areas" 
+              element={
+                <PageTransition>
+                  <Areas />
+                </PageTransition>
+              } />
+
+              <Route path="/areas/:id" 
+              element={
+                <PageTransition>
+                  <AreaDetail />
+                </PageTransition>
+              } />
+
               <Route
                 path="/exercises/:topicId"
                 element={
@@ -140,15 +192,17 @@ function ProtectedLayout() {
                   </PageTransition>
                 }
               />
-
+              <Route path="/simulados" 
+              element={
+                <PageTransition>
+                  <Simulados />
+                </PageTransition>
+              } />
+              <Route path="/simulados/play" element={<SimuladosPlayer />} />
             </Routes>
-
           </AnimatePresence>
-
         </main>
-
       </div>
-
     </div>
   );
 }
