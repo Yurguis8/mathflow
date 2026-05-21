@@ -1,1 +1,104 @@
-[]
+[
+  {
+    "id": "plano-cartesiano",
+    "title": "Plano Cartesiano",
+    "description": "Representação de pontos e figuras no plano cartesiano.",
+    "icon": "Grid2X2",
+    "difficulty": "Fácil",
+    "area": "geometria-analitica",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "(x,y)"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "distancia-entre-pontos",
+    "title": "Distância entre Pontos",
+    "description": "Cálculo da distância entre dois pontos no plano.",
+    "icon": "Ruler",
+    "difficulty": "Fácil",
+    "area": "geometria-analitica",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "d=\\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "ponto-medio",
+    "title": "Ponto Médio",
+    "description": "Determinação do ponto médio entre dois pontos.",
+    "icon": "Dot",
+    "difficulty": "Fácil",
+    "area": "geometria-analitica",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "M=\\left(\\frac{x_1+x_2}{2},\\frac{y_1+y_2}{2}\\right)"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "retas",
+    "title": "Retas",
+    "description": "Equações e propriedades das retas no plano.",
+    "icon": "Slash",
+    "difficulty": "Médio",
+    "area": "geometria-analitica",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "y=ax+b"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "circunferencia",
+    "title": "Circunferência",
+    "description": "Equações e propriedades da circunferência no plano cartesiano.",
+    "icon": "Circle",
+    "difficulty": "Médio",
+    "area": "geometria-analitica",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "(x-a)^2+(y-b)^2=r^2"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "conicas",
+    "title": "Cônicas",
+    "description": "Estudo da parábola, elipse e hipérbole.",
+    "icon": "Orbit",
+    "difficulty": "Difícil",
+    "area": "geometria-analitica",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "y^2=4px"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  }
+]

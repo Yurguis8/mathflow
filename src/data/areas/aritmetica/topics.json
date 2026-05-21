@@ -1,1 +1,192 @@
-[]
+[
+  {
+    "id": "operacoes-basicas",
+    "title": "Operações Básicas",
+    "description": "Adição, subtração, multiplicação e divisão de números reais.",
+    "icon": "Calculator",
+    "difficulty": "Fácil",
+    "area": "aritmetica",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "a+b",
+        "a-b",
+        "a \\cdot b",
+        "a/b"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "divisibilidade",
+    "title": "Divisibilidade",
+    "description": "Critérios de divisibilidade e propriedades dos números inteiros.",
+    "icon": "Hash",
+    "difficulty": "Fácil",
+    "area": "aritmetica",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "a = bq + r"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "mmc-e-mdc",
+    "title": "MMC e MDC",
+    "description": "Cálculo do mínimo múltiplo comum e máximo divisor comum.",
+    "icon": "GitMerge",
+    "difficulty": "Fácil",
+    "area": "aritmetica",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "MMC(a,b) \\cdot MDC(a,b) = a \\cdot b"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "fracoes",
+    "title": "Frações",
+    "description": "Operações, simplificação e comparação de frações.",
+    "icon": "PieChart",
+    "difficulty": "Fácil",
+    "area": "aritmetica",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "\\frac{a}{b} + \\frac{c}{d} = \\frac{ad+bc}{bd}"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "razao-e-proporcao",
+    "title": "Razão e Proporção",
+    "description": "Comparação entre grandezas e proporcionalidade.",
+    "icon": "Scale",
+    "difficulty": "Fácil",
+    "area": "aritmetica",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "\\frac{a}{b} = \\frac{c}{d}"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "regra-de-tres",
+    "title": "Regra de Três",
+    "description": "Resolução de problemas envolvendo proporcionalidade.",
+    "icon": "ArrowLeftRight",
+    "difficulty": "Fácil",
+    "area": "aritmetica",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "\\frac{a}{b} = \\frac{c}{x}"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "porcentagem",
+    "title": "Porcentagem",
+    "description": "Cálculo de porcentagens, aumentos e descontos.",
+    "icon": "Percent",
+    "difficulty": "Fácil",
+    "area": "aritmetica",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "p\\% = \\frac{p}{100}"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "potenciacao-e-radiciacao",
+    "title": "Potenciação e Radiciação",
+    "description": "Propriedades de potências e raízes.",
+    "icon": "Superscript",
+    "difficulty": "Médio",
+    "area": "aritmetica",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "a^m \\cdot a^n = a^{m+n}"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "notacao-cientifica",
+    "title": "Notação Científica",
+    "description": "Representação de números muito grandes ou pequenos.",
+    "icon": "Atom",
+    "difficulty": "Fácil",
+    "area": "aritmetica",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "a \\times 10^n"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "juros",
+    "title": "Juros",
+    "description": "Juros simples e compostos em matemática financeira.",
+    "icon": "BadgeDollarSign",
+    "difficulty": "Médio",
+    "area": "aritmetica",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "M = C(1+i)^t"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "medias",
+    "title": "Médias",
+    "description": "Cálculo de média aritmética e ponderada.",
+    "icon": "BarChart3",
+    "difficulty": "Fácil",
+    "area": "aritmetica",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "\\bar{x} = \\frac{x_1+x_2+...+x_n}{n}"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  }
+]

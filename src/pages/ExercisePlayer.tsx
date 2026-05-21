@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useLocation } from "react-router-dom"; // Importado useLocation
 import {
   ArrowLeft,
   CheckCircle2,
@@ -7,63 +7,111 @@ import {
   ChevronRight,
   HelpCircle,
   Trophy,
+  Menu,
+  Award,
+  GraduationCap
 } from "lucide-react";
 
 import { motion, AnimatePresence } from "motion/react";
-
 import type { Exercise } from "../types";
 
-import allExercises from "../data/allExercises";
-
 export default function ExercisePlayer() {
-  const { topicId } = useParams();
+  const { areaId, topicId } = useParams();
+  const location = useLocation();
+
+  // Captura os filtros configurados no Modal (caso não existam, assume o padrão "Todos" e "false")
+  const targetedLevel = location.state?.selectedLevel || "Todos";
+  const onlyEnem = location.state?.onlyEnem || false;
 
   const [exercises, setExercises] = useState<Exercise[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
-
-  const [selectedOption, setSelectedOption] =
-    useState<number | null>(null);
-
+  
+  const [selectedOption, setSelectedOption] = useState<number | null>(null);
+  const [isConfirmed, setIsConfirmed] = useState(false);
+  
   const [showResolution, setShowResolution] = useState(false);
-
-  const [isCorrect, setIsCorrect] =
-    useState<boolean | null>(null);
-
+  const [showLeaveModal, setShowLeaveModal] = useState(false);
+  const [showQuestionNavigator, setShowQuestionNavigator] = useState(false);
+  const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
   const [loading, setLoading] = useState(true);
-
   const [finished, setFinished] = useState(false);
-
   const [score, setScore] = useState(0);
-
   const [seconds, setSeconds] = useState(0);
+
+
 
   const user = JSON.parse(localStorage.getItem("user") || "{}");
 
   // CRONÔMETRO
   useEffect(() => {
     let timer: NodeJS.Timeout;
-
     if (!finished) {
       timer = setInterval(() => {
         setSeconds((prev) => prev + 1);
       }, 1000);
     }
-
     return () => clearInterval(timer);
   }, [finished]);
 
-  // CARREGA EXERCÍCIOS
+  // SEU CARREGAMENTO DINÂMICO CUSTOMIZADO COM OS NOVOS FILTROS DE QUESTÕES
   useEffect(() => {
-    if (topicId) {
-      const filteredExercises = allExercises.filter(
-        (exercise: any) => exercise.topicId === topicId
-      );
+    let isMounted = true;
 
-      setExercises(filteredExercises);
+    async function loadAreaExercises() {
+      if (!areaId || areaId === "undefined" || !topicId) {
+        if (isMounted) {
+          setExercises([]);
+          setLoading(false);
+        }
+        return;
+      }
+
+      try {
+        setLoading(true);
+        
+        const module = await import(`../data/areas/${areaId}/exercises.json`);
+        const areaExercises = module.default;
+
+        const cleanStr = (str: string) => 
+          str.trim().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
+        // 1. Filtra separando pelo TopicId correto
+        let filtered = areaExercises.filter((exercise: any) => {
+          const currentExerciseTopic = exercise.topicId || exercise.topic || "";
+          return cleanStr(currentExerciseTopic) === cleanStr(topicId);
+        });
+
+        // 2. Filtra por nível de Dificuldade da questão individual se não for "Todos"
+        if (targetedLevel !== "Todos") {
+          filtered = filtered.filter((exercise: any) => 
+            cleanStr(exercise.difficulty || "") === cleanStr(targetedLevel)
+          );
+        }
+
+        // 3. Filtra apenas questões do ENEM se a caixinha foi marcada
+        if (onlyEnem) {
+          filtered = filtered.filter((exercise: any) => 
+            cleanStr(exercise.source || "") === "enem"
+          );
+        }
+
+        if (isMounted) {
+          setExercises(filtered);
+        }
+      } catch (error) {
+        console.error(`Erro ao importar o arquivo da área: ${areaId}`, error);
+        if (isMounted) setExercises([]); 
+      } finally {
+        if (isMounted) setLoading(false);
+      }
     }
 
-    setLoading(false);
-  }, [topicId]);
+    loadAreaExercises();
+
+    return () => {
+      isMounted = false;
+    };
+  }, [areaId, topicId, targetedLevel, onlyEnem]);
 
   // SALVA PROGRESSO
   const saveProgressToDB = async (isFinal = false) => {
@@ -79,31 +127,26 @@ export default function ExercisePlayer() {
     };
 
     try {
-      await fetch(
-        "https://mathflow-l58o.onrender.com/progress/save",
-        {
-          method: "POST",
-
-          headers: {
-            "Content-Type": "application/json",
-          },
-
-          body: JSON.stringify(progressData),
-        }
-      );
+      await fetch("https://mathflow-l58o.onrender.com/progress/save", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(progressData),
+      });
     } catch (error) {
       console.error("Erro ao salvar progresso:", error);
     }
   };
 
   const handleOptionSelect = (idx: number) => {
-    if (selectedOption !== null) return;
-
+    if (isConfirmed) return;
     setSelectedOption(idx);
+  };
 
-    const correct =
-      idx === exercises[currentIndex].correctIndex;
+  const handleConfirmAnswer = () => {
+    if (selectedOption === null || isConfirmed) return;
 
+    setIsConfirmed(true);
+    const correct = selectedOption === exercises[currentIndex].correctIndex;
     setIsCorrect(correct);
 
     if (correct) {
@@ -112,36 +155,58 @@ export default function ExercisePlayer() {
   };
 
   const handleNext = () => {
-    const isLast =
-      currentIndex + 1 === exercises.length;
-
+    const isLast = currentIndex + 1 === exercises.length;
     saveProgressToDB(isLast);
 
     if (!isLast) {
       setCurrentIndex((prev) => prev + 1);
-
       setSelectedOption(null);
-
+      setIsConfirmed(false);
       setIsCorrect(null);
-
       setShowResolution(false);
     } else {
       setFinished(true);
     }
   };
 
+  // FUNÇÃO AUXILIAR PARA DEFINIR AS CORES DA DIFICULDADE (TOTALMENTE BLINDADA)
+  const getDifficultyColors = (difficulty: string) => {
+    const diff = String(difficulty || "Mista")
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase()
+      .trim();
+
+    if (diff === "facil") {
+      return "bg-green-50 text-green-700 border-green-200 dark:bg-green-950/20 dark:text-green-400 dark:border-green-900/40";
+    }
+    if (diff === "medio") {
+      return "bg-amber-50 text-amber-700 border-amber-200 dark:bg-amber-950/20 dark:text-amber-400 dark:border-amber-900/40";
+    }
+    if (diff === "dificil") {
+      return "bg-red-50 text-red-700 border-red-200 dark:bg-red-950/20 dark:text-red-400 dark:border-red-900/40";
+    }
+    if (diff === "olimpico") {
+      return "bg-purple-600 text-amber-300 border-purple-700 font-extrabold dark:bg-purple-900 dark:text-amber-400 dark:border-purple-800";
+    }
+    return "bg-blue-50 text-blue-700 border-blue-100 dark:bg-blue-900/20 dark:text-blue-400 dark:border-blue-900/40";
+  };
+
   if (loading) {
-    return (
-      <div className="h-screen flex items-center justify-center">
-        Carregando exercícios...
-      </div>
-    );
+    return <div className="h-screen flex items-center justify-center">Carregando exercícios...</div>;
   }
 
+  // TELA DE REGRESSO SE NÃO HOUVER QUESTÕES COM ESSE FILTRO COMBINADO
   if (!exercises.length) {
     return (
-      <div className="p-8 text-center text-slate-500">
-        Nenhum exercício encontrado.
+      <div className="p-8 text-center text-slate-500 max-w-lg mx-auto mt-24 bg-white rounded-3xl border border-slate-200 shadow-sm">
+        <p className="text-xl font-bold text-slate-800 mb-2">Nenhuma questão disponível</p>
+        <p className="text-sm text-slate-400 mb-6">
+          Não existem exercícios de nível <span className="font-semibold text-blue-600">"{targetedLevel}"</span> {onlyEnem && "vindos do ENEM "}cadastrados para este assunto ainda.
+        </p>
+        <Link to="/exercises" className="inline-block bg-slate-900 text-white px-6 py-3 rounded-xl font-bold text-sm hover:bg-slate-800 transition-colors">
+          Voltar aos Tópicos
+        </Link>
       </div>
     );
   }
@@ -155,50 +220,23 @@ export default function ExercisePlayer() {
             <Trophy className="w-10 h-10" />
           </div>
 
-          <h2 className="text-3xl font-bold mb-2">
-            Excelente trabalho!
-          </h2>
-
-          <p className="text-slate-600 mb-8">
-            Seu progresso foi salvo.
-          </p>
+          <h2 className="text-3xl font-bold mb-2">Excelente trabalho!</h2>
+          <p className="text-slate-600 mb-8">Seu progresso foi salvo.</p>
 
           <div className="bg-slate-50 rounded-2xl p-6 mb-8 flex justify-around">
             <div>
-              <p className="text-xs text-slate-400 uppercase font-bold">
-                Acertos
-              </p>
-
-              <p className="text-3xl font-bold text-blue-600">
-                {score} / {exercises.length}
-              </p>
+              <p className="text-xs text-slate-400 uppercase font-bold">Acertos</p>
+              <p className="text-3xl font-bold text-blue-600">{score} / {exercises.length}</p>
             </div>
-
             <div>
-              <p className="text-xs text-slate-400 uppercase font-bold">
-                Tempo
-              </p>
-
-              <p className="text-3xl font-bold text-green-600">
-                {Math.floor(seconds / 60)}m {seconds % 60}s
-              </p>
+              <p className="text-xs text-slate-400 uppercase font-bold">Tempo</p>
+              <p className="text-3xl font-bold text-green-600">{Math.floor(seconds / 60)}m {seconds % 60}s</p>
             </div>
           </div>
 
           <div className="flex gap-4">
-            <Link
-              to="/exercises"
-              className="flex-1 bg-slate-100 py-4 rounded-xl font-bold"
-            >
-              Voltar
-            </Link>
-
-            <Link
-              to="/"
-              className="flex-1 bg-blue-600 text-white py-4 rounded-xl font-bold"
-            >
-              Dashboard
-            </Link>
+            <Link to="/exercises" className="flex-1 bg-slate-100 py-4 rounded-xl font-bold text-center">Voltar</Link>
+            <Link to="/" className="flex-1 bg-blue-600 text-white py-4 rounded-xl font-bold text-center">Dashboard</Link>
           </div>
         </div>
       </div>
@@ -206,31 +244,56 @@ export default function ExercisePlayer() {
   }
 
   const currentExercise = exercises[currentIndex];
+  const progress = ((currentIndex + 1) / exercises.length) * 100;
 
-  const progress =
-    ((currentIndex + 1) / exercises.length) * 100;
+  
 
   return (
     <div className="max-w-4xl mx-auto px-4 pb-24">
       <div className="flex items-center justify-between mb-8 pt-4">
-        <Link
-          to="/exercises"
-          className="flex items-center gap-2 text-slate-500"
+        {/* BOTÃO DE ABANDONAR QUE ATIVA O MODAL CUSTOMIZADO */}
+        <button 
+          type="button"
+          onClick={() => setShowLeaveModal(true)} 
+          className="flex items-center gap-2 text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 text-sm font-medium transition-colors"
         >
-          <ArrowLeft className="w-4 h-4" />
-          Sair
-        </Link>
+          <ArrowLeft className="w-4 h-4" /> Sair
+        </button>
 
-        <span className="text-sm font-bold text-slate-400 uppercase">
-          Questão {currentIndex + 1} de {exercises.length}
-        </span>
+        {/* METADADOS/BADGES DINÂMICAS DA QUESTÃO */}
+        <div className="flex items-center gap-2">
+          {currentExercise.source?.toLowerCase() === "enem" && (
+            <span className="flex items-center gap-1 text-[10px] bg-amber-50 text-amber-700 border border-amber-200 px-2 py-0.5 rounded-sm font-bold uppercase tracking-wider">
+              <GraduationCap className="w-3 h-3" /> ENEM
+            </span>
+          )}
+          <span className={`text-[10px] px-2 py-0.5 rounded-sm font-bold uppercase tracking-wider border ${getDifficultyColors(currentExercise.difficulty)}`}>
+            {currentExercise.difficulty || "Geral"}
+          </span>
+        </div>
+
+        <div className="flex items-center gap-3">
+
+          <button
+            type="button"
+            onClick={() => setShowQuestionNavigator(true)}
+            className="flex items-center gap-2 px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
+          >
+            <Menu className="w-4 h-4" />
+            <span className="text-xs sm:text-sm font-bold text-slate-600 dark:text-slate-300">
+              Questões
+            </span>
+          </button>
+
+          <span className="text-xs sm:text-sm font-bold text-slate-400 uppercase">
+            {currentIndex + 1} / {exercises.length}
+          </span>
+
+        </div>
       </div>
 
       <div className="w-full h-2 bg-slate-200 rounded-full mb-10 overflow-hidden">
-        <motion.div
-          animate={{ width: `${progress}%` }}
-          className="h-full bg-blue-600"
-        />
+        <motion.div animate={{ width: `${progress}%` }} className="h-full bg-blue-600" />
       </div>
 
       <AnimatePresence mode="wait">
@@ -239,104 +302,120 @@ export default function ExercisePlayer() {
           initial={{ opacity: 0, x: 10 }}
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -10 }}
-          className="bg-white rounded-3xl p-8 border border-slate-200"
+          className="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm"
         >
-          <h2 className="text-2xl font-semibold mb-8 whitespace-pre-wrap">
+          <h2 className="text-base sm:text-xl md:text-2xl font-semibold mb-6 whitespace-pre-wrap text-slate-800 tracking-tight leading-relaxed">
             {currentExercise.question}
           </h2>
 
-          <div className="space-y-4">
+          {/* RENDERIZAÇÃO CONDICIONAL DE LINK EXTERNO DE IMAGEM */}
+          {currentExercise.image && (
+            <div className="mb-8 overflow-hidden rounded-md border border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/20 p-4 flex justify-center shadow-inner">
+              <img
+                src={currentExercise.image}
+                alt={`Imagem de suporte para o exercício ${currentExercise.id}`}
+                className="max-h-72 object-contain rounded-sm"
+                loading="lazy"
+              />
+            </div>
+          )}
+
+          {/* ALTERNATIVAS COM SUPORTE A IMAGENS E TEXTOS */}
+          <div className="grid grid-cols-1 gap-3">
             {currentExercise.options.map((option, idx) => {
               const isSelected = selectedOption === idx;
+              const isCorrectTarget = idx === currentExercise.correctIndex;
 
-              const isCorrectTarget =
-                idx === currentExercise.correctIndex;
+              // Detecta se a alternativa atual é um link de imagem (começa com http ou https)
+              const isImageOption = typeof option === "string" && (option.startsWith("http://") || option.startsWith("https://"));
 
-              let style =
-                "border-slate-200 hover:border-blue-400 hover:bg-blue-50";
+              let style = "border-slate-200 dark:border-slate-800 hover:border-blue-400 hover:bg-blue-50/50 dark:hover:bg-blue-950/20";
 
-              if (selectedOption !== null) {
-                if (isCorrectTarget) {
-                  style =
-                    "border-green-500 bg-green-50 text-green-700";
-                } else if (isSelected) {
-                  style =
-                    "border-red-500 bg-red-50 text-red-700";
-                } else {
-                  style = "opacity-50";
-                }
+              if (selectedOption !== null && !isConfirmed) {
+                if (isSelected) style = "border-blue-500 bg-blue-50/60 text-blue-700 dark:bg-blue-950/40 dark:text-blue-400 font-medium";
+                else style = "border-slate-200 dark:border-slate-800 opacity-60";
+              }
+              else if (isConfirmed) {
+                if (isCorrectTarget) style = "border-green-500 bg-green-50/50 text-green-700 dark:bg-green-950/20 dark:text-green-400 font-semibold";
+                else if (isSelected) style = "border-red-500 bg-red-50/50 text-red-700 dark:bg-red-950/20 dark:text-red-400";
+                else style = "opacity-40 border-slate-100 dark:border-slate-800";
               }
 
               return (
                 <button
                   key={idx}
+                  type="button"
                   onClick={() => handleOptionSelect(idx)}
-                  disabled={selectedOption !== null}
-                  className={`w-full p-5 rounded-2xl border-2 text-left transition-all ${style}`}
+                  disabled={isConfirmed}
+                  className={`w-full p-4 rounded-md border text-left transition-all text-sm ${style}`}
                 >
                   <div className="flex justify-between items-center gap-4">
-                    <span>{option}</span>
+                    
+                    {/* SE FOR IMAGEM, RENDERIZA A TAG DE IMAGEM; SE NÃO, RENDERIZA O TEXTO NORMAL */}
+                    {isImageOption ? (
+                      <div className="bg-white dark:bg-slate-800 p-2 rounded-sm border border-slate-100 dark:border-slate-700 max-w-[200px] max-h-[120px] flex items-center justify-center overflow-hidden">
+                        <img 
+                          src={option} 
+                          alt={`Alternativa ${String.fromCharCode(65 + idx)}`} 
+                          className="max-w-full max-h-full object-contain mix-blend-multiply dark:mix-blend-normal"
+                          loading="lazy"
+                        />
+                      </div>
+                    ) : (
+                      <span>{option}</span>
+                    )}
 
-                    {selectedOption !== null &&
-                      isCorrectTarget && (
-                        <CheckCircle2 className="text-green-600" />
-                      )}
-
-                    {isSelected &&
-                      !isCorrectTarget && (
-                        <XCircle className="text-red-600" />
-                      )}
+                    {isConfirmed && isCorrectTarget && <CheckCircle2 className="w-4 h-4 text-green-600 shrink-0" />}
+                    {isConfirmed && isSelected && !isCorrectTarget && <XCircle className="w-4 h-4 text-red-600 shrink-0" />}
                   </div>
                 </button>
               );
             })}
           </div>
 
-          <div className="mt-10 flex flex-col gap-4">
-            <button
-              onClick={() =>
-                setShowResolution(!showResolution)
-              }
-              disabled={selectedOption === null}
-              className="text-blue-600 font-bold flex items-center gap-2"
-            >
-              <HelpCircle className="w-4 h-4" />
-
-              {showResolution
-                ? "Esconder resolução"
-                : "Ver resolução"}
-            </button>
-
-            {selectedOption !== null && (
+          {/* PAINEL DE AÇÕES (CONFIRMAR / PRÓXIMA QUESTÃO) - DE VOLTA AO LUGAR CORRETO */}
+          <div className="flex flex-col gap-3 mt-6">
+            {!isConfirmed ? (
               <button
-                onClick={handleNext}
-                className="bg-slate-900 text-white py-4 rounded-2xl font-bold flex items-center justify-center gap-2"
+                type="button"
+                onClick={handleConfirmAnswer}
+                disabled={selectedOption === null}
+                className="w-full bg-blue-600 hover:bg-blue-700 disabled:opacity-50 text-white py-3.5 rounded-md font-bold text-sm transition-all shadow-md text-center"
               >
-                {currentIndex + 1 === exercises.length
-                  ? "Finalizar"
-                  : "Próxima questão"}
-
-                <ChevronRight className="w-5 h-5" />
+                Confirmar Resposta
               </button>
+            ) : (
+              <div className="flex flex-col sm:flex-row gap-3 w-full">
+                <button
+                  type="button"
+                  onClick={() => setShowResolution(!showResolution)}
+                  className="flex-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 py-3.5 rounded-md font-bold text-sm hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors border border-slate-200 dark:border-slate-700"
+                >
+                  {showResolution ? "Esconder Explicação" : "Ver Resolução"}
+                </button>
+                <button
+                  type="button"
+                  onClick={handleNext}
+                  className="flex-1 bg-slate-900 dark:bg-slate-700 hover:bg-slate-800 text-white py-3.5 rounded-md font-bold text-sm transition-all shadow-md flex items-center justify-center gap-2"
+                >
+                  {currentIndex + 1 === exercises.length ? "Finalizar" : "Próxima Questão"}
+                  <ChevronRight className="w-4 h-4" />
+                </button>
+              </div>
             )}
           </div>
 
+          {/* SEÇÃO DA RESOLUÇÃO COMENTADA */}
           <AnimatePresence>
-            {showResolution && (
+            {showResolution && isConfirmed && (
               <motion.div
                 initial={{ height: 0, opacity: 0 }}
-                animate={{
-                  height: "auto",
-                  opacity: 1,
-                }}
+                animate={{ height: "auto", opacity: 1 }}
                 exit={{ height: 0, opacity: 0 }}
                 className="overflow-hidden"
               >
-                <div className="mt-8 p-6 bg-slate-50 rounded-2xl border border-slate-200 whitespace-pre-wrap">
-                  <p className="font-bold mb-3">
-                    Explicação:
-                  </p>
-
+                <div className="mt-6 p-5 bg-slate-50 dark:bg-slate-800/40 rounded-md border border-slate-200 dark:border-slate-800 whitespace-pre-wrap text-sm text-slate-600 dark:text-slate-400">
+                  <p className="font-bold mb-2 text-slate-800 dark:text-slate-200">Explicação:</p>
                   {currentExercise.resolution}
                 </div>
               </motion.div>
@@ -344,6 +423,123 @@ export default function ExercisePlayer() {
           </AnimatePresence>
         </motion.div>
       </AnimatePresence>
+      {/* MODAL DE SAÍDA */}
+<AnimatePresence>
+  {showLeaveModal && (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="fixed inset-0 z-50 bg-black/40 flex items-center justify-center p-4"
+    >
+      <motion.div
+        initial={{ scale: 0.95, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        exit={{ scale: 0.95, opacity: 0 }}
+        className="bg-white dark:bg-slate-900 rounded-2xl p-6 w-full max-w-md border border-slate-200 dark:border-slate-800 shadow-2xl"
+      >
+        <h3 className="text-xl font-bold mb-2 text-slate-800 dark:text-slate-100">
+          Sair da sessão?
+        </h3>
+
+        <p className="text-sm text-slate-500 dark:text-slate-400 mb-6">
+          Seu progresso atual será salvo automaticamente.
+        </p>
+
+        <div className="flex gap-3">
+          <button
+            type="button"
+            onClick={() => setShowLeaveModal(false)}
+            className="flex-1 py-3 rounded-xl bg-slate-100 dark:bg-slate-800 font-semibold"
+          >
+            Cancelar
+          </button>
+
+          <Link
+            to="/exercises"
+            className="flex-1 py-3 rounded-xl bg-red-600 hover:bg-red-700 text-white font-semibold text-center"
+          >
+            Sair
+          </Link>
+        </div>
+      </motion.div>
+    </motion.div>
+  )}
+</AnimatePresence>
+
+{/* MODAL NAVEGAÇÃO DE QUESTÕES */}
+<AnimatePresence>
+  {showQuestionNavigator && (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="fixed inset-0 z-50 bg-black/40 flex items-center justify-center p-4"
+    >
+      <motion.div
+        initial={{ scale: 0.95, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        exit={{ scale: 0.95, opacity: 0 }}
+        className="bg-white dark:bg-slate-900 rounded-3xl w-full max-w-lg p-6 border border-slate-200 dark:border-slate-800 shadow-2xl"
+      >
+        <div className="flex items-center justify-between mb-6">
+          <h3 className="text-lg font-bold text-slate-800 dark:text-slate-100">
+            Navegar Questões
+          </h3>
+
+          <button
+            type="button"
+            onClick={() => setShowQuestionNavigator(false)}
+            className="text-slate-400 hover:text-slate-600 dark:hover:text-slate-300"
+          >
+            ✕
+          </button>
+        </div>
+
+        <div className="grid grid-cols-5 sm:grid-cols-6 gap-3 max-h-[60vh] overflow-y-auto pr-1">
+
+          {exercises.map((_, idx) => {
+
+            const isActive = idx === currentIndex;
+
+            return (
+              <button
+                key={idx}
+                type="button"
+                onClick={() => {
+
+                  setCurrentIndex(idx);
+
+                  setSelectedOption(null);
+                  setIsConfirmed(false);
+                  setIsCorrect(null);
+                  setShowResolution(false);
+
+                  setShowQuestionNavigator(false);
+                }}
+                className={`
+                  h-12
+                  rounded-xl
+                  text-sm
+                  font-bold
+                  transition-all
+                  border
+                  ${
+                    isActive
+                      ? "bg-blue-600 text-white border-blue-600"
+                      : "bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 hover:border-blue-400"
+                  }
+                `}
+              >
+                {idx + 1}
+              </button>
+            );
+          })}
+        </div>
+      </motion.div>
+    </motion.div>
+  )}
+</AnimatePresence>
     </div>
   );
 }

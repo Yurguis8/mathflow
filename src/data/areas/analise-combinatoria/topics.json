@@ -1,1 +1,53 @@
-[]
+[
+  {
+    "id": "principio-fundamental",
+    "title": "Princípio Fundamental da Contagem",
+    "description": "Princípio multiplicativo e aditivo da contagem, diagramas de árvore e arranjos simples.",
+    "icon": "Binary",
+    "difficulty": "Médio",
+    "area": "analise-combinatoria",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "Não cadastrado"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "permutacoes",
+    "title": "Permutações",
+    "description": "Permutação simples, permutação com repetição (anagramas, caminhos em malhas) e permutação circular.",
+    "icon": "Shuffle",
+    "difficulty": "Médio",
+    "area": "analise-combinatoria",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "Não cadastrado"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "combinacao-simples",
+    "title": "Combinação Simples",
+    "description": "Agrupamentos onde a ordem dos elementos não importa, escolha de subconjuntos e combinações com restrições.",
+    "icon": "Network",
+    "difficulty": "Difícil",
+    "area": "analise-combinatoria",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "Não cadastrado"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  }
+]

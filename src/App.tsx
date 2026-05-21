@@ -9,18 +9,16 @@ import ExercisesList from "./pages/ExercisesList";
 import ExercisePlayer from "./pages/ExercisePlayer";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence, motion } from "framer-motion"; // Ajustado import se necessário
 import Areas from "./pages/Areas";
 import AreaDetail from "./pages/AreaDetail";
 import Simulados from "./pages/Simulados";
 import SimuladosPlayer from "./pages/SimulationPlayer";
+import Enem from "./pages/Enem";
 
 export default function App() {
-  // Inicializamos o estado verificando se o token já existe
   const [token, setToken] = useState<string | null>(localStorage.getItem('token'));
 
-  // Este efeito vai monitorar o localStorage a cada segundo para garantir o redirecionamento
-  // É a forma mais segura quando não se usa Context API
   useEffect(() => {
     const checkToken = () => {
       const currentToken = localStorage.getItem('token');
@@ -29,7 +27,7 @@ export default function App() {
       }
     };
 
-    const interval = setInterval(checkToken, 500); // Checa a cada 500ms
+    const interval = setInterval(checkToken, 500);
     return () => clearInterval(interval);
   }, [token]);
 
@@ -37,7 +35,6 @@ export default function App() {
     <Router>
       <AnimatePresence mode="wait">
         <Routes>
-          {/* Se houver token e o usuário tentar ir para o login, mandamos para a dashboard */}
           <Route 
             path="/login" 
             element={token ? <Navigate to="/" replace /> : <Login />} 
@@ -60,145 +57,85 @@ export default function App() {
 }
 
 function ProtectedLayout() {
-  // Captura o usuário logado no localStorage
   const user = JSON.parse(localStorage.getItem('user') || '{}');
 
   useEffect(() => {
     if (!user.id) return;
 
-    // Registra o exato milissegundo em que o usuário entrou no sistema
-    const startTime = Date.now();
+    let localSeconds = 0;
+    const intervalTime = 60; // Intervalo para sincronizar com o banco (em segundos)
+    const url = `https://mathflow-l58o.onrender.com/progress/track-time`;
 
-    const salvarTempoNoBanco = () => {
-      const endTime = Date.now();
-      // Transforma a diferença de milissegundos em segundos inteiros
-      const secondsSpent = Math.floor((endTime - startTime) / 1000);
+    // Função centralizada para enviar dados ao backend
+    const sendTimeToBackend = (secondsToSend: number, useBeacon = false) => {
+      if (secondsToSend <= 0) return;
 
-      if (secondsSpent > 0) {
-        const url = `https://mathflow-l58o.onrender.com/progress/track-time`;
-        const payload = JSON.stringify({
-          userId: user.id.toString(),
-          seconds: secondsSpent
-        });
+      const payload = JSON.stringify({
+        userId: user.id.toString(),
+        seconds: secondsToSend
+      });
 
-        // O 'navigator.sendBeacon' garante o envio assíncrono para o back-end 
-        // mesmo se o usuário fechar a aba do navegador de forma abrupta
-        if (navigator.sendBeacon) {
-          navigator.sendBeacon(url, new Blob([payload], { type: 'application/json' }));
-        } else {
-          // Fallback caso o navegador não suporte beacon
-          fetch(url, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: payload,
-            keepalive: true // Mantém o fetch vivo mesmo após fechar a janela
-          }).catch((err) => console.error(err));
-        }
+      if (useBeacon && navigator.sendBeacon) {
+        navigator.sendBeacon(url, new Blob([payload], { type: 'application/json' }));
+      } else {
+        fetch(url, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: payload,
+          keepalive: true 
+        }).catch((err) => console.error("Erro ao computar tempo:", err));
       }
     };
 
-    // Escuta quando o usuário fecha a aba, muda de site ou atualiza a página (F5)
-    window.addEventListener("beforeunload", salvarTempoNoBanco);
+    // 1. Cronômetro em segundo plano (acumula e envia a cada 15 segundos)
+    const timer = setInterval(() => {
+      localSeconds += 1;
 
-    // Executa ao deslogar ou desmontar o layout de dentro da aplicação
+      if (localSeconds >= intervalTime) {
+        sendTimeToBackend(localSeconds);
+        localSeconds = 0; // Reseta o acumulador local após o envio com sucesso
+      }
+    }, 1000);
+
+    // 2. Envio emergencial caso a aba seja fechada no meio de um intervalo
+    const handleBeforeUnload = () => {
+      if (localSeconds > 0) {
+        sendTimeToBackend(localSeconds, true);
+      }
+    };
+
+    window.addEventListener("beforeunload", handleBeforeUnload);
+
+    // Limpeza ao desmontar o layout (ex: usuário fez logout)
     return () => {
-      window.removeEventListener("beforeunload", salvarTempoNoBanco);
-      salvarTempoNoBanco();
+      clearInterval(timer);
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+      if (localSeconds > 0) {
+        sendTimeToBackend(localSeconds);
+      }
     };
   }, [user.id]);
 
   return (
-    <div className="
-      flex
-      min-h-screen
-      bg-slate-50
-      dark:bg-slate-950
-      transition-colors
-      duration-300
-    ">
+    <div className="flex min-h-screen bg-slate-50 dark:bg-slate-950 transition-colors duration-300">
       <Sidebar />
 
-      <div className="
-        flex-1
-        flex
-        flex-col
-        min-w-0
-        md:ml-64
-      ">
+      <div className="flex-1 flex flex-col min-w-0 md:ml-64">
         <Header />
 
-        <main className="
-          flex-1
-          p-4
-          md:p-8
-        ">
+        <main className="flex-1 p-4 md:p-8">
           <AnimatePresence mode="wait">
             <Routes>
-              <Route
-                path="/"
-                element={
-                  <PageTransition>
-                    <Dashboard />
-                  </PageTransition>
-                }
-              />
-
-              <Route
-                path="/topics"
-                element={
-                  <PageTransition>
-                    <Topics />
-                  </PageTransition>
-                }
-              />
-
-              <Route
-                path="/topic/:id"
-                element={
-                  <PageTransition>
-                    <TopicDetail />
-                  </PageTransition>
-                }
-              />
-
-              <Route
-                path="/exercises"
-                element={
-                  <PageTransition>
-                    <ExercisesList />
-                  </PageTransition>
-                }
-              />
-
-              <Route path="/areas" 
-              element={
-                <PageTransition>
-                  <Areas />
-                </PageTransition>
-              } />
-
-              <Route path="/areas/:id" 
-              element={
-                <PageTransition>
-                  <AreaDetail />
-                </PageTransition>
-              } />
-
-              <Route
-                path="/exercises/:topicId"
-                element={
-                  <PageTransition>
-                    <ExercisePlayer />
-                  </PageTransition>
-                }
-              />
-              <Route path="/simulados" 
-              element={
-                <PageTransition>
-                  <Simulados />
-                </PageTransition>
-              } />
+              <Route path="/" element={<PageTransition><Dashboard /></PageTransition>} />
+              <Route path="/topics" element={<PageTransition><Topics /></PageTransition>} />
+              <Route path="/topic/:id" element={<PageTransition><TopicDetail /></PageTransition>} />
+              <Route path="/exercises" element={<PageTransition><ExercisesList /></PageTransition>} />
+              <Route path="/areas" element={<PageTransition><Areas /></PageTransition>} />
+              <Route path="/areas/:id" element={<PageTransition><AreaDetail /></PageTransition>} />
+              <Route path="/exercises/:areaId/:topicId" element={<PageTransition><ExercisePlayer /></PageTransition>} />
+              <Route path="/simulados" element={<PageTransition><Simulados /></PageTransition>} />
               <Route path="/simulados/play" element={<SimuladosPlayer />} />
+              <Route path="/enem" element={<Enem />} />
             </Routes>
           </AnimatePresence>
         </main>
@@ -207,36 +144,16 @@ function ProtectedLayout() {
   );
 }
 
-function PageTransition({
-  children
-}: {
-  children: React.ReactNode
-}) {
-
+function PageTransition({ children }: { children: React.ReactNode }) {
   return (
-
     <motion.div
-      initial={{
-        opacity: 0,
-        scale: 0.98
-      }}
-      animate={{
-        opacity: 1,
-        scale: 1
-      }}
-      exit={{
-        opacity: 0,
-        scale: 1.02
-      }}
-      transition={{
-        duration: 0.25,
-        ease: "easeOut"
-      }}
+      initial={{ opacity: 0, scale: 0.98 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, scale: 1.02 }}
+      transition={{ duration: 0.25, ease: "easeOut" }}
       className="h-full"
     >
-
       {children}
-
     </motion.div>
   );
 }

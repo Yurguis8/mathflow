@@ -1,1 +1,70 @@
-[]
+[
+  {
+    "id": "operacoes-matriciais",
+    "title": "Operações Matriciais",
+    "description": "Adição, subtração e multiplicação de matrizes.",
+    "icon": "Table",
+    "difficulty": "Fácil",
+    "area": "matrizes",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "A+B=[a_{ij}+b_{ij}]"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "determinantes",
+    "title": "Determinantes",
+    "description": "Cálculo e propriedades dos determinantes.",
+    "icon": "Grid3X3",
+    "difficulty": "Médio",
+    "area": "matrizes",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "\\det(A)"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "matriz-inversa",
+    "title": "Matriz Inversa",
+    "description": "Determinação e aplicação da matriz inversa.",
+    "icon": "FlipHorizontal",
+    "difficulty": "Médio",
+    "area": "matrizes",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "A\\cdot A^{-1}=I"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "sistemas-lineares",
+    "title": "Sistemas Lineares",
+    "description": "Resolução de sistemas utilizando matrizes.",
+    "icon": "Braces",
+    "difficulty": "Médio",
+    "area": "matrizes",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "AX=B"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  }
+]

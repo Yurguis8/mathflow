@@ -1,1 +1,70 @@
-[]
+[
+  {
+    "id": "definicao-de-logaritmo",
+    "title": "Definição de Logaritmo",
+    "description": "Conceito de logaritmo e relação com exponenciais.",
+    "icon": "Logs",
+    "difficulty": "Fácil",
+    "area": "logaritmos",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "\\log_a(b)=x \\iff a^x=b"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "propriedades-dos-logaritmos",
+    "title": "Propriedades dos Logaritmos",
+    "description": "Propriedades operatórias dos logaritmos.",
+    "icon": "Braces",
+    "difficulty": "Médio",
+    "area": "logaritmos",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "\\log_a(xy)=\\log_a(x)+\\log_a(y)"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "equacoes-logaritmicas",
+    "title": "Equações Logarítmicas",
+    "description": "Resolução de equações envolvendo logaritmos.",
+    "icon": "Equal",
+    "difficulty": "Médio",
+    "area": "logaritmos",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "\\log_a(x)=b"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "inequacoes-logaritmicas",
+    "title": "Inequações Logarítmicas",
+    "description": "Desigualdades envolvendo funções logarítmicas.",
+    "icon": "ChevronsLeftRight",
+    "difficulty": "Difícil",
+    "area": "logaritmos",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "\\log_a(x)>b"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  }
+]

@@ -1,1 +1,206 @@
-[]
+[
+  {
+    "id": "angulos",
+    "title": "Ângulos",
+    "description": "Estudo dos ângulos, medidas e relações geométricas.",
+    "icon": "RotateCw",
+    "difficulty": "Fácil",
+    "area": "geometria-plana",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "a+b=180^\\circ"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "triangulos",
+    "title": "Triângulos",
+    "description": "Classificação, propriedades e relações métricas nos triângulos.",
+    "icon": "Triangle",
+    "difficulty": "Fácil",
+    "area": "geometria-plana",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "A=\\frac{bh}{2}"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "quadrilateros",
+    "title": "Quadriláteros",
+    "description": "Propriedades de quadrados, retângulos, trapézios e paralelogramos.",
+    "icon": "Square",
+    "difficulty": "Fácil",
+    "area": "geometria-plana",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "A=b\\cdot h"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "poligonos",
+    "title": "Polígonos",
+    "description": "Estudo de polígonos regulares e suas propriedades.",
+    "icon": "Hexagon",
+    "difficulty": "Médio",
+    "area": "geometria-plana",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "S=(n-2)\\cdot180^\\circ"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "circunferencia",
+    "title": "Circunferência",
+    "description": "Arcos, cordas, ângulos e relações na circunferência.",
+    "icon": "Circle",
+    "difficulty": "Médio",
+    "area": "geometria-plana",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "C=2\\pi r"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "areas",
+    "title": "Áreas",
+    "description": "Cálculo de áreas de figuras planas.",
+    "icon": "Scan",
+    "difficulty": "Médio",
+    "area": "geometria-plana",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "A=\\pi r^2"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "semelhanca",
+    "title": "Semelhança",
+    "description": "Razões de proporcionalidade entre figuras semelhantes.",
+    "icon": "Copy",
+    "difficulty": "Médio",
+    "area": "geometria-plana",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "\\frac{a}{b}=\\frac{c}{d}"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "congruencia",
+    "title": "Congruência",
+    "description": "Critérios de congruência de triângulos e figuras geométricas.",
+    "icon": "CheckSquare",
+    "difficulty": "Médio",
+    "area": "geometria-plana",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "LLL, LAL, ALA"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "teorema-de-tales",
+    "title": "Teorema de Tales",
+    "description": "Proporcionalidade entre segmentos determinados por retas paralelas.",
+    "icon": "Rows3",
+    "difficulty": "Médio",
+    "area": "geometria-plana",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "\\frac{a}{b}=\\frac{c}{d}"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "teorema-de-pitagoras",
+    "title": "Teorema de Pitágoras",
+    "description": "Relação métrica entre os lados do triângulo retângulo.",
+    "icon": "TriangleRight",
+    "difficulty": "Fácil",
+    "area": "geometria-plana",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "a^2+b^2=c^2"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "relacoes-metricas",
+    "title": "Relações Métricas",
+    "description": "Relações métricas em triângulos e circunferências.",
+    "icon": "Ruler",
+    "difficulty": "Difícil",
+    "area": "geometria-plana",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "h^2=mn"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "trigonometria-no-triangulo",
+    "title": "Trigonometria no Triângulo",
+    "description": "Razões trigonométricas aplicadas aos triângulos.",
+    "icon": "Waves",
+    "difficulty": "Médio",
+    "area": "geometria-plana",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "\\sin(x)=\\frac{cateto\\ oposto}{hipotenusa}"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  }
+]

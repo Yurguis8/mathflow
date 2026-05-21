@@ -1,1 +1,105 @@
-[]
+[
+  {
+    "id": "razoes-trigonometricas",
+    "title": "Razões Trigonométricas",
+    "description": "Definição e aplicação de seno, cosseno e tangente.",
+    "icon": "TriangleRight",
+    "difficulty": "Fácil",
+    "area": "trigonometria",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "\\sin(x)=\\frac{cateto\\ oposto}{hipotenusa}",
+        "\\cos(x)=\\frac{cateto\\ adjacente}{hipotenusa}"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "ciclo-trigonometrico",
+    "title": "Ciclo Trigonométrico",
+    "description": "Representação das funções trigonométricas no círculo trigonométrico.",
+    "icon": "Circle",
+    "difficulty": "Médio",
+    "area": "trigonometria",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "\\sin^2(x)+\\cos^2(x)=1"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "identidades-trigonometricas",
+    "title": "Identidades Trigonométricas",
+    "description": "Relações e identidades fundamentais da trigonometria.",
+    "icon": "RefreshCcw",
+    "difficulty": "Difícil",
+    "area": "trigonometria",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "\\tan(x)=\\frac{\\sin(x)}{\\cos(x)}"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "equacoes-trigonometricas",
+    "title": "Equações Trigonométricas",
+    "description": "Resolução de equações envolvendo funções trigonométricas.",
+    "icon": "Equal",
+    "difficulty": "Difícil",
+    "area": "trigonometria",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "\\sin(x)=a"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "leis-dos-senos-e-cossenos",
+    "title": "Leis dos Senos e Cossenos",
+    "description": "Relações trigonométricas em triângulos quaisquer.",
+    "icon": "Triangle",
+    "difficulty": "Médio",
+    "area": "trigonometria",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "\\frac{a}{\\sin(A)}=\\frac{b}{\\sin(B)}"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "funcoes-trigonometricas",
+    "title": "Funções Trigonométricas",
+    "description": "Gráficos e propriedades das funções trigonométricas.",
+    "icon": "Waves",
+    "difficulty": "Difícil",
+    "area": "trigonometria",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "f(x)=\\sin(x)"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  }
+]

@@ -1,1 +1,87 @@
-[]
+[
+  {
+    "id": "principio-fundamental-da-contagem",
+    "title": "Princípio Fundamental da Contagem",
+    "description": "Métodos básicos de contagem combinatória.",
+    "icon": "ListOrdered",
+    "difficulty": "Fácil",
+    "area": "analise-combinatoria",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "m \\cdot n"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "permutacao",
+    "title": "Permutação",
+    "description": "Contagem de rearranjos de elementos.",
+    "icon": "Shuffle",
+    "difficulty": "Médio",
+    "area": "analise-combinatoria",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "P_n=n!"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "arranjo",
+    "title": "Arranjo",
+    "description": "Seleção ordenada de elementos.",
+    "icon": "MoveRight",
+    "difficulty": "Médio",
+    "area": "analise-combinatoria",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "A_{n,p}=\\frac{n!}{(n-p)!}"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "combinacao",
+    "title": "Combinação",
+    "description": "Seleção não ordenada de elementos.",
+    "icon": "Combine",
+    "difficulty": "Médio",
+    "area": "analise-combinatoria",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "C_{n,p}=\\frac{n!}{p!(n-p)!}"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "binomio-de-newton",
+    "title": "Binômio de Newton",
+    "description": "Expansão de potências de binômios.",
+    "icon": "Sigma",
+    "difficulty": "Difícil",
+    "area": "analise-combinatoria",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "(a+b)^n"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  }
+]

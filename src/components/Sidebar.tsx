@@ -7,6 +7,7 @@ import {
   Calculator,
   Menu,
   Blocks,
+  Pi,
   X,
   NotebookText,
   LogOut,
@@ -21,6 +22,7 @@ export default function Sidebar() {
     { name: "Áreas", path: "/areas", icon: Blocks },
     { name: "Assuntos", path: "/topics", icon: BookOpen },
     { name: "Exercícios", path: "/exercises", icon: Calculator },
+    { name: "Enem", path: "/enem", icon: GraduationCap },
     { name: "Simulados", path: "/simulados", icon: NotebookText },
   ];
 
@@ -60,7 +62,7 @@ export default function Sidebar() {
   {/* Logo */}
   <div className="p-6 mt-14 md:mt-0 flex items-center gap-3 border-b border-slate-200 dark:border-slate-800 shrink-0">
     <div className="bg-gray-600 p-2 rounded-xl shrink-0">
-      <GraduationCap className="text-white w-6 h-6" />
+      <Pi className="text-white w-6 h-6" />
     </div>
 
     <span className="font-bold text-xl text-slate-800 dark:text-white tracking-tight">

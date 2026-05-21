@@ -77,38 +77,60 @@ if (totalExercises >= 70) {
   };
 }
 
-  const stats = [
-    { 
-      label: "Exercícios Concluídos", 
-      value: dashboardData.totalCompleted.toString(), 
-      icon: Calculator, 
-      color: "text-blue-600 dark:text-blue-300", 
-      bg: "bg-blue-50 dark:bg-slate-800" 
-    },
-    { 
-      label: "Tempo de Estudo", 
-      value: `${Math.floor(dashboardData.totalStudyTime / 3600)}h`, 
-      icon: Clock, 
-      color: "text-amber-600 dark:text-amber-300", 
-      bg: "bg-amber-50 dark:bg-slate-800" 
-    },
-    { 
-      label: "Média de Acertos", 
-      value: `${dashboardData.accuracy}%`, 
-      icon: Target, 
-      color: "text-green-600 dark:text-green-300", 
-      bg: "bg-green-50 dark:bg-slate-800" 
-    },
-    { 
-      label: "Nível", 
-      value: medal.label, 
-      icon: Trophy, 
-      color: medal.color, 
-      bg: medal.bg,
-      border: medal.border
-    },
-  ];
+// Converte o tempo total para minutos e horas inteiras
+const totalMinutes = Math.floor(dashboardData.totalStudyTime / 60);
+const totalHours = Math.floor(dashboardData.totalStudyTime / 3600);
 
+// Se for menor que 1 hora (3600 segundos), mostra em minutos. Se não, mostra em horas.
+const displayStudyTime = dashboardData.totalStudyTime < 3600 
+  ? `${totalMinutes} min` 
+  : `${totalHours} h`;
+
+const stats = [
+  { 
+    label: "Exercícios Concluídos", 
+    value: dashboardData.totalCompleted.toString(), 
+    icon: Calculator, 
+    color: "text-blue-600 dark:text-blue-300", 
+    bg: "bg-blue-50 dark:bg-slate-800" 
+  },
+  { 
+    label: "Tempo de Estudo", 
+    value: displayStudyTime, // <-- Variável dinâmica inserida aqui
+    icon: Clock, 
+    color: "text-amber-600 dark:text-amber-300", 
+    bg: "bg-amber-50 dark:bg-slate-800" 
+  },
+  { 
+    label: "Média de Acertos", 
+    value: `${dashboardData.accuracy}%`, 
+    icon: Target, 
+    color: "text-green-600 dark:text-green-300", 
+    bg: "bg-green-50 dark:bg-slate-800" 
+  },
+  { 
+    label: "Nível", 
+    value: medal.label, 
+    icon: Trophy, 
+    color: medal.color, 
+    bg: medal.bg,
+    border: medal.border
+  },
+];
+// Filtra e ordena os tópicos para pegar os 2 com menor aproveitamento
+const lowestProgressTopics = [...dashboardData.progress]
+  .map(topic => {
+    // Calcula o aproveitamento atual do tópico
+    const percentage = topic.completed_questions > 0 
+      ? (topic.correct_answers / topic.completed_questions) * 100 
+      : 0;
+    return { ...topic, percentage };
+  })
+  // Ordena do MENOR aproveitamento para o MAIOR aproveitamento
+  .sort((a, b) => a.percentage - b.percentage)
+  // Pega apenas os 2 primeiros (os dois piores)
+  .slice(0, 2);
+  
   return (
     <div className="max-w-7xl mx-auto space-y-8 animate-in fade-in duration-700">
       <section>
@@ -147,60 +169,56 @@ if (totalExercises >= 70) {
       </section>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        <div className="lg:col-span-2 space-y-6">
-          <h2 className="text-xl font-bold flex items-center gap-3 dark:text-slate-200">
-            <TrendingUp className="w-5 h-5 text-blue-600 dark:text-white" />
-            Seu progresso por tópico
-          </h2>
-          
-          <div className="space-y-4">
-            {dashboardData.progress.length > 0 ? (
-              dashboardData.progress.map((topic) => (
-                <Link 
-                  key={topic.id}
-                  to={`/topic/${topic.topic_name.toLowerCase().replace(/ /g, '-')}`}
-                  className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-4 group transition-all hover:border-blue-500 dark:hover:border-white"
-                >
-                  <div className="flex items-center gap-4 w-full sm:w-auto">
-                    <div className="w-14 h-14 bg-slate-50 dark:bg-slate-800 rounded-xl flex items-center justify-center shrink-0">
-                      <BookOpen className="w-7 h-7 text-blue-600 dark:text-blue-300" />
-                    </div>
-                    <div>
-                      <h3 className="font-bold text-slate-800 dark:text-blue-100 group-hover:text-blue-600 dark:group-hover:text-white transition-colors">
-                        {topic.topic_name}
-                      </h3>
-                      <p className="text-xs text-slate-400 dark:text-slate-500">
-                        {topic.correct_answers} acertos de {topic.completed_questions} questões
-                      </p>
-                    </div>
-                  </div>
-                  
-                  <div className="w-full sm:w-48">
-                    <div className="flex justify-between text-[10px] font-bold uppercase tracking-widest mb-1.5 dark:text-slate-500">
-                      <span>Aproveitamento</span>
-                      {/* Azul vira Branco no texto do progresso tbm */}
-                      <span className="text-blue-600 dark:text-white">
-                        {topic.completed_questions > 0 
-                          ? Math.round((topic.correct_answers / topic.completed_questions) * 100) 
-                          : 0}%
-                      </span>
-                    </div>
-                    <div className="w-full h-2 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
-                      <motion.div 
-                        initial={{ width: 0 }}
-                        animate={{ width: `${(topic.correct_answers / topic.completed_questions) * 100}%` }}
-                        // Azul vira Branco na barra de progresso
-                        className="h-full bg-blue-600 dark:bg-white rounded-full"
-                      />
-                    </div>
-                  </div>
-                </Link>
-              ))
-            ) : (
-              <div className="text-center py-12 bg-white dark:bg-slate-900 rounded-2xl border border-dashed border-slate-300 dark:border-slate-700">
-                <p className="text-slate-500">Nenhum progresso registrado ainda.</p>
+  <div className="lg:col-span-2 space-y-6">
+    <h2 className="text-xl font-bold flex items-center gap-3 dark:text-slate-200">
+      <TrendingUp className="w-5 h-5 text-blue-600 dark:text-white" />
+      Foco de Estudo (Menor Aproveitamento)
+    </h2>
+    
+    <div className="space-y-4">
+      {lowestProgressTopics.length > 0 ? (
+        lowestProgressTopics.map((topic) => (
+          <Link 
+            key={topic.id}
+            to={`/topic/${topic.topic_name.toLowerCase().replace(/ /g, '-')}`}
+            className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-4 group transition-all hover:border-blue-500 dark:hover:border-white"
+          >
+            <div className="flex items-center gap-4 w-full sm:w-auto">
+              <div className="w-14 h-14 bg-slate-50 dark:bg-slate-800 rounded-xl flex items-center justify-center shrink-0">
+                <BookOpen className="w-7 h-7 text-blue-600 dark:text-blue-300" />
               </div>
-            )}
+              <div>
+                <h3 className="font-bold text-slate-800 dark:text-blue-100 group-hover:text-blue-600 dark:group-hover:text-white transition-colors">
+                  {topic.topic_name}
+                </h3>
+                <p className="text-xs text-slate-400 dark:text-slate-500">
+                  {topic.correct_answers} acertos de {topic.completed_questions} questões
+                </p>
+              </div>
+            </div>
+            
+            <div className="w-full sm:w-48">
+              <div className="flex justify-between text-[10px] font-bold uppercase tracking-widest mb-1.5 dark:text-slate-500">
+                <span>Aproveitamento</span>
+                <span className="text-blue-600 dark:text-white">
+                  {Math.round(topic.percentage)}%
+                </span>
+              </div>
+              <div className="w-full h-2 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+                <motion.div 
+                  initial={{ width: 0 }}
+                  animate={{ width: `${topic.percentage}%` }}
+                  className="h-full bg-blue-600 dark:bg-white rounded-full"
+                />
+              </div>
+            </div>
+          </Link>
+        ))
+      ) : (
+        <div className="text-center py-12 bg-white dark:bg-slate-900 rounded-2xl border border-dashed border-slate-300 dark:border-slate-700">
+          <p className="text-slate-500">Nenhum progresso registrado ainda.</p>
+        </div>
+      )}
           </div>
 
           {/* Banner de Desafio - Removido brilhos e sombras fortes */}

@@ -1,1 +1,139 @@
-[]
+[
+  {
+    "id": "conceito-e-grafico",
+    "title": "Conceito e Gráfico",
+    "description": "Definição de funções, domínio, imagem e interpretação gráfica.",
+    "icon": "LineChart",
+    "difficulty": "Fácil",
+    "area": "funcoes",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "f: A \\to B"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "funcao-afim",
+    "title": "Função Afim",
+    "description": "Estudo de funções do primeiro grau e seus gráficos.",
+    "icon": "TrendingUp",
+    "difficulty": "Fácil",
+    "area": "funcoes",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "f(x)=ax+b"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "funcao-quadratica",
+    "title": "Função Quadrática",
+    "description": "Funções do segundo grau, parábolas e análise gráfica.",
+    "icon": "ChartNoAxesCombined",
+    "difficulty": "Médio",
+    "area": "funcoes",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "f(x)=ax^2+bx+c"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "funcao-modular",
+    "title": "Função Modular",
+    "description": "Funções envolvendo módulo e interpretação geométrica.",
+    "icon": "Split",
+    "difficulty": "Médio",
+    "area": "funcoes",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "f(x)=|x|"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "funcao-exponencial",
+    "title": "Função Exponencial",
+    "description": "Funções com variável no expoente e aplicações.",
+    "icon": "Activity",
+    "difficulty": "Médio",
+    "area": "funcoes",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "f(x)=a^x"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "funcao-logaritmica",
+    "title": "Função Logarítmica",
+    "description": "Funções logarítmicas, propriedades e gráficos.",
+    "icon": "Logs",
+    "difficulty": "Médio",
+    "area": "funcoes",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "f(x)=\\log_a(x)"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "funcoes-trigonometricas",
+    "title": "Funções Trigonométricas",
+    "description": "Estudo das funções seno, cosseno e tangente.",
+    "icon": "Waves",
+    "difficulty": "Difícil",
+    "area": "funcoes",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "f(x)=\\sin(x)",
+        "f(x)=\\cos(x)"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "composicao-e-inversa",
+    "title": "Composição e Inversa",
+    "description": "Composição de funções e cálculo da função inversa.",
+    "icon": "RefreshCcw",
+    "difficulty": "Difícil",
+    "area": "funcoes",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "(f \\circ g)(x)=f(g(x))"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  }
+]

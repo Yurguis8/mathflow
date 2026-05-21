@@ -1,1 +1,121 @@
-[]
+[
+  {
+    "id": "prismas",
+    "title": "Prismas",
+    "description": "Estudo das propriedades, áreas e volumes dos prismas.",
+    "icon": "Box",
+    "difficulty": "Fácil",
+    "area": "geometria-espacial",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "V=A_b\\cdot h"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "piramides",
+    "title": "Pirâmides",
+    "description": "Áreas e volumes de pirâmides.",
+    "icon": "Pyramid",
+    "difficulty": "Médio",
+    "area": "geometria-espacial",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "V=\\frac{A_b\\cdot h}{3}"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "cilindros",
+    "title": "Cilindros",
+    "description": "Cálculo de área e volume dos cilindros.",
+    "icon": "Cylinder",
+    "difficulty": "Médio",
+    "area": "geometria-espacial",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "V=\\pi r^2 h"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "cones",
+    "title": "Cones",
+    "description": "Estudo das propriedades e volume dos cones.",
+    "icon": "Cone",
+    "difficulty": "Médio",
+    "area": "geometria-espacial",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "V=\\frac{\\pi r^2 h}{3}"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "esferas",
+    "title": "Esferas",
+    "description": "Área da superfície e volume das esferas.",
+    "icon": "Globe",
+    "difficulty": "Médio",
+    "area": "geometria-espacial",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "V=\\frac{4}{3}\\pi r^3"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "areas-e-volumes",
+    "title": "Áreas e Volumes",
+    "description": "Cálculo geral de áreas e volumes de sólidos geométricos.",
+    "icon": "Scan3D",
+    "difficulty": "Médio",
+    "area": "geometria-espacial",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "V=A_b\\cdot h"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  },
+  {
+    "id": "poliedros",
+    "title": "Poliedros",
+    "description": "Estudo dos poliedros e da relação de Euler.",
+    "icon": "Shapes",
+    "difficulty": "Difícil",
+    "area": "geometria-espacial",
+    "content": {
+      "explanation": "Não cadastrado",
+      "formulas": [
+        "V-A+F=2"
+      ],
+      "example": "Não cadastrado",
+      "videoUrl": "#",
+      "pdfUrl": "#"
+    }
+  }
+]
