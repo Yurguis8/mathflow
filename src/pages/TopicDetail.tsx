@@ -133,8 +133,14 @@ export default function TopicDetail() {
             </a>
           )}
           
+          {/* CORREÇÃO AQUI: Ajustada a rota para incluir a área e enviado o state padrão */}
           <Link 
-            to={`/exercises/${topic.id}`}
+            to={`/exercises/${topic.area}/${topic.id}`}
+            state={{
+              selectedLevel: "Todos",
+              onlyEnem: false,
+              selectedYear: "Todos" // <- ADICIONADO AQUI TAMBÉM
+            }}
             className="flex items-center justify-center gap-3 bg-blue-600 text-white px-6 py-4 rounded-md font-bold text-lg hover:bg-blue-700 transition-all hover:-translate-y-1 w-full sm:w-auto"
           >
             Começar Exercícios

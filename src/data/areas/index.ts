@@ -5,7 +5,7 @@ const areas = [
     description:
       "Frações, porcentagem, operações fundamentais e conjuntos numéricos.",
     difficulty: "Fácil",
-    pdf: "#",
+    pdf: "https://www.dm.ufscar.br/~ptlini/paterlini_arit_2ed_19_02_2017.pdf",
   },
 
   {
@@ -14,7 +14,7 @@ const areas = [
     description:
       "Equações, polinômios, produtos notáveis e expressões algébricas.",
     difficulty: "Médio",
-    pdf: "#",
+    pdf: "https://www.ced.seduc.ce.gov.br/wp-content/uploads/sites/82/2022/03/caderno06_deAluno.pdf",
   },
 
   {
@@ -41,7 +41,7 @@ const areas = [
     description:
       "Função afim, quadrática, modular, exponencial e logarítmica.",
     difficulty: "Difícil",
-    pdf: "#",
+    pdf: "https://barbosadejesu.wpcomstaging.com/wp-content/uploads/2021/09/fundamentos-da-matematica-elementar-1-.pdf",
   },
 
   {

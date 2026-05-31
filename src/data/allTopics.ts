@@ -9,13 +9,10 @@ import analiseCombinatoria from "./areas/analise-combinatoria/topics.json";
 import geometriaAnalitica from "./areas/geometria-analitica/topics.json";
 import matrizes from "./areas/matrizes/topics.json";
 import logaritmos from "./areas/logaritmos/topics.json";
-import calculo from "./areas/calculo/topics.json";
-import enem from "./areas/enem/topics.json";
 
 const allTopics = [
   ...aritmetica,
   ...algebra,
-  ...enem,
   ...geometriaPlana,
   ...geometriaEspacial,
   ...funcoes,
@@ -25,7 +22,6 @@ const allTopics = [
   ...geometriaAnalitica,
   ...matrizes,
   ...logaritmos,
-  ...calculo,
 ];
 
 export default allTopics;

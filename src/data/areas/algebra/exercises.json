@@ -1,7 +1,7 @@
 [
   {
     "id": "enem-2022-136",
-    "topicId": "interpretacao-grafica",
+    "topicId": "equacoes-segundo-grau",
     "question": "Questão 136 - ENEM 2022\n\nUma máquina em operação tem sua temperatura T monitorada por meio de um registro gráfico, ao longo do tempo t. Essa máquina possui um pistão cuja velocidade V varia com a temperatura T da máquina, de acordo com a expressão V=T²−4. Após a máquina funcionar durante o intervalo de tempo de 10 horas, o seu operador analisa o registro gráfico, apresentado na figura, para avaliar a necessidade de eventuais ajustes, sabendo que a máquina apresenta falhas de funcionamento quando a velocidade do pistão se anula.\n\nQuantas vezes a velocidade do pistão se anulou durante as 10 horas de funcionamento?",
     "options": [
       "1",
@@ -17,331 +17,8 @@
     "resolution": "Resolução ainda não disponível."
   },
   {
-    "id": "enem-2022-137",
-    "topicId": "probabilidade-condicional-e-eventos",
-    "question": "Questão 137 - ENEM 2022\n\nA World Series é a decisão do campeonato norte-americano de beisebol. Os dois times que chegam a essa fase jogam, entre si, até sete partidas. O primeiro desses times que completar quatro vitórias é declarado campeão. Considere que, em todas as partidas, a probabilidade de qualquer um dos dois times vencer é sempre\n\nQual é a probabilidade de o time campeão ser aquele que venceu a primeira partida da World Series?",
-    "options": [
-      "https://enem.dev/2022/questions/137/a62b92ab-65a1-4608-a3ac-3a1e08008845.png",
-      "https://enem.dev/2022/questions/137/bcc4e92c-3d8c-40e8-8651-b1829f138eb3.png",
-      "https://enem.dev/2022/questions/137/b783250d-3cdc-48c4-b60a-44d5b2ccc932.png",
-      "https://enem.dev/2022/questions/137/ccd84f4e-31eb-4dfe-85be-202683fe5af7.png",
-      "https://enem.dev/2022/questions/137/1cb4062d-0ed1-45ac-a1f7-ce783f591515.png"
-    ],
-    "correctIndex": 2,
-    "image": "https://enem.dev/2022/questions/137/091aafba-f2dd-4f19-9655-73e6bd1599b6.png",
-    "source": "ENEM",
-    "difficulty": "Difícil",
-    "resolution": "Resolução ainda não disponível."
-  },
-  {
-    "id": "enem-2022-138",
-    "topicId": "estatistica",
-    "question": "Questão 138 - ENEM 2022\n\nO gráfico apresenta os totais de receitas e despesas de uma empresa, expressos em milhão de reais, no decorrer dos meses de um determinado ano. A empresa obtém lucro quando a diferença entre receita e despesa é positiva e tem prejuízo quando essa diferença é negativa.\n\nQual é a mediana, em milhão de reais, dos valores dos lucros apurados pela empresa nesse ano?",
-    "options": [
-      "1,5",
-      "2,0",
-      "2,9",
-      "3,0",
-      "5,5"
-    ],
-    "correctIndex": 3,
-    "image": "https://enem.dev/2022/questions/138/d738a15a-a083-4720-af91-80d2b3259c9f.png",
-    "source": "ENEM",
-    "difficulty": "Fácil",
-    "resolution": "Resolução ainda não disponível."
-  },
-  {
-    "id": "enem-2022-139",
-    "topicId": "razao-e-proporcao",
-    "question": "Questão 139 - ENEM 2022\n\nUm casal está reformando a cozinha de casa e decidiu comprar um refrigerador novo. Observando a planta da nova cozinha, desenhada na escala de 1: 50, notaram que o espaço destinado ao refrigerador tinha 3,8 cm de altura e 1,6 cm de largura. Eles sabem que os fabricantes de refrigeradores indicam que, para um bom funcionamento e fácil manejo na limpeza, esses eletrodomésticos devem ser colocados em espaços que permitam uma distância de, pelo menos, 10 cm de outros móveis ou paredes, tanto na parte superior quanto nas laterais. O casal comprou um refrigerador que caberia no local a ele destinado na nova cozinha, seguindo as instruções do fabricante.\n\nEsse refrigerador tem altura e largura máximas, em metro, respectivamente, iguais a",
-    "options": [
-      "1,80 e 0,60.",
-      "1,80 e 0,70.",
-      "1,90 e 0,80.",
-      "2,00 e 0,90.",
-      "2,00 e 1,00."
-    ],
-    "correctIndex": 0,
-    "image": null,
-    "source": "ENEM",
-    "difficulty": "Médio",
-    "resolution": "Resolução ainda não disponível."
-  },
-  {
-    "id": "enem-2022-140",
-    "topicId": "operacoes-fundamentais",
-    "question": "Questão 140 - ENEM 2022\n\nForam convidadas 32 equipes para um torneio de futebol, que foram divididas em 8 grupos com 4 equipes, sendo que, dentro de um grupo, cada equipe disputa uma única partida contra cada uma das demais equipes de seu grupo. A primeira e a segunda colocadas de cada grupo seguem para realizar as 8 partidas da próxima fase do torneio, chamada oitavas de final. Os vencedores das partidas das oitavas de final seguem para jogar as 4 partidas das quartas de final. Os vencedores das quartas de final disputam as 2 partidas das semifinais, e os vencedores avançam para a grande final, que define a campeã do torneio. Pelas regras do torneio, cada equipe deve ter um período de descanso de, no mínimo, 3 dias entre dois jogos por ela disputados, ou seja, se um time disputar uma partida, por exemplo, num domingo, só poderá disputar a partida seguinte a partir da quinta-feira da mesma semana.\n\nO número mínimo de dias necessários para a realização desse torneio é",
-    "options": [
-      "22.",
-      "25.",
-      "28.",
-      "48.",
-      "64."
-    ],
-    "correctIndex": 1,
-    "image": null,
-    "source": "ENEM",
-    "difficulty": "Médio",
-    "resolution": "Resolução ainda não disponível."
-  },
-  {
-    "id": "enem-2022-141",
-    "topicId": "probabilidade-condicional-e-eventos",
-    "question": "Questão 141 - ENEM 2022\n\nEm um jogo de bingo, as cartelas contêm 16 quadrículas dispostas em linhas e colunas. Cada quadrícula tem impresso um número, dentre os inteiros de 1 a 50, sem repetição de número. Na primeira rodada, um número é sorteado, aleatoriamente, dentre os 50 possíveis. Em todas as rodadas, o número sorteado é descartado e não participa dos sorteios das rodadas seguintes. Caso o jogador tenha em sua cartela o número sorteado, ele o assinala na cartela. Ganha o jogador que primeiro conseguir preencher quatro quadrículas que formam uma linha, uma coluna ou uma diagonal, conforme os tipos de situações ilustradas na Figura 1. O jogo inicia e, nas quatro primeiras rodadas, foram sorteados os seguintes números: 03, 27, 07 e 48. Ao final da quarta rodada, somente Pedro possuía uma cartela que continha esses quatro números sorteados, sendo que todos os demais jogadores conseguiram assinalar, no máximo, um desses números em suas cartelas. Observe na Figura 2 o cartão de Pedro após as quatro primeiras rodadas.\n\nA probabilidade de Pedro ganhar o jogo em uma das duas próximas rodadas é",
-    "options": [
-      "https://enem.dev/2022/questions/141/cd5a2722-63ec-4baf-bb68-20df7b0342b6.png",
-      "https://enem.dev/2022/questions/141/3098c816-0b2d-4a41-bd93-48a7103007d3.png",
-      "https://enem.dev/2022/questions/141/f1b1ddb0-011b-422f-ad9c-be16c2322ab9.png",
-      "https://enem.dev/2022/questions/141/182be64f-689b-4ab6-b35b-f0dfae3b5a54.png",
-      "https://enem.dev/2022/questions/141/3d293613-50b5-494a-b8f3-52e16ae9f866.png"
-    ],
-    "correctIndex": 4,
-    "image": "https://enem.dev/2022/questions/141/e8e788ea-4e28-4ceb-b928-494d2ca68033.png",
-    "source": "ENEM",
-    "difficulty": "Difícil",
-    "resolution": "Resolução ainda não disponível."
-  },
-  {
-    "id": "enem-2022-142",
-    "topicId": "principio-fundamental",
-    "question": "Questão 142 - ENEM 2022\n\nUma montadora de automóveis divulgou que oferta a seus clientes mais de 1 000 configurações diferentes de carro, variando o modelo, a motorização, os opcionais e a cor do veículo. Atualmente, ela oferece 7 modelos de carros com 2 tipos de motores: 1.0 e 1.6. Já em relação aos opcionais, existem 3 escolhas possíveis: central multimídia, rodas de liga leve e bancos de couro, podendo o cliente optar por incluir um, dois, três ou nenhum dos opcionais disponíveis.\n\nPara ser fiel à divulgação feita, a quantidade mínima de cores que a montadora deverá disponibilizar a seus clientes é",
-    "options": [
-      "8.",
-      "9.",
-      "11.",
-      "18.",
-      "24."
-    ],
-    "correctIndex": 1,
-    "image": null,
-    "source": "ENEM",
-    "difficulty": "Médio",
-    "resolution": "Resolução ainda não disponível."
-  },
-  {
-    "id": "enem-2022-143",
-    "topicId": "planificacao",
-    "question": "Questão 143 - ENEM 2022\n\nDentre as diversas planificações possíveis para o cubo, uma delas é a que se encontra apresentada na Figura 1. Em um cubo, foram pintados, em três de suas faces, quadrados de cor cinza escura, que ocupam um quarto dessas faces, tendo esses três quadrados um vértice em comum, conforme ilustrado na Figura 2.\n\nA planificação do cubo da Figura 2, conforme o tipo de planificação apresentada na Figura 1, é",
-    "options": [
-      "https://enem.dev/2022/questions/143/37b0d8a0-5992-4fac-8f58-93924c6877e2.jpg",
-      "https://enem.dev/2022/questions/143/c2a2bae5-e20a-4bdb-af9e-b6d37b0cdc81.jpg",
-      "https://enem.dev/2022/questions/143/bfd0a9ed-5ff2-444f-b297-e2f37eba789b.jpg",
-      "https://enem.dev/2022/questions/143/b76f04c7-e485-4c93-8e57-60d5ce9f5623.jpg",
-      "https://enem.dev/2022/questions/143/2e478466-a3b6-4a44-8c04-a6187dc164df.jpg"
-    ],
-    "correctIndex": 0,
-    "image": "https://enem.dev/2022/questions/143/4da64c40-da53-4205-b673-aa5b6274e3e2.jpg",
-    "source": "ENEM",
-    "difficulty": "Difícil",
-    "resolution": "Resolução ainda não disponível."
-  },
-  {
-    "id": "enem-2022-145",
-    "topicId": "razao-e-proporcao",
-    "question": "Questão 145 - ENEM 2022\n\nO pacote básico de um jogo para smartphone, que é vendido a R$ 50,00, contém 2 000 gemas e 100 000 moedas de ouro, que são itens utilizáveis nesse jogo. A empresa que comercializa esse jogo decidiu criar um pacote especial que será vendido a R$ 100,00 e que se diferenciará do pacote básico por apresentar maiores quantidades de gemas e moedas de ouro. Para estimular as vendas desse novo pacote, a empresa decidiu inserir nele 6 000 gemas a mais, em relação ao que o cliente teria caso optasse por comprar, com a mesma quantia, dois pacotes básicos.\n\nA quantidade de moedas de ouro que a empresa deverá inserir ao pacote especial, para que seja mantida a mesma proporção existente entre as quantidades de gemas e de moedas de ouro contidas no pacote básico, é",
-    "options": [
-      "50 000.",
-      "100 000.",
-      "200 000.",
-      "300 000.",
-      "400 000."
-    ],
-    "correctIndex": 4,
-    "image": null,
-    "source": "ENEM",
-    "difficulty": "Fácil",
-    "resolution": "Resolução ainda não disponível."
-  },
-  {
-    "id": "enem-2022-146",
-    "topicId": "equacoes-e-sistemas",
-    "question": "Questão 146 - ENEM 2022\n\nUm parque tem dois circuitos de tamanhos diferentes para corridas. Um corredor treina nesse parque e, no primeiro dia, inicia seu treino percorrendo 3 voltas em torno do circuito maior e 2 voltas em torno do menor, perfazendo um total de 1 800 m. Em seguida, dando continuidade a seu treino, corre mais 2 voltas em torno do circuito maior e 1 volta em torno del menor, percorrendo mais 1 100 m. No segundo dia, ele pretende percorrer 5 000 m nos circuitos do parque, fazendo um número inteiro de voltas em torno deles e de modo que o número de voltas seja o maior possível.\n\nA soma do número de voltas em torno dos dois circuitos, no segundo dia, será",
-    "options": [
-      "10.",
-      "13.",
-      "14.",
-      "15.",
-      "16"
-    ],
-    "correctIndex": 4,
-    "image": null,
-    "source": "ENEM",
-    "difficulty": "Difícil",
-    "resolution": "Resolução ainda não disponível."
-  },
-  {
-    "id": "enem-2022-147",
-    "topicId": "porcentagem",
-    "question": "Questão 147 - ENEM 2022\n\nUma equipe de marketing digital foi contratada para aumentar as vendas de um produto ofertado em um site de comércio eletrônico. Para isso, elaborou um anúncio que, quando o cliente clica sobre ele, é direcionado para a página de vendas do produto. Esse anúncio foi divulgado em duas redes sociais, A e B, e foram obtidos os seguintes resultados: • rede social A: o anúncio foi visualizado por 3 000 pessoas; 10% delas clicaram sobre o anúncio e foram redirecionadas para o site; 3% das que clicaram sobre o anúncio compraram o produto. O investimento feito para a publicação do anúncio nessa rede foi de R$ 100,00; • rede social B: o anúncio foi visualizado por 1 000 pessoas; 30% delas clicaram sobre o anúncio e foram redirecionadas para o site; 2% das que clicaram sobre o anúncio compraram o produto. O investimento feito para a publicação do anúncio nessa rede foi de R$ 200,00. Por experiência, o pessoal da equipe de marketing considera que a quantidade de novas pessoas que verão o anúncio é diretamente proporcional ao investimento realizado, e que a quantidade de pessoas que comprarão o produto também se manterá proporcional à quantidade de pessoas que clicarão sobre o anúncio. O responsável pelo produto decidiu, então, investir mais R$ 300,00 em cada uma das duas redes sociais para a divulgação desse anúncio e obteve, de fato, o aumento proporcional esperado na quantidade de clientes que compraram esse produto. Para classificar o aumento obtido na quantidade (Q) de compradores desse produto, em consequência dessa segunda divulgação, em relação aos resultados observados na primeira divulgação, o responsável pelo produto adotou o seguinte critério: • Q ≤ 60%: não satisfatório; • 60% < Q ≤ 100%: regular; • 100% < Q ≤ 150%: bom; • 150% < Q ≤ 190%: muito bom; • 190% < Q ≤ 200%: excelente\n\nO aumento na quantidade de compradores, em consequência dessa segunda divulgação, em relação ao que foi registrado com a primeira divulgação, foi classificado como",
-    "options": [
-      "Não satisfatório.",
-      "Regular.",
-      "Bom.",
-      "Muito bom.",
-      "Excelente."
-    ],
-    "correctIndex": 2,
-    "image": null,
-    "source": "ENEM",
-    "difficulty": "Médio",
-    "resolution": "Resolução ainda não disponível."
-  },
-  {
-    "id": "enem-2022-148",
-    "topicId": "potenciacao-e-radiciacao",
-    "question": "Questão 148 - ENEM 2022\n\nA luminosidade _L_ de uma estrela está relacionada com o raio _R_ e com a temperatura _T_ dessa estrela segundo a Lei de Stefan-Boltzmann: em que c é uma constante igual para todas as estrelas. Disponível em: http://ciencia.hsw.uol.com.br. Acesso em: 22 nov. 2013 (adaptado) Considere duas estrelas _E_ e _F_, sendo que a estrela _E_ tem metade do raio da estrela _F_ e o dobro da temperatura de _F_.\n\nIndique por LE e LF suas respectivas luminosidades. A relação entre as luminosidades dessas duas estrelas é dada por",
-    "options": [
-      "https://enem.dev/2022/questions/148/623219f3-b839-4f65-b990-99e2416e78ac.png",
-      "https://enem.dev/2022/questions/148/ac0ff64f-89bb-4e7c-a004-f3a22719d728.png",
-      "https://enem.dev/2022/questions/148/282300db-f32c-4e24-b4ec-da66e734e9c4.png",
-      "https://enem.dev/2022/questions/148/2e2fa9f3-4c51-4920-8048-790d9f42ed80.png",
-      "https://enem.dev/2022/questions/148/c37d4dda-0f9a-4756-a282-99e7ddd27c64.png"
-    ],
-    "correctIndex": 3,
-    "image": "https://enem.dev/2022/questions/148/00e98ef8-6901-4d38-91f1-1fa1afda8b14.png",
-    "source": "ENEM",
-    "difficulty": "Fácil",
-    "resolution": "Resolução ainda não disponível."
-  },
-  {
-    "id": "enem-2022-149",
-    "topicId": "estatistica",
-    "question": "Questão 149 - ENEM 2022\n\nUma das informações que pode auxiliar no dimensionamento do número de pediatras que devem atender em uma Unidade Básica de Saúde (UBS) é o número que representa a mediana da quantidade de crianças por família existente na região sob sua responsabilidade. O quadro mostra a distribuição das frequências do número de crianças por família na região de responsabilidade de uma UBS.\n\nO número que representa a mediana da quantidade de crianças por família nessa região é",
-    "options": [
-      "1,0.",
-      "1,5.",
-      "1,9.",
-      "2,1.",
-      "2,5."
-    ],
-    "correctIndex": 1,
-    "image": "https://enem.dev/2022/questions/149/d92eba46-c91d-43d9-accf-ec06c4506ac1.png",
-    "source": "ENEM",
-    "difficulty": "Médio",
-    "resolution": "Resolução ainda não disponível."
-  },
-  {
-    "id": "enem-2022-150",
-    "topicId": "funcao-quadratica",
-    "question": "Questão 150 - ENEM 2022\n\nEm jogos de voleibol, um saque é invalidado se a bola atingir o teto do ginásio onde ocorre o jogo. Um jogador de uma equipe tem um saque que atinge uma grande altura. Seu recorde foi quando a batida do saque se iniciou a uma altura de 1,5 m do piso da quadra, e a trajetória da bola foi descrita pela parábola , em que y representa a altura da bola em relação ao eixo x (das abscissas) que está localizado a 1,5 m do piso da quadra, como representado na figura. Suponha que em todas as partidas algum saque desse jogador atinja a mesma altura do seu recorde. A equipe desse jogador participou de um torneio de voleibol no qual jogou cinco partidas, cada uma delas em um ginásio diferente. As alturas dos tetos desses ginásios, em relação aos pisos das quadras, são: • ginásio I: 17 m; • ginásio II: 18 m; • ginásio III: 19 m; • ginásio IV: 21 m; • ginásio V: 40 m.\n\nO saque desse atleta foi invalidado",
-    "options": [
-      "Apenas no ginásio I.",
-      "Apenas nos ginásios I e II.",
-      "Apenas nos ginásios I, II e III.",
-      "Apenas nos ginásios I, II, III e IV.",
-      "Em todos os ginásios."
-    ],
-    "correctIndex": 3,
-    "image": "https://enem.dev/2022/questions/150/764fcc6a-f737-404f-867b-7caacf69134e.png",
-    "source": "ENEM",
-    "difficulty": "Médio",
-    "resolution": "Resolução ainda não disponível."
-  },
-  {
-    "id": "enem-2022-151",
-    "topicId": "unidades-de-medida",
-    "question": "Questão 151 - ENEM 2022\n\nUm médico faz o acompanhamento clínico de um grupo de pessoas que realizam atividades físicas diariamente. Ele observou que a perda média de massa dessas pessoas para cada hora de atividade física era de 1,5 kg. Sabendo que a massa de 1 L de água é de 1 kg, ele recomendou que ingerissem, ao longo das 3 horas seguintes ao final da atividade, uma quantidade total de água correspondente a 40% a mais do que a massa perdida na atividade física, para evitar desidratação. Seguindo a recomendação médica, uma dessas pessoas ingeriu, certo dia, um total de 1,7 L de água após terminar seus exercícios físicos.\n\nPara que a recomendação médica tenha efetivamente sido respeitada, a atividade física dessa pessoa, nesse dia, durou",
-    "options": [
-      "30 minutos ou menos.",
-      "Mais de 35 e menos de 45 minutos.",
-      "Mais de 45 e menos de 55 minutos.",
-      "Mais de 60 e menos de 70 minutos.",
-      "70 minutos ou mais."
-    ],
-    "correctIndex": 2,
-    "image": null,
-    "source": "ENEM",
-    "difficulty": "Médio",
-    "resolution": "Resolução ainda não disponível."
-  },
-  {
-    "id": "enem-2022-152",
-    "topicId": "sequencias-e-progressoes",
-    "question": "Questão 152 - ENEM 2022\n\nEm uma sala de cinema, para garantir que os espectadores vejam toda a imagem projetada na tela, a disposição das poltronas deve obedecer à norma técnica da Associação Brasileira de Normas Técnicas (ABNT), que faz as seguintes indicações: • Distância mínima (Dmín) entre a tela de projeção e o encosto da poltrona da primeira fileira deve ser de, pelo menos, 60% da largura (L) da tela. • Distância máxima (Dmáx) entre a tela de projeção e o encosto da poltrona da última fileira deve ser o dobro da largura (L) da tela, sendo aceitável uma distância de até 2,9 vezes a largura (L) da tela. Para o espaçamento entre as fileiras de poltronas, é considerada a distância de 1 metro entre os encostos de poltronas in duas fileiras consecutivas. Disponível em: www.ctav.gov.br. Acesso em: 14 nov. 2013. Disponível em: www.ctav.gov.br. Acesso em: 14 nov. 2013. Pretende-se ampliar essa sala, mantendo-se na mesma posição a tela e todas as poltronas já instaladas, ampliando-se ao máximo a sala para os fundos (área de instalação de novas poltronas), respeitando-se o limite aceitável da norma da ABNT. A intenção é aumentar, ao máximo, a quantidade de poltronas da sala, instalando-se novas unidades, iguais às já instaladas.\n\nQuantas fileiras de poltronas a sala comportará após essa ampliação?",
-    "options": [
-      "26",
-      "27",
-      "28",
-      "29",
-      "35"
-    ],
-    "correctIndex": 2,
-    "image": "https://enem.dev/2022/questions/152/f182fb95-a05f-4d8d-bd7d-bbf7adf3d95b.png",
-    "source": "ENEM",
-    "difficulty": "Médio",
-    "resolution": "Resolução ainda não disponível."
-  },
-  {
-    "id": "enem-2022-153",
-    "topicId": "volumes-e-areas",
-    "question": "Questão 153 - ENEM 2022\n\nUma empresa produz e vende um tipo de chocolate, maciço, em formato de cone circular reto com as medidas do diâmetro da base e da altura iguais a 8 cm e 10 cm, respectively, como apresenta a figura. Devido a um aumento de preço dos ingredientes utilizados na produção desse chocolate, a empresa decide produzir esse mesmo tipo de chocolate com um volume 19% menor, no mesmo formato de cone circular reto com altura de 10 cm.\n\nPara isso, a empresa produzirá esses novos chocolates com medida do raio da base, em centímetro, igual a",
-    "options": [
-      "1,52.",
-      "3,24.",
-      "3,60.",
-      "6,48.",
-      "7,20."
-    ],
-    "correctIndex": 2,
-    "image": "https://enem.dev/2022/questions/153/f85bbaf3-e20e-48e7-8a5f-143804fa1743.png",
-    "source": "ENEM",
-    "difficulty": "Médio",
-    "resolution": "Resolução ainda não disponível."
-  },
-  {
-    "id": "enem-2022-154",
-    "topicId": "porcentagem",
-    "question": "Questão 154 - ENEM 2022\n\nEm janeiro de 2013, foram declaradas 1 794 272 admissões e 1 765 372 desligamentos no Brasil, ou seja, foram criadas 28 900 vagas de emprego, segundo dados do Cadastro Geral de Empregados e Desempregados (Caged), divulgados pelo Ministério do Trabalho e Emprego (MTE). Segundo o Caged, o número de vagas criadas em janeiro de 2013 sofreu uma queda de 75%, quando comparado com o mesmo período de 2012. Disponível em: http://portal.mte.gov.br. Acesso em: 23 fev. 2013 (adaptado).\n\nDe acordo com as informações dadas, o número de vagas criadas em janeiro de 2012 foi",
-    "options": [
-      "16 514.",
-      "86 700.",
-      "115 600.",
-      "441 343.",
-      "448 568."
-    ],
-    "correctIndex": 2,
-    "image": null,
-    "source": "ENEM",
-    "difficulty": "Fácil",
-    "resolution": "Resolução ainda não disponível."
-  },
-  {
-    "id": "enem-2022-155",
-    "topicId": "combinacao-simples",
-    "question": "Questão 155 - ENEM 2022\n\nUm prédio, com 9 andares e 8 apartamentos de 2 quartos por andar, está com todos os seus apartamentos à venda. Os apartamentos são identificados por números formados por dois algarismos, sendo que a dezena indica o andar onde se encontra o apartamento, e a unidade, um algarismo de 1 a 8, que diferencia os apartamentos de um mesmo andar. Quanto à incidência de sol nos quartos desses apartamentos, constatam-se as seguintes características, em função de seus números de identificação: • naqueles que finalizam em 1 ou 2, ambos os quartos recebem sol apenas na parte da manhã; • naqueles que finalizam em 3, 4, 5 ou 6, apenas um dos quartos recebe sol na parte da manhã; • naqueles que finalizam em 7 ou 8, ambos os quartos recebem sol apenas na parte da tarde. Uma pessoa pretende comprar 2 desses apartamentos em um mesmo andar, mas quer que, em ambos, pelo menos um dos quartos receba sol na parte da manhã.\n\nDe quantas maneiras diferentes essa pessoa poderá escolher 2 desses apartamentos para compra nas condições desejadas?",
-    "options": [
-      "https://enem.dev/2022/questions/155/4e4d5692-b3ea-4434-aaef-74309d2d3b2a.png",
-      "https://enem.dev/2022/questions/155/2b0fcee8-c3b1-4c03-ac2a-342792f7ab28.png",
-      "https://enem.dev/2022/questions/155/e2dfe176-9a1a-49e7-aee5-62794ac8242b.png",
-      "https://enem.dev/2022/questions/155/0681d716-28d4-4521-801f-5a20871829e5.png",
-      "https://enem.dev/2022/questions/155/027b58bd-d5b6-4ab1-afb6-a17dd85e31c8.png"
-    ],
-    "correctIndex": 1,
-    "image": null,
-    "source": "ENEM",
-    "difficulty": "Médio",
-    "resolution": "Resolução ainda não disponível."
-  },
-  {
-    "id": "enem-2022-156",
-    "topicId": "simetria",
-    "question": "Questão 156 - ENEM 2022\n\nO professor de artes orientou seus estudantes a realizarem a seguinte sequência de atividades: • Dobrar uma folha de papel em formato quadrado duas vezes, em sequência, ao longo das linhas tracejadas, conforme ilustrado nas figuras 1 e 2, para obter o papel dobrado, conforme Figura 3. • Em seguida, no papel dobrado da Figura 3, considerar o ponto _R_, sobre o segmento _OM_, sendo o ponto médio do lado do quadrado original, de modo que , traçar um arco de circunferência de raio medindo com centro no ponto _R_, obtendo a Figura 4. Por último, recortar o papel ao longo do arco de circunferência e excluir a parte que contém o setor circular, obtendo o papel dobrado, conforme Figura 5.\n\nApós desdobrado o papel que restou na Figura 5, a figura plana que os estudantes obterão será",
-    "options": [
-      "https://enem.dev/2022/questions/156/538392d5-583a-4aa5-a47c-61ee0bc6b98d.png",
-      "https://enem.dev/2022/questions/156/78436952-5965-4c7f-80c3-ca2eee79bb4e.png",
-      "https://enem.dev/2022/questions/156/ddf97279-7187-4bc2-be7b-25bd70510a73.png",
-      "https://enem.dev/2022/questions/156/b09ad37a-893e-4709-8b48-bded413fc77f.png",
-      "https://enem.dev/2022/questions/156/c3221442-88b6-455d-bf9f-5097c75188a2.png"
-    ],
-    "correctIndex": 2,
-    "image": "https://enem.dev/2022/questions/156/2b1f4d30-ed72-40af-824d-6d394c9d948d.png",
-    "source": "ENEM",
-    "difficulty": "Difícil",
-    "resolution": "Resolução ainda não disponível."
-  },
-  {
     "id": "enem-2022-157",
-    "topicId": "funcao-afim",
+    "topicId": "expressoes-algebricas",
     "question": "Questão 157 - ENEM 2022\n\nO funcionário de uma loja tem seu salário mensal formado por uma parcela fixa de 675 reais mais uma comissão que depende da quantidade de peças vendidas por ele no mês. O cálculo do valor dessa comissão é feito de acordo com estes critérios: • até a quinquagésima peça vendida, paga-se 5 reais por peça; • a partir da quinquagésima primeira peça vendida, o valor pago é de 7 reais por peça. Represente por q a quantidade de peças vendidas no mês por esse funcionário, e por S(q) o seu salário mensal, em real, nesse mês.\n\nA expressão algébrica que descreve S(q) em função de q é",
     "options": [
       "https://enem.dev/2022/questions/157/fc471085-2399-4726-8cde-a72bae7ac9c5.png",
@@ -357,25 +34,8 @@
     "resolution": "Resolução ainda não disponível."
   },
   {
-    "id": "enem-2022-158",
-    "topicId": "funcao-afim",
-    "question": "Questão 158 - ENEM 2022\n\nAo analisar os dados de uma epidemia em uma cidade, peritos obtiveram um modelo que avalia a quantidade de pessoas infectadas a cada mês, ao longo de um ano. O modelo é dado por , sendo t um número natural, variando de 1 a 12, que representa os meses do ano, e p(t) a quantidade de pessoas infectadas no mês t do ano. Para tentar diminuir o número de infectados no próximo ano, a Secretaria Municipal de Saúde decidiu intensificar a propaganda oficial sobre os cuidados com a epidemia. Foram apresentadas cinco propostas (I, II, III, IV e V), com diferentes períodos de intensificação das propagandas: A sugestäo dos peritos é que seja escolhida a proposta cujo período de intensificação da propaganda englobe o mês em que, sequndo o modelo, há a maior quantidade de infectados. A sugestão foi aceita.\n\nA proposta escolhida foi a",
-    "options": [
-      "I.",
-      "II.",
-      "III.",
-      "IV.",
-      "V."
-    ],
-    "correctIndex": 2,
-    "image": "https://enem.dev/2022/questions/158/94d1c253-bab8-44b6-aa7a-7bd9552dc398.png",
-    "source": "ENEM",
-    "difficulty": "Fácil",
-    "resolution": "Resolução ainda não disponível."
-  },
-  {
     "id": "enem-2022-159",
-    "topicId": "operacoes-fundamentais",
+    "topicId": "progressoes",
     "question": "Questão 159 - ENEM 2022\n\nUm atleta iniciou seu treinamento visando as competições de fim de ano. Seu treinamento consiste em cinco tipos diferentes de treinos: treino , treino , treino , treino e treino . A sequência dos treinamentos deve seguir esta ordem: A letra R significa repouso. Após completar a sequência de treinamentos, o atleta começa novamente a sequência a partir do treino , e segue a ordem descrita. Após 24 semanas completas de treinamento, se dará o inicio das competições.",
     "options": [
       "https://enem.dev/2022/questions/159/63615e39-7138-4ae8-9e1b-5096335cc20f.png",
@@ -391,330 +51,8 @@
     "resolution": "Resolução ainda não disponível."
   },
   {
-    "id": "enem-2022-160",
-    "topicId": "projecao-ortogonal",
-    "question": "Questão 160 - ENEM 2022\n\nUm robô, que tem um ímã em sua base, se desloca sobre a superfície externa de um cubo metálico, ao longo de segmentos de reta cujas extremidades são pontos médios de arestas e centros de faces. Ele inicia seu deslocamento no ponto **P**, centro da face superior do cubo, segue para o centro da próxima face, converte à esquerda e segue para o centro da face seguinte, converte à direita e continua sua movimentação, sempre alternando entre conversões à esquerda e à direita quando alcança o centro de uma face. O robô só termina sua movimentação quando retorna ao ponto **P**. A figura apresenta os deslocamentos iniciais desse robô.\n\nA projeção ortogonal do trajeto descrito por esse robô sobre o plano da base, após terminada sua movimentação, visualizada da posição em que se está enxergando esse cubo, é",
-    "options": [
-      "https://enem.dev/2022/questions/160/5d7821fa-37c8-4d86-b71d-4b70a0e1d096.png",
-      "https://enem.dev/2022/questions/160/6a4daa1c-7f24-439f-b2a3-43eddb2b2400.png",
-      "https://enem.dev/2022/questions/160/41ab922d-57a6-428b-a207-4dc213ec6481.png",
-      "https://enem.dev/2022/questions/160/79a7fd8e-7800-4a2f-86d6-33dcbe3aef84.png",
-      "https://enem.dev/2022/questions/160/2dacf59f-b682-45fb-bd03-29f25ba41487.png"
-    ],
-    "correctIndex": 0,
-    "image": "https://enem.dev/2022/questions/160/c9e8168c-5f91-45a5-82a3-c5a2948bf0a9.png",
-    "source": "ENEM",
-    "difficulty": "Difícil",
-    "resolution": "Resolução ainda não disponível."
-  },
-  {
-    "id": "enem-2022-161",
-    "topicId": "razao-e-proporcao",
-    "question": "Questão 161 - ENEM 2022\n Uma empresa de engenharia projetou uma casa com a forma de um retângulo para um de seus clientes. Esse cliente solicitou a inclusão de uma varanda em forma de L. A figura apresenta a planta baixa desenhada pela empresa, já com a varanda incluída, cujas medidas, indicadas em centímetro, representam os valores das dimensões da varanda na escala de 1 : 50.\n\nA medida real da área da varanda, em metro quadrado, é",
-    "options": [
-      "33,40",
-      "66,80",
-      "89,24",
-      "133,60",
-      "534,40"
-    ],
-    "correctIndex": 0,
-    "image": "https://enem.dev/2022/questions/161/e1e86e81-76dc-4763-a118-273941076831.png",
-    "source": "ENEM",
-    "difficulty": "Médio",
-    "resolution": "Resolução ainda não disponível."
-  },
-  {
-    "id": "enem-2022-162",
-    "topicId": "funcao-afim",
-    "question": "Questão 162 - ENEM 2022\n\nUma loja de roupas fixou uma meta de vendas de 77 000 reais para um determinado mês de 30 dias. O gráfico mostra o volume de vendas dessa loja, em real, nos dez primeiros dias do mês e entre o dia dez e o dia vinte desse mês, nos seus dois únicos setores (infantil e adulto). Suponha que a variação no volume de vendas, para o período registrado, tenha se dado de forma linear, como mostrado no gráfico, e que essa tendência se mantenha a mesma para os próximos dez dias.\n\nAo final do trigésimo dia, quanto faltará no volume de vendas, em real, para que a meta fixada para o mês seja alcançada?",
-    "options": [
-      "5 000",
-      "7 000",
-      "11 000",
-      "18 000",
-      "29 000"
-    ],
-    "correctIndex": 2,
-    "image": "https://enem.dev/2022/questions/162/0942383a-b8ee-4c44-a9ad-ae50d4204c0c.png",
-    "source": "ENEM",
-    "difficulty": "Médio",
-    "resolution": "Resolução ainda não disponível."
-  },
-  {
-    "id": "enem-2022-163",
-    "topicId": "estatistica",
-    "question": "Questão 163 - ENEM 2022\n\nEm uma universidade, atuam professores que estão enquadrados funcionalmente pela sua maior titulação: mestre ou doutor. Nela há, atualmente, 60 mestres e 40 doutores. Os salários mensais dos professores mestres e dos doutores são, respectivamente, R$ 8 000,00 e R$ 12 000,00. A diretoria da instituição pretende proporcionar um aumento salarial diferenciado para o ano seguinte, de tal forma que o salário médio mensal dos professores dessa instituição não ultrapasse R$ 12 240,00. A universidade já estabeleceu que o aumento salarial será de 25% para os mestres e precisa ainda definir o percentual de reajuste para os doutores.\n\nMantido o número atual de professores com suas atuais titulações, o aumento salarial, em porcentagem, a ser concedido aos doutores deverá ser de, no máximo,",
-    "options": [
-      "14,4.",
-      "20,7.",
-      "22,0.",
-      "30,0.",
-      "37,5"
-    ],
-    "correctIndex": 3,
-    "image": null,
-    "source": "ENEM",
-    "difficulty": "Médio",
-    "resolution": "Resolução ainda não disponível."
-  },
-  {
-    "id": "enem-2022-164",
-    "topicId": "unidades-de-medida",
-    "question": "Questão 164 - ENEM 2022\n\nUm borrifador de atuação automática libera, a cada acionamento, uma mesma quantidade de inseticida. O recipiente desse produto, quando cheio, contém 360 mL de inseticida, que duram 60 dias se o borrifador permanecer ligado ininterruptamente e for acionado a cada 48 minutos.\n\nA quantidade de inseticida que é liberada a cada acionamento do borrifador, em mililitro, é",
-    "options": [
-      "0,125.",
-      "0,200.",
-      "4,800.",
-      "6,000.",
-      "12,000."
-    ],
-    "correctIndex": 1,
-    "image": null,
-    "source": "ENEM",
-    "difficulty": "Médio",
-    "resolution": "Resolução ainda não disponível."
-  },
-  {
-    "id": "enem-2022-165",
-    "topicId": "razao-e-proporcao",
-    "question": "Questão 165 - ENEM 2022\n\nDefinem-se o dia e o ano de um planeta de um sistema solar como sendo, respectivamente, o tempo que o planeta leva para dar 1 volta completa em torno de seu próprio eixo de rotação e o tempo para dar 1 volta completa em torno de seu Sol. Suponha que exista um planeta Z, em algum sistema solar, onde um dia corresponda a 73 dias terrestres e que 2 de seus anos correspondam a 1 ano terrestre. Considere que 1 ano terrestre tem 365 de seus dias.\n\nNo planeta Z, seu ano corresponderia a quantos de seus dias?",
-    "options": [
-      "2,5",
-      "10,0",
-      "730,0",
-      "13 322,5",
-      "53 290,0"
-    ],
-    "correctIndex": 0,
-    "image": null,
-    "source": "ENEM",
-    "difficulty": "Fácil",
-    "resolution": "Resolução ainda não disponível."
-  },
-  {
-    "id": "enem-2022-166",
-    "topicId": "interpretacao-grafica",
-    "question": "Questão 166 - ENEM 2022\n\nEm uma competição de velocidade, diz-se que há uma ultrapassagem quando um veículo que está atrás de outro passa à sua frente, com ambos se deslocando no mesmo sentido. Considere uma competição automobilística entre cinco carros em uma pista com 100 m de comprimento, onde todos largam no mesmo instante e da mesma linha. O gráfico mostra a variação da distância percorrida por cada veículo, em função do tempo, durante toda a competição.\n\nQual o número de ultrapassagens, após o início da competição, efetuadas pelo veículo que chegou em último lugar?",
-    "options": [
-      "1",
-      "2",
-      "3",
-      "4"
-    ],
-    "correctIndex": 0,
-    "image": "https://enem.dev/2022/questions/166/efa5ccf4-a844-4c87-b110-7a675585a779.png",
-    "source": "ENEM",
-    "difficulty": "Fácil",
-    "resolution": "Resolução ainda não disponível."
-  },
-  {
-    "id": "enem-2022-167",
-    "topicId": "porcentagem",
-    "question": "Questão 167 - ENEM 2022\n\nEm uma loja, o preço promocional de uma geladeira é de R$ 1 000,00 para pagamento somente em dinheiro. Seu preço normal, fora da promoção, é 10% maior. Para pagamento feito com o cartão de crédito da loja, é dado um desconto de 2% sobre o preço normal. Uma cliente decidiu comprar essa geladeira, optando pelo pagamento com o cartão de crédito da loja. Ela calculou que o valor a ser pago seria o preço promocional acrescido de 8%. Ao ser informada pela loja do valor a pagar, segundo sua opção, percebeu uma diferença entre seu cálculo e o valor que lhe foi apresentado\n\nO valor apresentado pela loja, comparado ao valor calculado pela cliente, foi",
-    "options": [
-      "R$ 2,00 menor.",
-      "R$ 100,00 menor.",
-      "R$ 200,00 menor.",
-      "R$ 42,00 maior.",
-      "R$ 80,00 maior."
-    ],
-    "correctIndex": 0,
-    "image": null,
-    "source": "ENEM",
-    "difficulty": "Fácil",
-    "resolution": "Resolução ainda não disponível."
-  },
-  {
-    "id": "enem-2022-168",
-    "topicId": "operacoes-fundamentais",
-    "question": "Questão 168 - ENEM 2022\n\nUma pessoa precisa se deslocar de automóvel do ponto P para o ponto Q, indicados na figura, na qual as linhas verticais e horizontais simbolizam ruas Por causa do sentido de tráfego nessas ruas, o caminho poligonal destacado é a possibilidade mais curta de efetuar esse deslocamento. Para descrevê-lo, deve-se especificar qual o sentido a ser tomado em cada cruzamento de ruas, em relação à direção de deslocamento do automóvel, que se movimentará continuamente. Para isso, empregam-se as letras E, F e D para indicar “vire à esquerda”, “siga em frente” e “vire à direita”, respectivamente.\n\nA sequência de letras que descreve o caminho poligonal destacado é",
-    "options": [
-      "DDEFDDEEFFD.",
-      "DFEFDDDEFFD.",
-      "DFEFDDEEFFD.",
-      "EFDFEEDDFFE.",
-      "EFDFEEEDFFE."
-    ],
-    "correctIndex": 2,
-    "image": "https://enem.dev/2022/questions/168/5c7c6e9a-c900-4910-a9d0-af84f8f5b8c4.png",
-    "source": "ENEM",
-    "difficulty": "Fácil",
-    "resolution": "Resolução ainda não disponível."
-  },
-  {
-    "id": "enem-2022-169",
-    "topicId": "volumes-e-areas",
-    "question": "Questão 169 - ENEM 2022\n\nUma loja comercializa cinco modelos de caixas-d’água (I, II, III, IV e V), todos em formato de cilindro reto de base circular. Os modelos II, III, IV e V têm as especificações de suas dimensões dadas em relação às dimensões do modelo I, cuja profundidade é P e área da base é Ab, como segue: • modelo II: o dobro da profundidade e a metade da área da base do modelo I; • modelo III: o dobro da profundidade e a metade do raio da base do modelo I; • modelo V: a metade da profundidade e o dobro da área da base do modelo I; • modelo V: a metade da profundidade e o dobro do raio da base do modelo I. Uma pessoa pretende comprar nessa loja o modelo de caixa-d’água que ofereça a maior capacidade volumétrica\n\nO modelo escolhido deve ser o",
-    "options": [
-      "I.",
-      "II.",
-      "III.",
-      "IV.",
-      "V."
-    ],
-    "correctIndex": 4,
-    "image": null,
-    "source": "ENEM",
-    "difficulty": "Médio",
-    "resolution": "Resolução ainda não disponível."
-  },
-  {
-    "id": "enem-2022-170",
-    "topicId": "razao-e-proporcao",
-    "question": "Questão 170 - ENEM 2022\n\nNo período de 2005 a 2013, o valor de venda dos imóveis em uma cidade apresentou alta, o que resultou no aumento dos aluguéis. Os gráficos apresentam a evolução desses valores, para um mesmo imóvel, no mercado imobiliário dessa cidade. A rentabilidade do aluguel de um imóvel é calculada pela razão entre o valor mensal de aluguel e o valor de mercado desse imóvel.\n\nCom base nos dados fornecidos, em que ano a rentabilidade do aluguel foi maior?",
-    "options": [
-      "2005",
-      "2007",
-      "2009",
-      "2011",
-      "2013"
-    ],
-    "correctIndex": 1,
-    "image": "https://enem.dev/2022/questions/170/be397d74-899b-444a-b587-931e9c3505ca.png",
-    "source": "ENEM",
-    "difficulty": "Médio",
-    "resolution": "Resolução ainda não disponível."
-  },
-  {
-    "id": "enem-2022-171",
-    "topicId": "estatistica",
-    "question": "Questão 171 - ENEM 2022\n\nNos cinco jogos finais da última temporada, com uma média de 18 pontos por jogo, um jogador foi eleito o melhor do campeonato de basquete. Na atual temporada, Coração jogadores têm a chance de igualar ou melhorar essa média. No quadro estão registradas as pontuações desses cinco jogadores nos quatro primeiros jogos das finais deste ano. O quinto e último jogo será realizado para decidir a equipe campeã e qual o melhor jogador da temporada.\n\nO jogador que precisa fazer a menor quantidade de pontos no quinto jogo, para igualar a média de pontos do melhor jogador da temporada passada, é o",
-    "options": [
-      "I.",
-      "II.",
-      "III.",
-      "IV.",
-      "V."
-    ],
-    "correctIndex": 0,
-    "image": "https://enem.dev/2022/questions/171/45b098d3-26d2-49c5-a129-40e85febb05b.png",
-    "source": "ENEM",
-    "difficulty": "Fácil",
-    "resolution": "Resolução ainda não disponível."
-  },
-  {
-    "id": "enem-2022-172",
-    "topicId": "volumes-e-areas",
-    "question": "Questão 172 - ENEM 2022\n\nUm casal planeja construir em sua chácara uma piscina com o formato de um paralelepípedo reto retângulo com capacidade para 90 000 L de água. O casal contratou uma empresa de construções que apresentou cinco projetos com diferentes combinações nas dimensões internas de profundidade, largura e comprimento. A piscina a ser construída terá revestimento interno em suas paredes e fundo com uma mesma cerâmica, e o casal irá escolher o projeto que exija a menor área de revestimento. As dimensões internas de profundidade, largura e comprimento, respectivamente, para cada um dos projetos, são: • projeto I: 1,8 m, 2,0 m e 25,0 m; • projeto II: 2,0 m, 5,0 m e 9,0 m; • projeto III: 1,0 m, 6,0 m e 15,0 m; • projeto IV: 1,5 m, 15,0 m e 4,0 m; • projeto V: 2,5 m, 3,0 m e 12,0 m.\n\nO projeto que o casal deverá escolher será o",
-    "options": [
-      "I.",
-      "II.",
-      "III.",
-      "IV.",
-      "V."
-    ],
-    "correctIndex": 1,
-    "image": null,
-    "source": "ENEM",
-    "difficulty": "Médio",
-    "resolution": "Resolução ainda não disponível."
-  },
-  {
-    "id": "enem-2022-173",
-    "topicId": "razao-e-proporcao",
-    "question": "Questão 173 - ENEM 2022\n\nUma instituição de ensino superior ofereceu vagas em um processo seletivo de acesso a seus cursos. Finalizadas as inscrições, foi divulgada a relação do número de candidatos por vaga em cada um dos cursos oferecidos. Esses dados são apresentados no quadro.\n\nQual foi o número total de candidatos inscritos nesse processo seletivo?",
-    "options": [
-      "200",
-      "400",
-      "1200",
-      "1235",
-      "7200"
-    ],
-    "correctIndex": 3,
-    "image": "https://enem.dev/2022/questions/173/0e6a9a19-bb58-4f93-bcb9-b7f26f5df5e7.png",
-    "source": "ENEM",
-    "difficulty": "Fácil",
-    "resolution": "Resolução ainda não disponível."
-  },
-  {
-    "id": "enem-2022-174",
-    "topicId": "volumes-e-areas",
-    "question": "Questão 174 - ENEM 2022\n\nPeças metálicas de aeronaves abandonadas em aeroportos serão recicladas. Uma dessas peças é maciça e tem o formato cilíndrico, com a medida do raio da base igual a 4 cm e a da altura igual a 50 cm. Ela será derretida, e o volume de metal resultante será utilizado para a fabricação de esferas maciças com diâmetro de 1 cm, a serem usadas para confeccionar rolamentos. Para estimar a quantidade de esferas que poderão ser produzidas a partir de cada uma das peças cilíndricas, admite-se que não ocorre perda de material durante o processo de derretimento.\n\nQuantas dessas esferas poderão ser obtidas a partir de cada peça cilíndrica?",
-    "options": [
-      "800",
-      "1200",
-      "2400",
-      "4800",
-      "6400"
-    ],
-    "correctIndex": 3,
-    "image": null,
-    "source": "ENEM",
-    "difficulty": "Médio",
-    "resolution": "Resolução ainda não disponível."
-  },
-  {
-    "id": "enem-2022-175",
-    "topicId": "operacoes-fundamentais",
-    "question": "Questão 175 - ENEM 2022\n\nAo escutar a notícia de que um filme recém-lançado arrecadou, no primeiro mês de lançamento, R$ 1,35 bilhão em bilheteria, um estudante escreveu corretamente o número que representa essa quantia, com todos os seus algarismos.\n\nO número escrito pelo estudante foi",
-    "options": [
-      "135 000,00.",
-      "1 350 000,00.",
-      "13 500 000,00.",
-      "135 000 000,00.",
-      "1 350 000 000,00"
-    ],
-    "correctIndex": 4,
-    "image": null,
-    "source": "ENEM",
-    "difficulty": "Fácil",
-    "resolution": "Resolução ainda não disponível."
-  },
-  {
-    "id": "enem-2022-176",
-    "topicId": "otimizacao-geometrica",
-    "question": "Questão 176 - ENEM 2022\n\nPretende-se que a distância percorrida entre as duas cidades, pelas Rodovias 001 e 002, passando pelo ponto de conexão, seja a menor possível. Dadas as exigências do projeto, qual das localizações sugeridas deve ser a escolhida para o ponto de conexão?",
-    "options": [
-      "I",
-      "II",
-      "III",
-      "IV",
-      "V"
-    ],
-    "correctIndex": 3,
-    "image": "https://enem.dev/2022/questions/176/eebeabf5-0dec-4070-abd5-f803bb370dd9.png",
-    "source": "ENEM",
-    "difficulty": "Médio",
-    "resolution": "Resolução ainda não disponível."
-  },
-  {
-    "id": "enem-2022-177",
-    "topicId": "operacoes-fundamentais",
-    "question": "Questão 177 - ENEM 2022\n\nUma pessoa precisa contratar um operário para fazer um serviço em sua casa. Para isso, ela postou um anúncio em uma rede social. Cinco pessoas responderam informando preços por hora trabalhada, gasto diário com transporte e tempo necessário para conclusão do serviço, conforme valores apresentados no quadro.\n\nSe a pessoa pretende gastar o mínimo possível com essa contratação, irá contratar o operário",
-    "options": [
-      "I.",
-      "II.",
-      "III.",
-      "IV.",
-      "V."
-    ],
-    "correctIndex": 0,
-    "image": "https://enem.dev/2022/questions/177/fb1d11e4-76d3-4657-b78f-84e7bcd81f6c.png",
-    "source": "ENEM",
-    "difficulty": "Fácil",
-    "resolution": "Resolução ainda não disponível."
-  },
-  {
-    "id": "enem-2022-178",
-    "topicId": "volumes-e-areas",
-    "question": "Questão 178 - ENEM 2022\n\nUma cozinheira produz docinhos especiais por encomenda. Usando uma receita-base de massa, ela prepara uma porção, com a qual produz 50 docinhos maciços de formato esférico, com 2 cm de diâmetro. Um cliente encomenda 150 desses docinhos, mas pede que cada um tenha formato esférico com 4 cm de diâmetro. A cozinheira pretende preparar o número exato de porções da receita-base de massa necessário para produzir os docinhos dessa encomenda\n\nQuantas porções da receita-base de massa ela deve preparar para atender esse cliente?",
-    "options": [
-      "2",
-      "3",
-      "6",
-      "12",
-      "24"
-    ],
-    "correctIndex": 4,
-    "image": null,
-    "source": "ENEM",
-    "difficulty": "Difícil",
-    "resolution": "Resolução ainda não disponível."
-  },
-  {
     "id": "enem-2022-179",
-    "topicId": "estatistica",
+    "topicId": "progressoes",
     "question": "Questão 179 - ENEM 2022\n\nA esperança de vida ao nascer é o número médio de anos que um indivíduo tende a viver a partir de seu nascimento, considerando dados da população. No Brasil, esse número vem aumentando consideravelmente, como mostra o gráfico. Disponível em: http://cod.ibge.gov.br. Acesso em: 6 mar. 2014 (adaptado). Pode-se observar que a esperança de vida ao nascer em 2012 foi exatamente a média das registradas nos anos de 2011 e 2013. Suponha que esse fato também ocorreu com a esperança de vida ao nascer em 2013, em relação às esperanças de vida de 2012 e de 2014.\n\nCaso a suposição feita tenha sido confirmada, a esperança de vida ao nascer no Brasil no ano de 2014 terá sido, em ano, igual a",
     "options": [
       "74,23.",
@@ -726,24 +64,109 @@
     "correctIndex": 1,
     "image": "https://enem.dev/2022/questions/179/08b6ac03-1a1c-4a0d-b246-dc37098794ad.png",
     "source": "ENEM",
-    "difficulty": "Fácil",
+    "difficulty": "Médio",
     "resolution": "Resolução ainda não disponível."
   },
   {
-    "id": "enem-2022-180",
-    "topicId": "projecao-ortogonal",
-    "question": "Questão 180 - ENEM 2022\n\nNa figura estão destacadas duas trajetórias sobre a superfície do globo terrestre, descritas ao se percorrer parte dos meridianos 1, 2 e da Linha do Equador, sendo que os meridianos 1 e 2 estão contidos em planos perpendiculares entre si. O plano α é paralelo ao que contém a Linha do Equador.\n\nA vista superior da projeção ortogonal sobre o plano α dessas duas trajetórias é",
+    "id": "enem-2023-139",
+    "topicId": "progressoes",
+    "question": "Questão 139 - ENEM 2023\n\nO gerente de uma fábrica pretende comparar a evolução das vendas de dois produtos similares (I e II). Para isso, passou a verificar o número de unidades vendidas de cada um desses produtos em cada mês. Os resultados dessa verificação, para os meses de abril a junho, são apresentados na tabela. O gerente estava decidido a cessar a produção do produto II no mês seguinte àquele em que as vendas do produto I superassem as do produto II. Suponha que a variação na quantidade de unidades vendidas dos produtos I e II se manteve, mês a mês, como no período representado na tabela.\n\nEm qual mês o produto II parou de ser produzido?",
     "options": [
-      "https://enem.dev/2022/questions/180/05cb2bb8-e0d9-4b65-b5cf-8b286af2b395.png",
-      "https://enem.dev/2022/questions/180/23fc7b65-ca58-4a35-967f-ac9c73b89e03.png",
-      "https://enem.dev/2022/questions/180/5be81d3b-c2c8-4856-a7b6-9f265a813436.png",
-      "https://enem.dev/2022/questions/180/c29e4144-4fce-43b2-a402-0ff7de72f3d0.png",
-      "https://enem.dev/2022/questions/180/5e135009-dbc9-4b08-bdf9-ad95f8f3d14f.png"
+      "Junho.",
+      "Julho.",
+      "Agosto.",
+      "Setembro.",
+      "Outubro."
+    ],
+    "correctIndex": 3,
+    "image": "https://enem.dev/2023/questions/139/abba5cb1-da9d-4899-bda7-97099ca51147.png",
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2023-146",
+    "topicId": "progressoes",
+    "question": "Questão 146 - ENEM 2023\n\nConsidere que os números colocados nos vértices do triângulo estejam em progressão aritmética de razão igual a 2. Nas condições propostas, quais as possíveis soluções para as somas dos números que formam os lados do triângulo?",
+    "options": [
+      "Há somente uma solução possível, e as somas em cada lado do triângulo são iguais a 7.",
+      "Há somente uma solução possível, e as somas em cada lado do triângulo são iguais a 9.",
+      "Há somente duas soluções possíveis, uma em que as somas em cada lado do triângulo são iguais a 7 e outra em que as somas são iguais a 9.",
+      "Há somente duas soluções possíveis, uma em que as somas em cada lado do triângulo são iguais a 9 e outra em que as somas são iguais a 12.",
+      "Há somente duas soluções possíveis, uma em que as somas em cada lado do triângulo são iguais a 10 e outra em que as somas são iguais a 11."
     ],
     "correctIndex": 4,
-    "image": "https://enem.dev/2022/questions/180/f3e0feaa-a265-4d9f-894f-63135acff616.png",
+    "image": "https://enem.dev/2023/questions/146/74e0c851-b2af-410d-9f19-3348dd8f883a.jpg",
     "source": "ENEM",
-    "difficulty": "Difícil",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2023-152",
+    "topicId": "inequacoes",
+    "question": "Questão 152 - ENEM 2023\n\nA exposição a alguns níveis sonoros pode causar lesões auditivas. Por isso, em uma indústria, são adotadas medidas preventivas de acordo com a máquina que o funcionário opera e o nível _N_ de intensidade do som, medido em decibel (dB), a que o operário é exposto, sendo , _I_ a intensidade do som e . Disponível em: www.sofisica.com.br. Acesso em: 8 jul. 2015 (adaptado). Quando o som é considerado baixo, ou seja, _N_ = 48 dB ou menos, deve ser utilizada a medida preventiva I. No caso de o som ser moderado, quando _N_ está no intervalo (48 dB, 55 dB), deve ser utilizada a medida preventiva II. Quando o som é moderado alto, que equivale a _N_ no intervalo (55 dB, 80 dB), a medida preventiva a ser usada é a III. Se _N_ estiver no intervalo (80 dB, 115 dB), quando o som é considerado alto, deve ser utilizada a medida preventiva IV. E se o som é considerado muito alto, com _N_ maior que 115 dB, deve-se utilizar a medida preventiva V. Uma nova máquina, com , foi adquirida e será classificada de acordo com o nível de ruído que produz. Considere 0,3 como aproximação para .\n\nO funcionário que operará a nova máquina deverá adotar a medida preventiva",
+    "options": [
+      "I.",
+      "II.",
+      "III.",
+      "IV.",
+      "V."
+    ],
+    "correctIndex": 1,
+    "image": "https://enem.dev/2023/questions/152/30b0ee85-ac44-4eca-a7c9-54bd70f9c069.png",
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2023-158",
+    "topicId": "equacoes-primeiro-grau",
+    "question": "Questão 158 - ENEM 2023\n\nUm pescador tem um custo fixo diário de R$ 900,00 com combustível, iscas, manutenção de seu barco e outras pequenas despesas. Ele vende cada quilograma de peixe por R$ 5,00. Sua meta é obter um lucro mínimo de R$ 800,00 por dia. Sozinho, ele consegue, ao final de um dia de trabalho, pescar 180 kg de peixe, o que é suficiente apenas para cobrir o custo fixo diário. Portanto, precisa contratar ajudantes, pagando para cada um R$ 250,00 por dia de trabalho. Além desse valor, 4%dareceita obtida pela venda de peixe é repartida igualmente entre os ajudantes. Considerando o tamanho de seu barco, ele pode contratar até 5 ajudantes. Ele sabe que com um ajudante a pesca diária é de 300 kg e que, a partir do segundo ajudante contratado, aumenta-se em 100 kg a quantidade de peixe pescada por ajudante em um dia de trabalho.\n\nA quantidade mínima de ajudantes que esse pescador precisa contratar para conseguir o lucro diário pretendido é",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "correctIndex": 3,
+    "image": null,
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2023-169",
+    "topicId": "progressoes",
+    "question": "Questão 169 - ENEM 2023\n\nO esquema mostra como a intensidade luminosa decresce com o aumento da profundidade em um rio, sendo a intensidade na sua superfície. Considere que a intensidade luminosa diminui, a cada metro acrescido na profundidade, segundo o mesmo padrão do esquema.\n\nA intensidade luminosa correspondente à profundidade de 6 m é igual a",
+    "options": [
+      "https://enem.dev/2023/questions/169/0ad62fa9-ccdd-40b7-95e6-024319a5c9bc.png",
+      "https://enem.dev/2023/questions/169/74afb699-867b-4b47-8fa9-9c0fddd6db14.png",
+      "https://enem.dev/2023/questions/169/23fe5ab4-dc1d-4693-8a62-c17abdd5c5cb.png",
+      "https://enem.dev/2023/questions/169/9394f679-b291-4e10-9384-b1f2c2dba975.png",
+      "https://enem.dev/2023/questions/169/5037e73b-aa7f-43fd-baa8-4f70d9f0f498.png"
+    ],
+    "correctIndex": 3,
+    "image": "https://enem.dev/2023/questions/169/76239f15-d46d-4067-bb38-bb40ca2f87c0.png",
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2023-176",
+    "topicId": "progressoes",
+    "question": "Questão 176 - ENEM 2023\n\nOs números figurados pentagonais provavelmente foram introduzidos pelos pitagóricos por volta do século V a.C. As figuras ilustram como obter os seis primeiros deles, sendo os demais obtidos seguindo o mesmo padrão geométrico.\n\nO oitavo número pentagonal é",
+    "options": [
+      "59",
+      "83",
+      "86",
+      "89",
+      "92"
+    ],
+    "correctIndex": 4,
+    "image": "https://enem.dev/2023/questions/176/d21e916b-a5fc-441e-b782-d2d4aca3522b.png",
+    "source": "ENEM",
+    "difficulty": "Médio",
     "resolution": "Resolução ainda não disponível."
   }
 ]

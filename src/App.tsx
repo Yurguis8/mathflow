@@ -14,7 +14,6 @@ import Areas from "./pages/Areas";
 import AreaDetail from "./pages/AreaDetail";
 import Simulados from "./pages/Simulados";
 import SimuladosPlayer from "./pages/SimulationPlayer";
-import Enem from "./pages/Enem";
 
 export default function App() {
   const [token, setToken] = useState<string | null>(localStorage.getItem('token'));
@@ -135,7 +134,6 @@ function ProtectedLayout() {
               <Route path="/exercises/:areaId/:topicId" element={<PageTransition><ExercisePlayer /></PageTransition>} />
               <Route path="/simulados" element={<PageTransition><Simulados /></PageTransition>} />
               <Route path="/simulados/play" element={<SimuladosPlayer />} />
-              <Route path="/enem" element={<Enem />} />
             </Routes>
           </AnimatePresence>
         </main>

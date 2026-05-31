@@ -1,1 +1,70 @@
-[]
+[
+  {
+    "id": "enem-2022-161",
+    "topicId": "areas",
+    "question": "Questão 161 - ENEM 2022\n\nUma empresa de engenharia projetou uma casa com a forma de um retângulo para um de seus clientes. Esse cliente solicitou a inclusão de uma varanda em forma de L. A figura apresenta a planta baixa desenhada pela empresa, já com a varanda incluída, cujas medidas, indicadas em centímetro, representam os valores das dimensões da varanda na escala de 1 : 50.\n\nA medida real da área da varanda, em metro quadrado, é",
+    "options": [
+      "33,40",
+      "66,80",
+      "89,24",
+      "133,60",
+      "534,40"
+    ],
+    "correctIndex": 0,
+    "image": "https://enem.dev/2022/questions/161/e1e86e81-76dc-4763-a118-273941076831.png",
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2023-155",
+    "topicId": "areas",
+    "question": "Questão 155 - ENEM 2023\n\nNa planta baixa de um clube, a piscina é representada por um quadrado cuja área real mede 400 m². Ao redor dessa piscina, será construída uma calçada, de largura constante igual a 5 m.\n\nQual é a medida da área, em metro quadrado, ocupada pela calçada?",
+    "options": [
+      "1.000",
+      "900",
+      "600",
+      "500",
+      "400"
+    ],
+    "correctIndex": 3,
+    "image": "https://enem.dev/2023/questions/155/05746583-c107-4dd6-8a3b-7e7d0da99377.png",
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2023-165",
+    "topicId": "areas",
+    "question": "Questão 165 - ENEM 2023\n\nA figura representa uma escada com três degraus, construída em concreto maciço, com suas medidas especificadas. Nessa escada, pisos e espelhos têm formato retangular, e as paredes laterais têm formato de um polígono cujos lados adjacentes são perpendiculares. Pisos, espelhos e paredes laterais serão revestidos em cerâmica.\n\nA área a ser revestida em cerâmica, em metro quadrado, mede",
+    "options": [
+      "1,20.",
+      "1,35.",
+      "1,65.",
+      "1,80.",
+      "1,95."
+    ],
+    "correctIndex": 4,
+    "image": "https://enem.dev/2023/questions/165/bf369224-eb93-4bba-98c4-ff7d1e17df36.png",
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2023-172",
+    "topicId": "teorema-de-pitagoras",
+    "question": "Questão 172 - ENEM 2023\n\nSejam _a_, _b_ e _c_ as medidas dos lados de um triângulo retângulo, tendo a como medida da hipotenusa. Esses valores _a_, _b_ e _c_ são, respectivamente, os diâmetros dos círculos _C1_ , _C2_ e _C3_, como apresentados na figura. Observe que essa construção assegura, pelo teorema de Pitágoras, que área (C1) = área (C2) + área (C3). Um professor de matemática era conhecedor dessa construção e, confraternizando com dois amigos em uma pizzaria onde são vendidas pizzas somente em formato de círculo, lançou um desafio: mesmo sem usar um instrumento de medição, poderia afirmar com certeza se a área do círculo correspondente à pizza que ele pedisse era maior, igual ou menor do que a soma das áreas das pizzas dos dois amigos. Assim, foram pedidas três pizzas. O professor as dividiu ao meio e formou um triângulo com os diâmetros das pizzas, conforme indicado na figura. A partir da medida do ângulo a, o professor afirmou que a área de sua pizza é maior do que a soma das áreas das outras duas pizzas.\n\nA área da pizza do professor de matemática é maior do que a soma das áreas das outras duas pizzas, pois",
+    "options": [
+      "0° < a < 90°",
+      "A = 90°",
+      "90° < a < 180°",
+      "A = 180°",
+      "180° < a < 360°"
+    ],
+    "correctIndex": 2,
+    "image": "https://enem.dev/2023/questions/172/dcdd2743-6ad6-44e8-94ae-d2adec3a3400.png",
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  }
+]

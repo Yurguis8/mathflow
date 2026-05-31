@@ -22,7 +22,6 @@ export default function Sidebar() {
     { name: "Áreas", path: "/areas", icon: Blocks },
     { name: "Assuntos", path: "/topics", icon: BookOpen },
     { name: "Exercícios", path: "/exercises", icon: Calculator },
-    { name: "Enem", path: "/enem", icon: GraduationCap },
     { name: "Simulados", path: "/simulados", icon: NotebookText },
   ];
 

@@ -27,6 +27,7 @@ export default function ExercisesList() {
   const [activeTopic, setActiveTopic] = useState<Topic | null>(null);
   const [modalLevel, setModalLevel] = useState("Todos");
   const [onlyEnem, setOnlyEnem] = useState(false);
+  const [selectedYear, setSelectedYear] = useState("Todos"); // <- ADICIONADO
 
   const loading = false;
 
@@ -39,37 +40,35 @@ export default function ExercisesList() {
   };
 
   // FILTRO DA LISTA PRINCIPAL
-const filteredTopics = useMemo(() => {
-  return topics.filter((topic) => {
-    // 1. IGNORA TOTALMENTE OS TÓPICOS DO ENEM
-    // Se o id ou o title do tópico contiver "enem", ele é pulado e não entra na lista
-    if (
-      topic.id.toLowerCase().includes("enem") || 
-      topic.title.toLowerCase().includes("enem")
-    ) {
-      return false;
-    }
+  const filteredTopics = useMemo(() => {
+    return topics.filter((topic) => {
+      if (
+        topic.id.toLowerCase().includes("enem") || 
+        topic.title.toLowerCase().includes("enem")
+      ) {
+        return false;
+      }
 
-    // 2. ABAIXO SEGUE A SUA LÓGICA DE FILTRO DO CODIGO ORIGINAL:
-    const normalizedSearch = normalizeText(search);
+      const normalizedSearch = normalizeText(search);
 
-    const matchesSearch =
-      normalizeText(topic.title).includes(normalizedSearch) ||
-      normalizeText(topic.description).includes(normalizedSearch);
+      const matchesSearch =
+        normalizeText(topic.title).includes(normalizedSearch) ||
+        normalizeText(topic.description).includes(normalizedSearch);
 
-    const matchesDifficulty =
-      selectedDifficulty === "Todos" ||
-      topic.difficulty === selectedDifficulty;
+      const matchesDifficulty =
+        selectedDifficulty === "Todos" ||
+        topic.difficulty === selectedDifficulty;
 
-    return matchesSearch && matchesDifficulty;
-  });
-}, [topics, search, selectedDifficulty]);
+      return matchesSearch && matchesDifficulty;
+    });
+  }, [topics, search, selectedDifficulty]);
 
   // ABRE AS OPÇÕES DO TÓPICO
   const handleTopicClick = (topic: Topic) => {
     setActiveTopic(topic);
-    setModalLevel("Todos"); // Valor padrão inicial no modal
-    setOnlyEnem(false);     // Padrão desativado
+    setModalLevel("Todos"); 
+    setOnlyEnem(false);     
+    setSelectedYear("Todos"); // <- ADICIONADO: Volta para "Todos" ao abrir o modal
     setIsModalOpen(true);
   };
 
@@ -81,7 +80,8 @@ const filteredTopics = useMemo(() => {
     navigate(`/exercises/${activeTopic.area}/${activeTopic.id}`, {
       state: {
         selectedLevel: modalLevel,
-        onlyEnem: onlyEnem
+        onlyEnem: onlyEnem,
+        selectedYear: selectedYear // <- ADICIONADO: Enviando o ano para o player
       }
     });
   };
@@ -225,6 +225,28 @@ const filteredTopics = useMemo(() => {
                   <option value="Médio">Apenas Médio</option>
                   <option value="Difícil">Apenas Difícil</option>
                   <option value="Olímpico">Apenas Olímpico (OBMEP)</option>
+                </select>
+                <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" />
+              </div>
+            </div>
+            {/* ADICIONADO: SELEÇÃO DE ANO DO EXERCÍCIO */}
+            <div className="mb-5">
+              <label className="block text-xs font-bold text-slate-400 uppercase mb-2 tracking-wider">
+                Ano da Questão
+              </label>
+              <div className="relative">
+                <Filter className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 w-4 h-4 pointer-events-none" />
+                <select
+                  className="appearance-none w-full pl-11 pr-10 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 dark:text-white rounded-xl text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer"
+                  value={selectedYear}
+                  onChange={(e) => setSelectedYear(e.target.value)}
+                >
+                  <option value="Todos">Todos os anos</option>
+                  <option value="2024">2024</option>
+                  <option value="2023">2023</option>
+                  <option value="2022">2022</option>
+                  <option value="2021">2021</option>
+                  <option value="2020">2020</option>
                 </select>
                 <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" />
               </div>

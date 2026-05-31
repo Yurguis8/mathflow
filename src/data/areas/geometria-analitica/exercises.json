@@ -1,1 +1,70 @@
-[]
+[
+  {
+    "id": "enem-2022-156",
+    "topicId": "circunferencia",
+    "question": "Questão 156 - ENEM 2022\n\nO professor de artes orientou seus estudantes a realizarem a seguinte sequência de atividades: • Dobrar uma folha de papel em formato quadrado duas vezes, em sequência, ao longo das linhas tracejadas, conforme ilustrado nas figuras 1 e 2, para obter o papel dobrado, conforme Figura 3. • Em seguida, no papel dobrado da Figura 3, considerar o ponto _R_, sobre o segmento _OM_, sendo o ponto médio do lado do quadrado original, de modo que , traçar um arco de circunferência de raio medindo com centro no ponto _R_, obtendo a Figura 4. Por último, recortar o papel ao longo do arco de circunferência e excluir a parte que contém o setor circular, obtendo o papel dobrado, conforme Figura 5.\n\nApós desdobrado o papel que restou na Figura 5, a figura plana que os estudantes obterão será",
+    "options": [
+      "https://enem.dev/2022/questions/156/538392d5-583a-4aa5-a47c-61ee0bc6b98d.png",
+      "https://enem.dev/2022/questions/156/78436952-5965-4c7f-80c3-ca2eee79bb4e.png",
+      "https://enem.dev/2022/questions/156/ddf97279-7187-4bc2-be7b-25bd70510a73.png",
+      "https://enem.dev/2022/questions/156/b09ad37a-893e-4709-8b48-bded413fc77f.png",
+      "https://enem.dev/2022/questions/156/c3221442-88b6-455d-bf9f-5097c75188a2.png"
+    ],
+    "correctIndex": 2,
+    "image": "https://enem.dev/2022/questions/156/2b1f4d30-ed72-40af-824d-6d394c9d948d.png",
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2022-168",
+    "topicId": "plano-cartesiano",
+    "question": "Questão 168 - ENEM 2022\n\nUma pessoa precisa se deslocar de automóvel do ponto P para o ponto Q, indicados na figura, na qual as linhas verticais e horizontais simbolizam ruas Por causa do sentido de tráfego nessas ruas, o caminho poligonal destacado é a possibilidade mais curta de efetuar esse deslocamento. Para descrevê-lo, deve-se especificar qual o sentido a ser tomado em cada cruzamento de ruas, em relação à direção de deslocamento do automóvel, que se movimentará continuamente. Para isso, empregam-se as letras E, F e D para indicar “vire à esquerda”, “siga em frente” e “vire à direita”, respectivamente.\n\nA sequência de letras que descreve o caminho poligonal destacado é",
+    "options": [
+      "DDEFDDEEFFD.",
+      "DFEFDDDEFFD.",
+      "DFEFDDEEFFD.",
+      "EFDFEEDDFFE.",
+      "EFDFEEEDFFE."
+    ],
+    "correctIndex": 2,
+    "image": "https://enem.dev/2022/questions/168/5c7c6e9a-c900-4910-a9d0-af84f8f5b8c4.png",
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2022-176",
+    "topicId": "distancia-entre-pontos",
+    "question": "Questão 176 - ENEM 2022\n\nPretende-se que a distância percorrida entre as duas cidades, pelas Rodovias 001 e 002, passando pelo ponto de conexão, seja a menor possível. Dadas as exigências do projeto, qual das localizações sugeridas deve ser a escolhida para o ponto de conexão?",
+    "options": [
+      "I",
+      "II",
+      "III",
+      "IV",
+      "V"
+    ],
+    "correctIndex": 3,
+    "image": "https://enem.dev/2022/questions/176/eebeabf5-0dec-4070-abd5-f803bb370dd9.png",
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2023-145",
+    "topicId": "circunferencia",
+    "question": "Questão 145 - ENEM 2023\n\nNum certo momento de um jogo digital, a tela apresenta a imagem representada na figura. O ponto Q1 representa a posição de um jogador que está com a bola, os pontos Q2, Q3, Q4 , Q5 e Q6 também indicam posições de jogadores da mesma equipe, e os pontos A e B indicam os dois pés da trave mais próxima deles. No momento da partida retratado, o jogador Q1 tem a posse da bola, que será passada para um dos outros jogadores das posições Qn, n ∈ {2, 3, 4, 5, 6}, cujo ângulo AQnB tenha a mesma medida do ângulo AQ1 B.\n\nQual é o jogador que receberá a bola?",
+    "options": [
+      "https://enem.dev/2023/questions/145/b794885b-0519-4e72-87e0-93de02461252.png",
+      "https://enem.dev/2023/questions/145/57b5461f-1924-4599-9914-4b148b722d7c.png",
+      "https://enem.dev/2023/questions/145/d7e46a12-9912-4fad-8d9d-225859b42312.png",
+      "https://enem.dev/2023/questions/145/7a03bf64-9ae1-4137-924d-e1c6110fd1a3.png",
+      "https://enem.dev/2023/questions/145/5be53460-7a9a-4138-8d62-ac01b26993d6.png"
+    ],
+    "correctIndex": 1,
+    "image": "https://enem.dev/2023/questions/145/f338280e-33fe-4896-b296-cfb94ca78430.png",
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  }
+]

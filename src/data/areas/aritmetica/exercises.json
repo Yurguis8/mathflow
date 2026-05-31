@@ -1,1 +1,631 @@
-[]
+[
+  {
+    "id": "enem-2022-138",
+    "topicId": "medias",
+    "question": "Questão 138 - ENEM 2022\n\nO gráfico apresenta os totais de receitas e despesas de uma empresa, expressos em milhão de reais, no decorrer dos meses de um determinado ano. A empresa obtém lucro quando a diferença entre receita e despesa é positiva e tem prejuízo quando essa diferença é negativa.\n\nQual é a mediana, em milhão de reais, dos valores dos lucros apurados pela empresa nesse ano?",
+    "options": [
+      "1,5",
+      "2,0",
+      "2,9",
+      "3,0",
+      "5,5"
+    ],
+    "correctIndex": 3,
+    "image": "https://enem.dev/2022/questions/138/d738a15a-a083-4720-af91-80d2b3259c9f.png",
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2022-139",
+    "topicId": "razao-e-proporcao",
+    "question": "Questão 139 - ENEM 2022\n\nUm casal está reformando a cozinha de casa e decidiu comprar um refrigerador novo. Observando a planta da nova cozinha, desenhada na escala de 1: 50, notaram que o espaço destinado ao refrigerador tinha 3,8 cm de altura e 1,6 cm de largura. Eles sabem que os fabricantes de refrigeradores indicam que, para um bom funcionamento e fácil manejo na limpeza, esses eletrodomésticos devem ser colocados em espaços que permitam uma distância de, pelo menos, 10 cm de outros móveis ou paredes, tanto na parte superior quanto nas laterais. O casal comprou um refrigerador que caberia no local a ele destinado na nova cozinha, seguindo as instruções do fabricante.\n\nEsse refrigerador tem altura e largura máximas, em metro, respectivamente, iguais a",
+    "options": [
+      "1,80 e 0,60.",
+      "1,80 e 0,70.",
+      "1,90 e 0,80.",
+      "2,00 e 0,90.",
+      "2,00 e 1,00."
+    ],
+    "correctIndex": 0,
+    "image": null,
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2022-145",
+    "topicId": "razao-e-proporcao",
+    "question": "Questão 145 - ENEM 2022\n\nO pacote básico de um jogo para smartphone, que é vendido a R$ 50,00, contém 2 000 gemas e 100 000 moedas de ouro, que são itens utilizáveis nesse jogo. A empresa que comercializa esse jogo decidiu criar um pacote especial que será vendido a R$ 100,00 e que se diferenciará do pacote básico por apresentar maiores quantidades de gemas e moedas de ouro. Para estimular as vendas desse novo pacote, a empresa decidiu inserir nele 6 000 gemas a mais, em relação ao que o cliente teria caso optasse por comprar, com a mesma quantia, dois pacotes básicos.\n\nA quantidade de moedas de ouro que a empresa deverá inserir ao pacote especial, para que seja mantida a mesma proporção existente entre as quantidades de gemas e de moedas de ouro contidas no pacote básico, é",
+    "options": [
+      "50 000.",
+      "100 000.",
+      "200 000.",
+      "300 000.",
+      "400 000."
+    ],
+    "correctIndex": 4,
+    "image": null,
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2022-147",
+    "topicId": "porcentagem",
+    "question": "Questão 147 - ENEM 2022\n\nUma equipe de marketing digital foi contratada para aumentar as vendas de um produto ofertado em um site de comércio eletrônico. Para isso, elaborou um anúncio que, quando o cliente clica sobre ele, é direcionado para a página de vendas do produto. Esse anúncio foi divulgado em duas redes sociais, A e B, e foram obtidos os seguintes resultados: • rede social A: o anúncio foi visualizado por 3 000 pessoas; 10% delas clicaram sobre o anúncio e foram redirecionadas para o site; 3% das que clicaram sobre o anúncio compraram o produto. O investimento feito para a publicação do anúncio nessa rede foi de R$ 100,00; • rede social B: o anúncio foi visualizado por 1 000 pessoas; 30% delas clicaram sobre o anúncio e foram redirecionadas para o site; 2% das que clicaram sobre o anúncio compraram o produto. O investimento feito para a publicação do anúncio nessa rede foi de R$ 200,00. Por experiência, o pessoal da equipe de marketing considera que a quantidade de novas pessoas que verão o anúncio é diretamente proporcional ao investimento realizado, e que a quantidade de pessoas que comprarão o produto também se manterá proporcional à quantidade de pessoas que clicarão sobre o anúncio. O responsável pelo produto decidiu, então, investir mais R$ 300,00 em cada uma das duas redes sociais para a divulgação desse anúncio e obteve, de fato, o aumento proporcional esperado na quantidade de clientes que compraram esse produto. Para classificar o aumento obtido na quantidade (Q) de compradores desse produto, em consequência dessa segunda divulgação, em relação aos resultados observados na primeira divulgação, o responsável pelo produto adotou o seguinte critério: • Q ≤ 60%: não satisfatório; • 60% < Q ≤ 100%: regular; • 100% < Q ≤ 150%: bom; • 150% < Q ≤ 190%: muito bom; • 190% < Q ≤ 200%: excelente\n\nO aumento na quantidade de compradores, em consequência dessa segunda divulgação, em relação ao que foi registrado com a primeira divulgação, foi classificado como",
+    "options": [
+      "Não satisfatório.",
+      "Regular.",
+      "Bom.",
+      "Muito bom.",
+      "Excelente."
+    ],
+    "correctIndex": 2,
+    "image": null,
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2022-148",
+    "topicId": "potenciacao-e-radiciacao",
+    "question": "Questão 148 - ENEM 2022\n\nA luminosidade _L_ de uma estrela está relacionada com o raio _R_ e com a temperatura _T_ dessa estrela segundo a Lei de Stefan-Boltzmann: em que c é uma constante igual para todas as estrelas. Disponível em: http://ciencia.hsw.uol.com.br. Acesso em: 22 nov. 2013 (adaptado) Considere duas estrelas _E_ e _F_, sendo que a estrela _E_ tem metade do raio da estrela _F_ e o dobro da temperatura de _F_.\n\nIndique por LE e LF suas respectivas luminosidades. A relação entre as luminosidades dessas duas estrelas é dada por",
+    "options": [
+      "https://enem.dev/2022/questions/148/623219f3-b839-4f65-b990-99e2416e78ac.png",
+      "https://enem.dev/2022/questions/148/ac0ff64f-89bb-4e7c-a004-f3a22719d728.png",
+      "https://enem.dev/2022/questions/148/282300db-f32c-4e24-b4ec-da66e734e9c4.png",
+      "https://enem.dev/2022/questions/148/2e2fa9f3-4c51-4920-8048-790d9f42ed80.png",
+      "https://enem.dev/2022/questions/148/c37d4dda-0f9a-4756-a282-99e7ddd27c64.png"
+    ],
+    "correctIndex": 3,
+    "image": "https://enem.dev/2022/questions/148/00e98ef8-6901-4d38-91f1-1fa1afda8b14.png",
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2022-149",
+    "topicId": "medias",
+    "question": "Questão 149 - ENEM 2022\n\nUma das informações que pode auxiliar no dimensionamento do número de pediatras que devem atender em uma Unidade Básica de Saúde (UBS) é o número que representa a mediana da quantidade de crianças por família existente na região sob sua responsabilidade. O quadro mostra a distribuição das frequências do número de crianças por família na região de responsabilidade de uma UBS.\n\nO número que representa a mediana da quantidade de crianças por família nessa região é",
+    "options": [
+      "1,0.",
+      "1,5.",
+      "1,9.",
+      "2,1.",
+      "2,5."
+    ],
+    "correctIndex": 1,
+    "image": "https://enem.dev/2022/questions/149/d92eba46-c91d-43d9-accf-ec06c4506ac1.png",
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2022-151",
+    "topicId": "porcentagem",
+    "question": "Questão 151 - ENEM 2022\n\nUm médico faz o acompanhamento clínico de um grupo de pessoas que realizam atividades físicas diariamente. Ele observou que a perda média de massa dessas pessoas para cada hora de atividade física era de 1,5 kg. Sabendo que a massa de 1 L de água é de 1 kg, ele recomendou que ingerissem, ao longo das 3 horas seguintes ao final da atividade, uma quantidade total de água correspondente a 40% a mais do que a massa perdida na atividade física, para evitar desidratação. Seguindo a recomendação médica, uma dessas pessoas ingeriu, certo dia, um total de 1,7 L de água após terminar seus exercícios físicos.\n\nPara que a recomendação médica tenha efetivamente sido respeitada, a atividade física dessa pessoa, nesse dia, durou",
+    "options": [
+      "30 minutos ou menos.",
+      "Mais de 35 e menos de 45 minutos.",
+      "Mais de 45 e menos de 55 minutos.",
+      "Mais de 60 e menos de 70 minutos.",
+      "70 minutos ou mais."
+    ],
+    "correctIndex": 2,
+    "image": null,
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2022-152",
+    "topicId": "porcentagem",
+    "question": "Questão 152 - ENEM 2022\n\nEm uma sala de cinema, para garantir que os espectadores vejam toda a imagem projetada na tela, a disposição das poltronas deve obedecer à norma técnica da Associação Brasileira de Normas Técnicas (ABNT), que faz as seguintes indicações: • Distância mínima (Dmín) entre a tela de projeção e o encosto da poltrona da primeira fileira deve ser de, pelo menos, 60% da largura (L) da tela. • Distância máxima (Dmáx) entre a tela de projeção e o encosto da poltrona da última fileira deve ser o dobro da largura (L) da tela, sendo aceitável uma distância de até 2,9 vezes a largura (L) da tela. Para o espaçamento entre as fileiras de poltronas, é considerada a distância de 1 metro entre os encostos de poltronas em duas fileiras consecutivas. Disponível em: www.ctav.gov.br. Acesso em: 14 nov. 2013. Disponível em: www.ctav.gov.br. Acesso em: 14 nov. 2013. Pretende-se ampliar essa sala, mantendo-se na mesma posição a tela e todas as poltronas já instaladas, ampliando-se ao máximo a sala para os fundos (área de instalação de novas poltronas), respeitando-se o limite aceitável da norma da ABNT. A intenção é aumentar, ao máximo, a quantidade de poltronas da sala, instalando-se novas unidades, iguais às já instaladas.\n\nQuantas fileiras de poltronas a sala comportará após essa ampliação?",
+    "options": [
+      "26",
+      "27",
+      "28",
+      "29",
+      "35"
+    ],
+    "correctIndex": 2,
+    "image": "https://enem.dev/2022/questions/152/f182fb95-a05f-4d8d-bd7d-bbf7adf3d95b.png",
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2022-154",
+    "topicId": "porcentagem",
+    "question": "Questão 154 - ENEM 2022\n\nEm janeiro de 2013, foram declaradas 1 794 272 admissões e 1 765 372 desligamentos no Brasil, ou seja, foram criadas 28 900 vagas de emprego, segundo dados do Cadastro Geral de Empregados e Desempregados (Caged), divulgados pelo Ministério do Trabalho e Emprego (MTE). Segundo o Caged, o número de vagas criadas em janeiro de 2013 sofreu uma queda de 75%, quando comparado com o mesmo período de 2012. Disponível em: http://portal.mte.gov.br. Acesso em: 23 fev. 2013 (adaptado).\n\nDe acordo com as informações dadas, o número de vagas criadas em janeiro de 2012 foi",
+    "options": [
+      "16 514.",
+      "86 700.",
+      "115 600.",
+      "441 343.",
+      "448 568."
+    ],
+    "correctIndex": 2,
+    "image": null,
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2022-155",
+    "topicId": "operacoes-basicas",
+    "question": "Questão 155 - ENEM 2022\n\nUm prédio, com 9 andares e 8 apartamentos de 2 quartos por andar, está com todos os seus apartamentos à venda. Os apartamentos são identificados por números formados por dois algarismos, sendo que a dezena indica o andar onde se encontra o apartamento, e a unidade, um algarismo de 1 a 8, que diferencia os apartamentos de um mesmo andar. Quanto à incidência de sol nos quartos desses apartamentos, constatam-se as seguintes características, em função de seus números de identificação: • naqueles que finalizam em 1 ou 2, ambos os quartos recebem sol apenas na parte da manhã; • naqueles que finalizam em 3, 4, 5 ou 6, apenas um dos quartos recebe sol na parte da manhã; • naqueles que finalizam em 7 ou 8, ambos os quartos recebem sol apenas na parte da tarde. Uma pessoa pretende comprar 2 desses apartamentos em um mesmo andar, mas quer que, em ambos, pelo menos um dos quartos receba sol na parte da manhã.\n\nDe quantas maneiras diferentes essa pessoa poderá escolher 2 desses apartamentos para compra nas condições desejadas?",
+    "options": [
+      "https://enem.dev/2022/questions/155/4e4d5692-b3ea-4434-aaef-74309d2d3b2a.png",
+      "https://enem.dev/2022/questions/155/2b0fcee8-c3b1-4c03-ac2a-342792f7ab28.png",
+      "https://enem.dev/2022/questions/155/e2dfe176-9a1a-49e7-aee5-62794ac8242b.png",
+      "https://enem.dev/2022/questions/155/0681d716-28d4-4521-801f-5a20871829e5.png",
+      "https://enem.dev/2022/questions/155/027b58bd-d5b6-4ab1-afb6-a17dd85e31c8.png"
+    ],
+    "correctIndex": 1,
+    "image": null,
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2022-163",
+    "topicId": "medias",
+    "question": "Questão 163 - ENEM 2022\n\nEm uma universidade, atuam professores que estão enquadrados funcionalmente pela sua maior titulação: mestre ou doutor. Nela há, atualmente, 60 mestres e 40 doutores. Os salários mensais dos professores mestres e dos doutores são, respectivamente, R$ 8 000,00 e R$ 12 000,00. A diretoria da instituição pretende proporcionar um aumento salarial diferenciado para o ano seguinte, de tal forma que o salário médio mensal dos professores dessa instituição não ultrapasse R$ 12 240,00. A universidade já estabeleceu que o aumento salarial será de 25% para os mestres e precisa ainda definir o percentual de reajuste para os doutores.\n\nMantido o número atual de professores com suas atuais titulações, o aumento salarial, em porcentagem, a ser concedido aos doutores deverá ser de, no máximo,",
+    "options": [
+      "14,4.",
+      "20,7.",
+      "22,0.",
+      "30,0.",
+      "37,5"
+    ],
+    "correctIndex": 3,
+    "image": null,
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2022-164",
+    "topicId": "regra-de-tres",
+    "question": "Questão 164 - ENEM 2022\n\nUm borrifador de atuação automática libera, a cada acionamento, uma mesma quantidade de inseticida. O recipiente desse produto, quando cheio, contém 360 mL de inseticida, que duram 60 dias se o borrifador permanecer ligado ininterruptamente e for acionado a cada 48 minutos.\n\nA quantidade de inseticida que é liberada a cada acionamento do borrifador, em mililitro, é",
+    "options": [
+      "0,125.",
+      "0,200.",
+      "4,800.",
+      "6,000.",
+      "12,000."
+    ],
+    "correctIndex": 1,
+    "image": null,
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2022-165",
+    "topicId": "razao-e-proporcao",
+    "question": "Questão 165 - ENEM 2022\n\nDefinem-se o dia e o ano de um planeta de um sistema solar como sendo, respectivamente, o tempo que o planeta leva para dar 1 volta completa em torno de seu próprio eixo de rotação e o tempo para dar 1 volta completa em torno de seu Sol. Suponha que exista um planeta Z, em algum sistema solar, onde um dia corresponda a 73 dias terrestres e que 2 de seus anos correspondam a 1 ano terrestre. Considere que 1 ano terrestre tem 365 de seus dias.\n\nNo planeta Z, seu ano corresponderia a quantos de seus dias?",
+    "options": [
+      "2,5",
+      "10,0",
+      "730,0",
+      "13 322,5",
+      "53 290,0"
+    ],
+    "correctIndex": 0,
+    "image": null,
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2022-167",
+    "topicId": "porcentagem",
+    "question": "Questão 167 - ENEM 2022\n\nEm uma loja, o preço promocional de uma geladeira é de R$ 1 000,00 para pagamento somente em dinheiro. Seu preço normal, fora da promoção, é 10% maior. Para pagamento feito com o cartão de crédito da loja, é dado um desconto de 2% sobre o preço normal. Uma cliente decidiu comprar essa geladeira, optando pelo pagamento com o cartão de crédito da loja. Ela calculou que o valor a ser pago seria o preço promocional acrescido de 8%. Ao ser informada pela loja do valor a pagar, segundo sua opção, percebeu uma diferença entre seu cálculo e o valor que lhe foi apresentado\n\nO valor apresentado pela loja, comparado ao valor calculado pela cliente, foi",
+    "options": [
+      "R$ 2,00 menor.",
+      "R$ 100,00 menor.",
+      "R$ 200,00 menor.",
+      "R$ 42,00 maior.",
+      "R$ 80,00 maior."
+    ],
+    "correctIndex": 0,
+    "image": null,
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2022-170",
+    "topicId": "razao-e-proporcao",
+    "question": "Questão 170 - ENEM 2022\n\nNo período de 2005 a 2013, o valor de venda dos imóveis em uma cidade apresentou alta, o que resultou no aumento dos aluguéis. Os gráficos apresentam a evolução desses valores, para um mesmo imóvel, no mercado imobiliário dessa cidade. A rentabilidade do aluguel de um imóvel é calculada pela razão entre o valor mensal de aluguel e o valor de mercado desse imóvel.\n\nCom base nos dados fornecidos, em que ano a rentabilidade do aluguel foi maior?",
+    "options": [
+      "2005",
+      "2007",
+      "2009",
+      "2011",
+      "2013"
+    ],
+    "correctIndex": 1,
+    "image": "https://enem.dev/2022/questions/170/be397d74-899b-444a-b587-931e9c3505ca.png",
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2022-171",
+    "topicId": "medias",
+    "question": "Questão 171 - ENEM 2022\n\nNos cinco jogos finais da última temporada, com uma média de 18 pontos por jogo, um jogador foi eleito o melhor do campeonato de basquete. Na atual temporada, cinco jogadores têm a chance de igualar ou melhorar essa média. No quadro estão registradas as pontuações desses cinco jogadores nos quatro primeiros jogos das finais deste ano. O quinto e último jogo será realizado para decidir a equipe campeã e qual o melhor jogador da temporada.\n\nO jogador que precisa fazer a menor quantidade de pontos no quinto jogo, para igualar a média de pontos do melhor jogador da temporada passada, é o",
+    "options": [
+      "I.",
+      "II.",
+      "III.",
+      "IV.",
+      "V."
+    ],
+    "correctIndex": 0,
+    "image": "https://enem.dev/2022/questions/171/45b098d3-26d2-49c5-a129-40e85febb05b.png",
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2022-173",
+    "topicId": "razao-e-proporcao",
+    "question": "Questão 173 - ENEM 2022\n\nUma instituição de ensino superior ofereceu vagas em um processo seletivo de acesso a seus cursos. Finalizadas as inscrições, foi divulgada a relação do número de candidatos por vaga em cada um dos cursos oferecidos. Esses dados são apresentados no quadro.\n\nQual foi o número total de candidatos inscritos nesse processo seletivo?",
+    "options": [
+      "200",
+      "400",
+      "1200",
+      "1235",
+      "7200"
+    ],
+    "correctIndex": 3,
+    "image": "https://enem.dev/2022/questions/173/0e6a9a19-bb58-4f93-bcb9-b7f26f5df5e7.png",
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2022-175",
+    "topicId": "notacao-cientifica",
+    "question": "Questão 175 - ENEM 2022\n\nAo escutar a notícia de que um filme recém-lançado arrecadou, no primeiro mês de lançamento, R$ 1,35 bilhão em bilheteria, um estudante escreveu corretamente o número que representa essa quantia, com todos os seus algarismos.\n\nO número escrito pelo estudante foi",
+    "options": [
+      "135 000,00.",
+      "1 350 000,00.",
+      "13 500 000,00.",
+      "135 000 000,00.",
+      "1 350 000 000,00"
+    ],
+    "correctIndex": 4,
+    "image": null,
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2022-177",
+    "topicId": "operacoes-basicas",
+    "question": "Questão 177 - ENEM 2022\n\nUma pessoa precisa contratar um operário para fazer um serviço em sua casa. Para isso, ela postou um anúncio em uma rede social. Cinco pessoas responderam informando preços por hora trabalhada, gasto diário com transporte e tempo necessário para conclusão do serviço, conforme valores apresentados no quadro.\n\nSe a pessoa pretende gastar o mínimo possível com essa contratação, irá contratar o operário",
+    "options": [
+      "I.",
+      "II.",
+      "III.",
+      "IV.",
+      "V."
+    ],
+    "correctIndex": 0,
+    "image": "https://enem.dev/2022/questions/177/fb1d11e4-76d3-4657-b78f-84e7bcd81f6c.png",
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2023-137",
+    "topicId": "medias",
+    "question": "Questão 137 - ENEM 2023\n\nOs 100 funcionários de uma empresa estão distribuídos em dois setores: Produção e Administração. Os funcionários de um mesmo setor recebem salários com valores iguais. O quadro apresenta a quantidade de funcionários por setor e seus respectivos salários.\n\nA média dos salários dos 100 funcionários dessa empresa, em real, é",
+    "options": [
+      "2.000,00.",
+      "2.500,00.",
+      "3.250,00.",
+      "4.500,00.",
+      "9.000,00."
+    ],
+    "correctIndex": 2,
+    "image": "https://enem.dev/2023/questions/137/fc161c5c-10e9-46d8-a75d-09c59b21d5a4.png",
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2023-138",
+    "topicId": "razao-e-proporcao",
+    "question": "Questão 138 - ENEM 2023\n\nVisando atrair mais clientes, o gerente de uma loja anunciou uma promoção em que cada cliente que realizar uma compra pode ganhar um voucher para ser usado em sua próxima compra. Para ganhar seu voucher, o cliente precisa retirar, ao acaso, uma bolinha de dentro de cada uma das duas urnas A e B disponibilizadas pelo gerente, nas quais há apenas bolinhas pretas e brancas. Atualmente, a probabilidade de se escolher, ao acaso, uma bolinha preta na urna A é igual a 20% e a probabilidade de se escolher uma bolinha preta na urna B é 25%. Ganha o voucher o cliente que retirar duas bolinhas pretas, uma de cada urna. Com o passar dos dias, o gerente percebeu que, para a promoção ser viável aos negócios, era preciso alterar a probabilidade de acerto do cliente sem alterar a regra da promoção. Para isso, resolveu alterar a quantidade de bolinhas brancas na urna B de forma que a probabilidade de um cliente ganhar o voucher passasse a ser menor ou igual a 1%. Sabe-se que a urna B tem 4 bolinhas pretas e que, em ambas as urnas, todas as bolinhas têm a mesma probabilidade de serem retiradas.\n\nQual é o número mínimo de bolinhas brancas que o gerente deve adicionar à urna B?",
+    "options": [
+      "20",
+      "60",
+      "64",
+      "68",
+      "80"
+    ],
+    "correctIndex": 2,
+    "image": null,
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2023-140",
+    "topicId": "medias",
+    "question": "Questão 140 - ENEM 2023\n\nUma empresa de transporte faz regularmente um levantamento do número de viagens realizadas durante o dia por todos os 160 motoristas cadastrados em seu aplicativo. Em um certo dia, foi gerado um relatório, por meio de um gráfico de barras, no qual se relacionaram a quantidade de motoristas com a quantidade de viagens realizadas até aquele instante do dia.\n\nComparando os valores da média, da mediana e da moda da distribuição das quantidades de viagens realizadas pelos motoristas cadastrados nessa empresa, obtém-se",
+    "options": [
+      "Mediana = média < moda.",
+      "Mediana = moda < média.",
+      "Mediana < média < moda.",
+      "Moda < média < mediana.",
+      "Moda < mediana < média."
+    ],
+    "correctIndex": 4,
+    "image": "https://enem.dev/2023/questions/140/846c1155-c9f0-48ad-a862-f9bf883c3935.png",
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2023-141",
+    "topicId": "razao-e-proporcao",
+    "question": "Questão 141 - ENEM 2023\n\nQual a probabilidade de o vencedor do sorteio ser um estudante do terceiro ano?",
+    "options": [
+      "https://enem.dev/2023/questions/141/e698edb1-adc0-416b-9370-c20a7e878259.jpg",
+      "https://enem.dev/2023/questions/141/b5f5bdf5-2251-4326-9877-ce9c2d831600.jpg",
+      "https://enem.dev/2023/questions/141/d241fadb-6516-4ca8-aa9b-e72fff314881.jpg",
+      "https://enem.dev/2023/questions/141/1dcce683-4ef7-4862-b554-3e3c66de54c3.jpg",
+      "https://enem.dev/2023/questions/141/7b4de18d-92ca-488f-8419-ec95d852a135.jpg"
+    ],
+    "correctIndex": 4,
+    "image": null,
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2023-142",
+    "topicId": "razao-e-proporcao",
+    "question": "Questão 142 - ENEM 2023\n\nQual é a quantidade mínima de água, em litro, que cada morador, em média, deverá economizar por dia, de modo que o reservatório não fique sem água nos próximos 10 dias?",
+    "options": [
+      "50",
+      "60",
+      "80",
+      "140",
+      "150"
+    ],
+    "correctIndex": 0,
+    "image": null,
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2023-143",
+    "topicId": "porcentagem",
+    "question": "Questão 143 - ENEM 2023\n\nEm janeiro do ano passado, a direção de uma fábrica abriu uma creche para os filhos de seus funcionários, com 10 salas, cada uma com capacidade para atender 10 crianças a cada ano. As vagas são sorteadas entre os filhos dos funcionários inscritos, enquanto os não contemplados pelo sorteio formam uma lista de espera. No ano passado, a lista de espera teve 400 nomes e, neste ano, esse número cresceu 10%. A direção da fábrica realizou uma pesquisa e constatou que a lista de espera para o próximo ano terá a mesma quantidade de nomes da lista de espera deste ano. Decidiu, então, construir, ao longo desse ano, novas salas para a creche, também com capacidade de atendimento para 10 crianças cada, de modo que o número de nomes na lista de espera no próximo ano seja 25% menor que o deste ano.\n\nO número mínimo de salas que deverão ser construídas é",
+    "options": [
+      "10",
+      "11",
+      "12",
+      "30",
+      "33"
+    ],
+    "correctIndex": 1,
+    "image": null,
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2023-144",
+    "topicId": "razao-e-proporcao",
+    "question": "Questão 144 - ENEM 2023\n\nA foto mostra a construção de uma cisterna destinada ao armazenamento de água. Uma cisterna como essa, na forma de cilindro circular reto com 3 m² de área da base, foi abastecida por um curso-d’água com vazão constante. O seu proprietário registrou a altura do nível da água no interior da cisterna durante o abastecimento em diferentes momentos de um mesmo dia, conforme o quadro. Disponível em: www.paraibamix.com. Acesso em: 3 dez. 2012.\n\nQual foi a vazão, em metro cúbico por hora, do curso-d’água que abasteceu a cisterna?",
+    "options": [
+      "0,3",
+      "0,5",
+      "0,9",
+      "1,8",
+      "2,7"
+    ],
+    "correctIndex": 2,
+    "image": "https://enem.dev/2023/questions/144/c606403f-fd10-4c02-8e46-736fece94b85.png",
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2023-147",
+    "topicId": "razao-e-proporcao",
+    "question": "Questão 147 - ENEM 2023\n\nAlguns estudos comprovam que os carboidratos fornecem energia ao corpo, preservam as proteínas estruturais dos músculos durante a prática de atividade física e ainda dão força para o cérebro coordenar os movimentos, o que de fato tem impacto positivo no desenvolvimento do praticante. O ideal é consumir 1 grama de carboidrato para cada minuto de caminhada. CIRINO, C. Boa pergunta: consumir carboidratos antes dos exercícios melhora o desempenho do atleta? Revista Saúde! É Vital, n. 330, nov. 2010 (adaptado). Um casal realizará diariamente 30 minutos de caminhada, ingerindo, antes dessa atividade, a quantidade ideal de carboidratos recomendada. Para ter o consumo ideal apenas por meio do consumo de pão de fôrma integral, o casal planeja garantir o suprimento de pães para um período de 30 dias ininterruptos. Sabe-se que cada pacote desse pão vem com 18 fatias, e que cada uma delas tem 15 gramas de carboidratos. A quantidade mínima de pacotes de pão de fôrma necessários para prover o suprimento a esse casal é",
+    "options": [
+      "1",
+      "4",
+      "6",
+      "7",
+      "8"
+    ],
+    "correctIndex": 3,
+    "image": null,
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2023-150",
+    "topicId": "porcentagem",
+    "question": "Questão 150 - ENEM 2023\n\nDirigir após ingerir bebidas alcoólicas é uma atitude extremamente perigosa, uma vez que, a partir da primeira dose, a pessoa já começa a ter perda de sensibilidade de movimentos e de reflexos. Apesar de a eliminação e absorção do álcool depender de cada pessoa e de como o organismo consegue metabolizar a substância, ao final da primeira hora após a ingestão, a concentração de álcool (C) no sangue corresponde a aproximadamente 90% da quantidade (q) de álcool ingerida, e a eliminação total dessa concentração pode demorar até 12 horas. Disponível em: http://g1.globo.com. Acesso em: 1 dez. 2018 (adaptado).\n\nNessas condições, ao final da primeira hora após a ingestão da quantidade q de álcool, a concentração C dessa substância no sangue é expressa algebricamente por",
+    "options": [
+      "C = 0,9q",
+      "C = 0,1q",
+      "C = 1 − 0,1q",
+      "C = 1 − 0,9q",
+      "C = q − 10"
+    ],
+    "correctIndex": 0,
+    "image": null,
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2023-150",
+    "topicId": "porcentagem",
+    "question": "Questão 150 - ENEM 2023\n\nDirigir após ingerir bebidas alcoólicas é uma atitude extremamente perigosa, uma vez que, a partir da primeira dose, a pessoa já começa a ter perda de sensibilidade de movimentos e de reflexos. Apesar de a eliminação e absorção do álcool depender de cada pessoa e de como o organismo consegue metabolizar a substância, ao final da primeira hora após a ingestão, a concentração de álcool (C) no sangue corresponde a aproximadamente 90% da quantidade (q) de álcool ingerida, e a eliminação total dessa concentração pode demorar até 12 horas. Disponível em: http://g1.globo.com. Acesso em: 1 dez. 2018 (adaptado).\n\nNessas condições, ao final da primeira hora após a ingestão da quantidade q de álcool, a concentração C dessa substância no sangue é expressa algebricamente por",
+    "options": [
+      "C = 0,9q",
+      "C = 0,1q",
+      "C = 1 − 0,1q",
+      "C = 1 − 0,9q",
+      "C = q − 10"
+    ],
+    "correctIndex": 0,
+    "image": null,
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2023-157",
+    "topicId": "porcentagem",
+    "question": "Questão 157 - ENEM 2023\n\nUm professor, para promover a aprendizagem dos estudantes em estatística, propôs uma atividade. O objetivo era verificar o percentual de estudantes com massa corporal abaixo da média e altura acima da média de um grupo de estudantes. Para isso, usando uma balança e uma fita métrica, avaliou uma amostra de dez estudantes, anotando as medidas observadas. O gráfico apresenta a massa corporal, em quilograma, e a altura, em metro, obtidas na atividade Após a coleta dos dados, os estudantes calcularam a média dos valores obtidos, referentes à massa corporal e à altura, obtendo, respectivamente, 80 kg e 1,65 m.\n\nQual é o percentual de estudantes dessa amostra com massa corporal abaixo da média e altura acima da média?",
+    "options": [
+      "10",
+      "20",
+      "30",
+      "50",
+      "70"
+    ],
+    "correctIndex": 1,
+    "image": "https://enem.dev/2023/questions/157/13cfbc97-0034-4904-9100-ff5ca3f6504e.png",
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2023-161",
+    "topicId": "juros",
+    "question": "Questão 161 - ENEM 2023\n\nUma loja vende seus produtos de duas formas: à vista ou financiado em três parcelas mensais iguais. Para definir o valor dessas parcelas nas vendas financiadas, a loja aumenta em 20% o valor do produto à vista e divide esse novo valor por 3. A primeira parcela deve ser paga no ato da compra, e as duas últimas, em 30 e 60 dias após a compra. Um cliente da loja decidiu comprar, de forma financiada, um produto cujo valor à vista é R$ 1 500,00. Utilize 5,29 como aproximação para 28.\n\nA taxa mensal de juros compostos praticada nesse financiamento é de",
+    "options": [
+      "6,7%",
+      "10%",
+      "20%",
+      "21,5%",
+      "23,3%"
+    ],
+    "correctIndex": 3,
+    "image": null,
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2023-166",
+    "topicId": "operacoes-basicas",
+    "question": "Questão 166 - ENEM 2023\n\nUma pessoa pratica quatro atividades físicas — caminhar, correr, andar de bicicleta e jogar futebol — como parte de seu programa de emagrecimento. Essas atividades são praticadas semanalmente de acordo com o quadro, que apresenta o número de horas diárias por atividade. Ela deseja comemorar seu aniversário e escolhe o dia da semana em que o gasto calórico com as atividades físicas praticadas for o maior. Para tanto, considera que os valores dos gastos calóricos das atividades por hora (cal/h) são os seguintes:\n\nO dia da semana em que será comemorado o aniversário é",
+    "options": [
+      "Segunda-feira.",
+      "Terça-feira.",
+      "Quarta-feira.",
+      "Quinta-feira.",
+      "Sexta-feira."
+    ],
+    "correctIndex": 2,
+    "image": "https://enem.dev/2023/questions/166/80863c14-e426-4ae6-9ff0-03f5b3c71160.png",
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2023-167",
+    "topicId": "regra-de-tres",
+    "question": "Questão 167 - ENEM 2023\n\nA cada bimestre, a diretora de uma escola compra uma quantidade de folhas de papel ofício proporcional ao número de alunos matriculados. No bimestre passado, ela comprou 6 000 folhas para serem utilizadas pelos 1 200 alunos matriculados. Neste bimestre, alguns alunos cancelaram suas matrículas e a escola tem, agora, 1 150 alunos. A diretora só pode gastar R$ 220,00 nessa compra, e sabe que o fornecedor da escola vende as folhas de papel ofício em embalagens de 100 unidades a R$ 4,00 a embalagem. Assim, será preciso convencer o fornecedor a dar um desconto à escola, de modo que seja possível comprar a quantidade total de papel ofício necessária para o bimestre.\n\nO desconto necessário no preço final da compra, em porcentagem, pertence ao intervalo",
+    "options": [
+      "(5,0 ; 5,5).",
+      "(8,0 ; 8,5).",
+      "(11,5 ; 12,5).",
+      "(19,5 ; 20,5).",
+      "(3,5 ; 4,0)."
+    ],
+    "correctIndex": 0,
+    "image": null,
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2023-171",
+    "topicId": "razao-e-proporcao",
+    "question": "Questão 171 - ENEM 2023\n\nO calendário maia apresenta duas contagens simultâneas de anos, o chamado ano Tzolkim, composto por 260 dias e que determinava o calendário religioso, e o ano Haab, composto por 365 dias e que determinava o calendário agrícola. Um historiador encontrou evidências de que gerações de uma mesma família governaram certa comunidade maia pelo período de 20 ciclos, sendo cada ciclo formado por 52 anos Haab. Disponível em: www.suapesquisa.com. Acesso em: 20 ago. 2014.\n\nDe acordo com as informações fornecidas, durante quantos anos Tzolkim aquela comunidade maia foi governada por tal família?",
+    "options": [
+      "741",
+      "1 040",
+      "1 460",
+      "2 100",
+      "5 200"
+    ],
+    "correctIndex": 2,
+    "image": null,
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2023-173",
+    "topicId": "razao-e-proporcao",
+    "question": "Questão 173 - ENEM 2023\n\nEntre maratonistas, um parâmetro utilizado é o de economia de corrida (EC). O valor desse parâmetro é calculado pela razão entre o consumo de oxigênio, em mililitro (mL) por minuto (min), e a massa, em quilograma (kg), do atleta correndo a uma velocidade constante. Disponível em: www.treinamentoonline.com.br. Acesso em: 23 out. 2019 (adaptado).\n\nUm maratonista, visando melhorar sua performance, auxiliado por um médico, mensura o seu consumo de oxigênio por minuto a velocidade constante. Com base nesse consumo e na massa do atleta, o médico calcula o EC do atleta. A unidade de medida da grandeza descrita pelo parâmetro EC é",
+    "options": [
+      "https://enem.dev/2023/questions/173/58763f45-39e0-4355-b932-75233adbdf21.png",
+      "https://enem.dev/2023/questions/173/81adc538-3ad2-4ced-9a2f-9a7f5f247c20.png",
+      "https://enem.dev/2023/questions/173/5d5d774d-009d-44a6-a774-55719c5547bf.png",
+      "https://enem.dev/2023/questions/173/3464da35-f15a-4506-b75a-168a26ff4664.png",
+      "https://enem.dev/2023/questions/173/146d0f23-94de-4fd7-ae01-2d31285103d3.png"
+    ],
+    "correctIndex": 1,
+    "image": null,
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2023-179",
+    "topicId": "operacoes-basicas",
+    "question": "Questão 179 - ENEM 2023\n\nAs características culturais variam de povo para povo. Há notícias de um povo que possuía formas de contar diferentes das nossas, como indicado no quadrinho a seguir.\n\nSegundo o padrão de contagem indicado na figura, as representações dos numerais cinco e sete, nessa cultura, devem ser, respectivamente,",
+    "options": [
+      "Okosa urapum urapum urapum e okosa okosa urapum urapum urapum.",
+      "Okosa okosa urapum e okosa okosa okosa okosa urapum.",
+      "Okosa okosa urapum e okosa okosa okosa urapum.",
+      "Okosa urapum urapum e okosa urapum okosa urapum urapum.",
+      "Okosa okosa urapum e okosa okosa okosa okosa."
+    ],
+    "correctIndex": 2,
+    "image": "https://enem.dev/2023/questions/179/d2b83dd3-33ef-40d6-944a-b98d17f6411b.png",
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2023-180",
+    "topicId": "medias",
+    "question": "Questão 180 - ENEM 2023\n\nUm tipo de semente necessita de bastante água nos dois primeiros meses após o plantio. Um produtor pretende estabelecer o melhor momento para o plantio desse tipo de semente, nos meses de outubro a março. Após consultar a previsão do índice mensal de precipitação de chuva (ImPC) da região onde ocorrerá o plantio, para o período chuvoso de 2020-2021, ele obteve os seguintes dados: • outubro/2020: ImPC = 250 mm; • novembro/2020: ImPC = 150 mm; • dezembro/2020: ImPC = 200 mm; • janeiro/2021: ImPC = 450 mm; • fevereiro/2021: ImPC = 100 mm; • março/2021: ImPC = 200 mm. Com base nessas previsões, ele precisa escolher dois meses consecutivos em que a média mensal de precipitação seja a maior possível.\n\nNo início de qual desses meses o produtor deverá plantar esse tipo de semente?",
+    "options": [
+      "Outubro.",
+      "Novembro.",
+      "Dezembro.",
+      "Janeiro.",
+      "Fevereiro."
+    ],
+    "correctIndex": 2,
+    "image": null,
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  }
+]

@@ -1,1 +1,155 @@
-[]
+[
+  {
+    "id": "enem-2022-143",
+    "topicId": "poliedros",
+    "question": "Questão 143 - ENEM 2022\n\nDentre as diversas planificações possíveis para o cubo, uma delas é a que se encontra apresentada na Figura 1. Em um cubo, foram pintados, em três de suas faces, quadrados de cor cinza escura, que ocupam um quarto dessas faces, tendo esses três quadrados um vértice em comum, conforme ilustrado na Figura 2.\n\nA planificação do cubo da Figura 2, conforme o tipo de planificação apresentada na Figura 1, é",
+    "options": [
+      "https://enem.dev/2022/questions/143/37b0d8a0-5992-4fac-8f58-93924c6877e2.jpg",
+      "https://enem.dev/2022/questions/143/c2a2bae5-e20a-4bdb-af9e-b6d37b0cdc81.jpg",
+      "https://enem.dev/2022/questions/143/bfd0a9ed-5ff2-444f-b297-e2f37eba789b.jpg",
+      "https://enem.dev/2022/questions/143/b76f04c7-e485-4c93-8e57-60d5ce9f5623.jpg",
+      "https://enem.dev/2022/questions/143/2e478466-a3b6-4a44-8c04-a6187dc164df.jpg"
+    ],
+    "correctIndex": 0,
+    "image": "https://enem.dev/2022/questions/143/4da64c40-da53-4205-b673-aa5b6274e3e2.jpg",
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2022-153",
+    "topicId": "cones",
+    "question": "Questão 153 - ENEM 2022\n\nUma empresa produz e vende um tipo de chocolate, maciço, em formato de cone circular reto com as medidas do diâmetro da base e da altura iguais a 8 cm e 10 cm, respectivamente, como apresenta a figura. Devido a um aumento de preço dos ingredientes utilizados na produção desse chocolate, a empresa decide produzir esse mesmo tipo de chocolate com um volume 19% menor, no mesmo formato de cone circular reto com altura de 10 cm.\n\nPara isso, a empresa produzirá esses novos chocolates com medida do raio da base, em centímetro, igual a",
+    "options": [
+      "1,52.",
+      "3,24.",
+      "3,60.",
+      "6,48.",
+      "7,20."
+    ],
+    "correctIndex": 2,
+    "image": "https://enem.dev/2022/questions/153/f85bbaf3-e20e-48e7-8a5f-143804fa1743.png",
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2022-160",
+    "topicId": "poliedros",
+    "question": "Questão 160 - ENEM 2022\n\nUm robô, que tem um ímã em sua base, se desloca sobre a superfície externa de um cubo metálico, ao longo de segmentos de reta cujas extremidades são pontos médios de arestas e centros de faces. Ele inicia seu deslocamento no ponto **P**, centro da face superior do cubo, segue para o centro da próxima face, converte à esquerda e segue para o centro da face seguinte, converte à direita e continua sua movimentação, sempre alternando entre conversões à esquerda e à direita quando alcança o centro de uma face. O robô só termina sua movimentação quando retorna ao ponto **P**. A figura apresenta os deslocamentos iniciais desse robô.\n\nA projeção ortogonal do trajeto descrito por esse robô sobre o plano da base, após terminada sua movimentação, visualizada da posição em que se está enxergando esse cubo, é",
+    "options": [
+      "https://enem.dev/2022/questions/160/5d7821fa-37c8-4d86-b71d-4b70a0e1d096.png",
+      "https://enem.dev/2022/questions/160/6a4daa1c-7f24-439f-b2a3-43eddb2b2400.png",
+      "https://enem.dev/2022/questions/160/41ab922d-57a6-428b-a207-4dc213ec6481.png",
+      "https://enem.dev/2022/questions/160/79a7fd8e-7800-4a2f-86d6-33dcbe3aef84.png",
+      "https://enem.dev/2022/questions/160/2dacf59f-b682-45fb-bd03-29f25ba41487.png"
+    ],
+    "correctIndex": 0,
+    "image": "https://enem.dev/2022/questions/160/c9e8168c-5f91-45a5-82a3-c5a2948bf0a9.png",
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2022-169",
+    "topicId": "cilindros",
+    "question": "Questão 169 - ENEM 2022\n\nUma loja comercializa cinco modelos de caixas-d’água (I, II, III, IV e V), todos em formato de cilindro reto de base circular. Os modelos II, III, IV e V têm as especificações de suas dimensões dadas em relação às dimensões do modelo I, cuja profundidade é P e área da base é Ab, como segue: • modelo II: o dobro da profundidade e a metade da área da base do modelo I; • modelo III: o dobro da profundidade e a metade do raio da base do modelo I; • modelo IV: a metade da profundidade e o dobro da área da base do modelo I; • modelo V: a metade da profundidade e o dobro do raio da base do modelo I. Uma pessoa pretende comprar nessa loja o modelo de caixa-d’água que ofereça a maior capacidade volumétrica\n\nO modelo escolhido deve ser o",
+    "options": [
+      "I.",
+      "II.",
+      "III.",
+      "IV.",
+      "V."
+    ],
+    "correctIndex": 4,
+    "image": null,
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2022-172",
+    "topicId": "prismas",
+    "question": "Questão 172 - ENEM 2022\n\nUm casal planeja construir em sua chácara uma piscina com o formato de um paralelepípedo reto retângulo com capacidade para 90 000 L de água. O casal contratou uma empresa de construções que apresentou cinco projetos com diferentes combinações nas dimensões internas de profundidade, largura e comprimento. A piscina a ser construída terá revestimento interno em suas paredes e fundo com uma mesma cerâmica, e o casal irá escolher o projeto que exija a menor área de revestimento. As dimensões internas de profundidade, largura e comprimento, respectivamente, para cada um dos projetos, são: • projeto I: 1,8 m, 2,0 m e 25,0 m; • projeto II: 2,0 m, 5,0 m e 9,0 m; • projeto III: 1,0 m, 6,0 m e 15,0 m; • projeto IV: 1,5 m, 15,0 m e 4,0 m; • projeto V: 2,5 m, 3,0 m e 12,0 m.\n\nO projeto que o casal deverá escolher será o",
+    "options": [
+      "I.",
+      "II.",
+      "III.",
+      "IV.",
+      "V."
+    ],
+    "correctIndex": 1,
+    "image": null,
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2022-174",
+    "topicId": "areas-e-volumes",
+    "question": "Questão 174 - ENEM 2022\n\nPeças metálicas de aeronaves abandonadas em aeroportos serão recicladas. Uma dessas peças é maciça e tem o formato cilíndrico, com a medida do raio da base igual a 4 cm e a da altura igual a 50 cm. Ela será derretida, e o volume de metal resultante será utilizado para a fabricação de esferas maciças com diâmetro de 1 cm, a serem usadas para confeccionar rolamentos. Para estimar a quantidade de esferas que poderão ser produzidas a partir de cada uma das peças cilíndricas, admite-se que não ocorre perda de material durante o processo de derretimento.\n\nQuantas dessas esferas poderão ser obtidas a partir de cada peça cilíndrica?",
+    "options": [
+      "800",
+      "1200",
+      "2400",
+      "4800",
+      "6400"
+    ],
+    "correctIndex": 3,
+    "image": null,
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2022-178",
+    "topicId": "esferas",
+    "question": "Questão 178 - ENEM 2022\n\nUma cozinheira produz docinhos especiais por encomenda. Usando uma receita-base de massa, ela prepara uma porção, com a qual produz 50 docinhos maciços de formato esférico, com 2 cm de diâmetro. Um cliente encomenda 150 desses docinhos, mas pede que cada um tenha formato esférico com 4 cm de diâmetro. A cozinheira pretende preparar o número exato de porções da receita-base de massa necessário para produzir os docinhos dessa encomenda\n\nQuantas porções da receita-base de massa ela deve preparar para atender esse cliente?",
+    "options": [
+      "2",
+      "3",
+      "6",
+      "12",
+      "24"
+    ],
+    "correctIndex": 4,
+    "image": null,
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2022-180",
+    "topicId": "esferas",
+    "question": "Questão 180 - ENEM 2022\n\nNa figura estão destacadas duas trajetórias sobre a superfície do globo terrestre, descritas ao se percorrer parte dos meridianos 1, 2 e da Linha do Equador, sendo que os meridianos 1 e 2 estão contidos em planos perpendiculares entre si. O plano α é paralelo ao que contém a Linha do Equador.\n\nA vista superior da projeção ortogonal sobre o plano α dessas duas trajetórias é",
+    "options": [
+      "https://enem.dev/2022/questions/180/05cb2bb8-e0d9-4b65-b5cf-8b286af2b395.png",
+      "https://enem.dev/2022/questions/180/23fc7b65-ca58-4a35-967f-ac9c73b89e03.png",
+      "https://enem.dev/2022/questions/180/5be81d3b-c2c8-4856-a7b6-9f265a813436.png",
+      "https://enem.dev/2022/questions/180/c29e4144-4fce-43b2-a402-0ff7de72f3d0.png",
+      "https://enem.dev/2022/questions/180/5e135009-dbc9-4b08-bdf9-ad95f8f3d14f.png"
+    ],
+    "correctIndex": 4,
+    "image": "https://enem.dev/2022/questions/180/f3e0feaa-a265-4d9f-894f-63135acff616.png",
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2023-136",
+    "topicId": "areas-e-volumes",
+    "question": "Questão 136 - ENEM 2023\n\nUm artista plástico esculpe uma escultura a partir de um bloco de madeira de lei, em etapas. Inicialmente, esculpe um cone reto com 36 cm de altura e diâmetro da base medindo 18 cm. Em seguida, remove desse cone um cone menor, cujo diâmetro da base mede 6 cm, obtendo, assim, um tronco de cone, conforme ilustrado na figura. Em seguida, perfura esse tronco de cone, removendo um cilindro reto, de diâmetro 6 cm, cujo eixo de simetria é o mesmo do cone original. Dessa forma, ao final, a escultura tem a forma de um tronco de cone com uma perfuração cilíndrica de base a base. O tipo de madeira utilizada para produzir essa escultura tem massa igual a 0,6 g por centímetro cúbico de volume. Utilize 3 como aproximação para π.\n\nQual é a massa, em grama, dessa escultura?",
+    "options": [
+      "1.198,8",
+      "1.296,0",
+      "1.360,8",
+      "4.665,6",
+      "4.860,0"
+    ],
+    "correctIndex": 1,
+    "image": "https://enem.dev/2023/questions/136/565c2d5a-96a0-4468-9bb1-2710707a40fd.png",
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  }
+]

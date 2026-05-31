@@ -1,1 +1,205 @@
-[]
+[
+  {
+    "id": "enem-2022-150",
+    "topicId": "funcao-quadratica",
+    "question": "Questão 150 - ENEM 2022\n\nEm jogos de voleibol, um saque é invalidado se a bola atingir o teto do ginásio onde ocorre o jogo. Um jogador de uma equipe tem um saque que atinge uma grande altura. Seu recorde foi quando a batida do saque se iniciou a uma altura de 1,5 m do piso da quadra, e a trajetória da bola foi descrita pela parábola , em que y representa a altura da bola em relação ao eixo x (das abscissas) que está localizado a 1,5 m do piso da quadra, como representado na figura. Suponha que em todas as partidas algum saque desse jogador atinja a mesma altura do seu recorde. A equipe desse jogador participou de um torneio de voleibol no qual jogou cinco partidas, cada uma delas em um ginásio diferente. As alturas dos tetos desses ginásios, em relação aos pisos das quadras, são: • ginásio I: 17 m; • ginásio II: 18 m; • ginásio III: 19 m; • ginásio IV: 21 m; • ginásio V: 40 m.\n\nO saque desse atleta foi invalidado",
+    "options": [
+      "Apenas no ginásio I.",
+      "Apenas nos ginásios I e II.",
+      "Apenas nos ginásios I, II e III.",
+      "Apenas nos ginásios I, II, III e IV.",
+      "Em todos os ginásios."
+    ],
+    "correctIndex": 3,
+    "image": "https://enem.dev/2022/questions/150/764fcc6a-f737-404f-867b-7caacf69134e.png",
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2022-150",
+    "topicId": "funcao-quadratica",
+    "question": "Questão 150 - ENEM 2022\n\nEm jogos de voleibol, um saque é invalidado se a bola atingir o teto do ginásio onde ocorre o jogo. Um jogador de uma equipe tem um saque que atinge uma grande altura. Seu recorde foi quando a batida do saque se iniciou a uma altura de 1,5 m do piso da quadra, e a trajetória da bola foi descrita pela parábola , em que y representa a altura da bola em relação ao eixo x (das abscissas) que está localizado a 1,5 m do piso da quadra, como representado na figura. Suponha que em todas as partidas algum saque desse jogador atinja a mesma altura do seu recorde. A equipe desse jogador participou de um torneio de voleibol no qual jogou cinco partidas, cada uma delas em um ginásio diferente. As alturas dos tetos desses ginásios, em relação aos pisos das quadras, são: • ginásio I: 17 m; • ginásio II: 18 m; • ginásio III: 19 m; • ginásio IV: 21 m; • ginásio V: 40 m.\n\nO saque desse atleta foi invalidado",
+    "options": [
+      "Apenas no ginásio I.",
+      "Apenas nos ginásios I e II.",
+      "Apenas nos ginásios I, II e III.",
+      "Apenas nos ginásios I, II, III e IV.",
+      "Em todos os ginásios."
+    ],
+    "correctIndex": 3,
+    "image": "https://enem.dev/2022/questions/150/764fcc6a-f737-404f-867b-7caacf69134e.png",
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2022-162",
+    "topicId": "funcao-afim",
+    "question": "Questão 162 - ENEM 2022\n\nUma loja de roupas fixou uma meta de vendas de 77 000 reais para um determinado mês de 30 dias. O gráfico mostra o volume de vendas dessa loja, em real, nos dez primeiros dias do mês e entre o dia dez e o dia vinte desse mês, nos seus dois únicos setores (infantil e adulto). Suponha que a variação no volume de vendas, para o período registrado, tenha se dado de forma linear, como mostrado no gráfico, e que essa tendência se mantenha a mesma para os próximos dez dias.\n\nAo final do trigésimo dia, quanto faltará no volume de vendas, em real, para que a meta fixada para o mês seja alcançada?",
+    "options": [
+      "5 000",
+      "7 000",
+      "11 000",
+      "18 000",
+      "29 000"
+    ],
+    "correctIndex": 2,
+    "image": "https://enem.dev/2022/questions/162/0942383a-b8ee-4c44-a9ad-ae50d4204c0c.png",
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2022-166",
+    "topicId": "conceito-e-grafico",
+    "question": "Questão 166 - ENEM 2022\n\nEm uma competição de velocidade, diz-se que há uma ultrapassagem quando um veículo que está atrás de outro passa à sua frente, com ambos se deslocando no mesmo sentido. Considere uma competição automobilística entre cinco carros em uma pista com 100 m de comprimento, onde todos largam no mesmo instante e da mesma linha. O gráfico mostra a variação da distância percorrida por cada veículo, em função do tempo, durante toda a competição.\n\nQual o número de ultrapassagens, após o início da competição, efetuadas pelo veículo que chegou em último lugar?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correctIndex": 0,
+    "image": "https://enem.dev/2022/questions/166/efa5ccf4-a844-4c87-b110-7a675585a779.png",
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2023-151",
+    "topicId": "conceito-e-grafico",
+    "question": "Questão 151 - ENEM 2023\n\nUm investidor iniciante observou o gráfico que apresenta a evolução dos valores de duas criptomoedas A e B em relação ao tempo. Durante horas consecutivas, esses valores foram observados em nove instantes, representados por horas exatas.\n\nEm quantos desses instantes a criptomoeda A estava mais valorizada do que a criptomoeda B?",
+    "options": [
+      "3",
+      "4",
+      "6",
+      "7",
+      "9"
+    ],
+    "correctIndex": 1,
+    "image": "https://enem.dev/2023/questions/151/276495a3-e5f2-4e4c-83b0-3473512a5274.png",
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2023-156",
+    "topicId": "conceito-e-grafico",
+    "question": "Questão 156 - ENEM 2023\n\nUma pessoa caminha por 30 minutos e utiliza um aplicativo instalado em seu celular para monitorar a variação da intensidade do sinal de internet recebido pelo aparelho durante o deslocamento. Chegando ao seu destino, o aplicativo forneceu este gráfico:\n\nPor quantos minutos, durante essa caminhada, o celular dessa pessoa ficou sem receber sinal de internet?",
+    "options": [
+      "6",
+      "8",
+      "10",
+      "14",
+      "24"
+    ],
+    "correctIndex": 0,
+    "image": "https://enem.dev/2023/questions/156/e9e0b793-5535-48e6-87c6-5516e6d7c8cd.png",
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2023-159",
+    "topicId": "funcao-exponencial",
+    "question": "Questão 159 - ENEM 2023\n\nUm agricultor é informado sobre um método de proteção para sua lavoura que consiste em inserir larvas específicas, de rápida reprodução. A reprodução dessas larvas faz com que sua população multiplique-se por 10 a cada 3 dias e, para evitar eventuais desequilíbrios, é possível cessar essa reprodução aplicando-se um produto X. O agricultor decide iniciar esse método com 100 larvas e dispõe de 5 litros do produto X, cuja aplicação recomendada é de exatamente 1 litro para cada população de 200 000 larvas. A quantidade total do produto X de que ele dispõe deverá ser aplicada de uma única vez.\n\nQuantos dias após iniciado esse método o agricultor deverá aplicar o produto X?",
+    "options": [
+      "2",
+      "4",
+      "6",
+      "12",
+      "18"
+    ],
+    "correctIndex": 3,
+    "image": null,
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2023-162",
+    "topicId": "funcao-afim",
+    "question": "Questão 162 - ENEM 2023\n\nPara concretar a laje de sua residência, uma pessoa contratou uma construtora. Tal empresa informa que o preço _y_ do concreto bombeado é composto de duas partes: uma fixa, chamada de taxa de bombeamento, e uma variável, que depende do volume _x_ de concreto utilizado. Sabe-se que a taxa de bombeamento custa R$ 500,00 e que o metro cúbico do concreto bombeado é de R$ 250,00.\n\nA expressão que representa o preço y em função do volume x, em metro cúbico, é",
+    "options": [
+      "Y = 250x",
+      "Y = 500x",
+      "Y = 750x",
+      "Y = 250x + 500",
+      "Y = 500x + 250"
+    ],
+    "correctIndex": 3,
+    "image": null,
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2023-163",
+    "topicId": "conceito-e-grafico",
+    "question": "Questão 163 - ENEM 2023\n\nUma empresa de segurança domiciliar oferece o serviço de patrulha noturna, no qual vigilantes em motocicletas fazem o monitoramento periódico de residências. A empresa conta com uma base, de onde acompanha o trajeto realizado pelos vigilantes durante as patrulhas e orienta o deslocamento de equipes de reforço quando necessário. Numa patrulha rotineira, sem ocorrências, um vigilante conduziu sua motocicleta a uma velocidade constante durante todo o itinerário estabelecido, levando 30 minutos para conclusão. De acordo com os registros do GPS alocado na motocicleta, a distância da posição do vigilante à base, ao longo do tempo de realização do trajeto, é descrita pelo gráfico.\n\nA vista superior da trajetória realizada pelo vigilante durante a patrulha registrada no gráfico é descrita pela representação",
+    "options": [
+      "https://enem.dev/2023/questions/163/71c51165-c400-4d10-bb4b-c03ed19ff5ad.png",
+      "https://enem.dev/2023/questions/163/e04c3016-712a-4e6b-a9e5-be3505a57d41.png",
+      "https://enem.dev/2023/questions/163/1706f84a-c72a-48c1-982b-708ed91bcc8a.png",
+      "https://enem.dev/2023/questions/163/d49e3db4-31ee-4123-9a19-599e0b473503.png",
+      "https://enem.dev/2023/questions/163/7f6e3bbf-ef4c-4a6f-9fdb-407513158e78.png"
+    ],
+    "correctIndex": 0,
+    "image": "https://enem.dev/2023/questions/163/ff0caefb-56e7-4c17-bae7-b65b91037e9c.png",
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2023-164",
+    "topicId": "conceito-e-grafico",
+    "question": "Questão 164 - ENEM 2023\n\nO gráfico expõe alguns números da gripe A-H1N1. Entre as categorias que estão em processo de imunização, uma já está completamente imunizada, a dos trabalhadores da saúde. Época, 26 abr. 2010 (adaptado).\n\nDe acordo com o gráfico, entre as demais categorias, a que está mais exposta ao vírus da gripe A-H1N1 é a categoria de",
+    "options": [
+      "Indígenas.",
+      "Gestantes.",
+      "Doentes crônicos.",
+      "Adultos entre 20 e 29 anos.",
+      "Crianças de 6 meses a 2 anos."
+    ],
+    "correctIndex": 3,
+    "image": "https://enem.dev/2023/questions/164/194cf28a-b40d-493d-b106-8f71aee57f51.png",
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2023-170",
+    "topicId": "funcao-quadratica",
+    "question": "Questão 170 - ENEM 2023\n\nAnalisando as vendas de uma empresa, o gerente concluiu que o montante diário arrecadado, em milhar de real, poderia ser calculado pela expressão , em que os valores de x representam os dias do mês, variando de 1 a 30. Um dos fatores para avaliar o desempenho mensal da empresa é verificar qual é o menor montante diário arrecadado ao longo do mês e classificar o desempenho conforme as categorias apresentadas a seguir, em que as quantidades estão expressas em milhar de real.\n\nNo caso analisado, qual seria a classificação do desempenho da empresa?",
+    "options": [
+      "Ótimo.",
+      "Bom.",
+      "Normal.",
+      "Ruim.",
+      "Péssimo."
+    ],
+    "correctIndex": 3,
+    "image": "https://enem.dev/2023/questions/170/369b24e4-258e-4faf-b7df-0c2e3da3c22a.png",
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  },
+  {
+    "id": "enem-2023-178",
+    "topicId": "conceito-e-grafico",
+    "question": "Questão 178 - ENEM 2023\n\nEstudantes trabalhando com robótica criaram uma “torneira inteligente” que automatiza sua abertura e seu fechamento durante a limpeza das mãos. A tecnologia funciona da seguinte forma: ao se colocarem as mãos sob a torneira, ela libera água durante 3 segundos para que a pessoa possa molhá-las. Em seguida, interrompe o fornecimento de água por 5 segundos, enquanto a pessoa ensaboa suas mãos, e finaliza o ciclo liberando água para o enxágue por mais 3 segundos. Considere o tempo (_t_), em segundo, contado a partir do instante em que se inicia o ciclo. A vazão de água nessa torneira é constante.\n\nUm esboço de gráfico que descreve o volume de água acumulado, em litro, liberado por essa torneira durante um ciclo de lavagem das mãos, em função do tempo (t), em segundo, é",
+    "options": [
+      "https://enem.dev/2023/questions/178/ad5cc202-0c4f-44fb-aa1a-ec86c2f86da4.png",
+      "https://enem.dev/2023/questions/178/c3b0946f-0e59-4928-858d-3f0a8887fb80.png",
+      "https://enem.dev/2023/questions/178/f9e8ae9f-c9d6-4b83-9376-55b5ecba8a38.png",
+      "https://enem.dev/2023/questions/178/46326c50-0f0b-42cf-a1d5-65299d39a4fd.png",
+      "https://enem.dev/2023/questions/178/7ebc0f53-95db-497b-bc23-30cf64649c3a.png"
+    ],
+    "correctIndex": 1,
+    "image": null,
+    "source": "ENEM",
+    "difficulty": "Médio",
+    "resolution": "Resolução ainda não disponível."
+  }
+]

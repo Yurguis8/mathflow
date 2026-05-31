@@ -22,6 +22,7 @@ export default function ExercisePlayer() {
   // Captura os filtros configurados no Modal (caso não existam, assume o padrão "Todos" e "false")
   const targetedLevel = location.state?.selectedLevel || "Todos";
   const onlyEnem = location.state?.onlyEnem || false;
+  const targetedYear = location.state?.selectedYear || "Todos"; // <- ADICIONADO
 
   const [exercises, setExercises] = useState<Exercise[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -95,6 +96,16 @@ export default function ExercisePlayer() {
           );
         }
 
+        // 4. ADICIONADO: Filtra pelo Ano procurando dentro do ID ou do Enunciado da questão
+        if (targetedYear !== "Todos") {
+          filtered = filtered.filter((exercise: any) => {
+            const exerciseId = String(exercise.id || "");
+            const exerciseQuestion = String(exercise.question || "");
+            
+            return exerciseId.includes(targetedYear) || exerciseQuestion.includes(targetedYear);
+          });
+        }
+
         if (isMounted) {
           setExercises(filtered);
         }
@@ -111,7 +122,7 @@ export default function ExercisePlayer() {
     return () => {
       isMounted = false;
     };
-  }, [areaId, topicId, targetedLevel, onlyEnem]);
+  }, [areaId, topicId, targetedLevel, onlyEnem, targetedYear]);
 
   // SALVA PROGRESSO
   const saveProgressToDB = async (isFinal = false) => {
