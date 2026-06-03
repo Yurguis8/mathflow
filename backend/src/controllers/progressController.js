@@ -1,20 +1,19 @@
 import { prisma } from '../lib/prisma.js';
 
-// SALVAR PROGRESSO ACUMULATIVO (Para Exercícios e Simulados)
 export async function saveProgress(req, res) {
   try {
     const {
       user_id,
       topic_name,
-      completed_questions, // Quantidade de questões feitas NESTA SESSÃO específica
-      correct_answers,     // Quantidade de acertos NESTA SESSÃO específica
-      last_question_index, // Índice atual da questão
-      study_time_seconds   // Segundos gastos NESTA SESSÃO específica
+      completed_questions,
+      correct_answers,
+      last_question_index,
+      study_time_seconds
     } = req.body;
 
     const userIdBigInt = BigInt(user_id);
 
-    // Busca se já existe registro desse usuário para este tópico específico
+    // Busca se já existe progresso desse usuário para este tópico específico
     const existingProgress = await prisma.user_topic_progress.findFirst({
       where: {
         user_id: userIdBigInt,
@@ -25,22 +24,27 @@ export async function saveProgress(req, res) {
     let result;
 
     if (existingProgress) {
-      // 💡 Se existir, incrementa (soma) os valores antigos com os novos que estão chegando
+      // Agora acumula os dados em vez de substituir
       result = await prisma.user_topic_progress.update({
         where: {
           id: existingProgress.id
         },
         data: {
-          completed_questions: { increment: parseInt(completed_questions || 0) },
-          correct_answers: { increment: parseInt(correct_answers || 0) },
-          study_time_seconds: { increment: parseInt(study_time_seconds || 0) },
-          // O índice da última questão e data continuam sendo atualizados normalmente
+          completed_questions: {
+            increment: parseInt(completed_questions || 0)
+          },
+          correct_answers: {
+            increment: parseInt(correct_answers || 0)
+          },
+          study_time_seconds: {
+            increment: parseInt(study_time_seconds || 0)
+          },
           last_question_index: parseInt(last_question_index || 0),
           updated_at: new Date()
         }
       });
     } else {
-      // Se não existir, cria o primeiro registro normalmente com os valores iniciais
+      // Se não existir, cria um novo registro
       result = await prisma.user_topic_progress.create({
         data: {
           user_id: userIdBigInt,
@@ -53,7 +57,6 @@ export async function saveProgress(req, res) {
       });
     }
 
-    // Retorna o resultado convertendo BigInt para String para não quebrar o JSON
     return res.json({
       ...result,
       id: result.id.toString(),
@@ -68,52 +71,45 @@ export async function saveProgress(req, res) {
   }
 }
 
-// BUSCAR DASHBOARD (Corrigido para evitar quebra de BigInt)
 export async function getDashboard(req, res) {
   try {
-    const { userId } = req.params;
-    const userIdBigInt = BigInt(userId);
+    const { user_id } = req.params;
 
-    // Puxa todos os registros de progresso do usuário (exceto a linha acumulativa global 'Geral')
     const progress = await prisma.user_topic_progress.findMany({
       where: {
-        user_id: userIdBigInt,
-        NOT: {
-          topic_name: 'Geral'
-        }
+        user_id: BigInt(user_id)
       }
     });
 
-    // Puxa a linha global 'Geral' para ler o tempo de tela totalizado
-    const generalProgress = await prisma.user_topic_progress.findFirst({
-      where: {
-        user_id: userIdBigInt,
-        topic_name: 'Geral'
+    let totalCorrect = 0;
+    let totalCompleted = 0;
+    let totalStudyTime = 0;
+
+    const formattedProgress = [];
+
+    progress.forEach(item => {
+      totalStudyTime += Number(item.study_time_seconds);
+
+      if (item.topic_name === 'Geral') {
+        return;
       }
+
+      totalCorrect += Number(item.correct_answers);
+      totalCompleted += Number(item.completed_questions);
+
+      formattedProgress.push({
+        ...item,
+        id: item.id.toString(),
+        user_id: item.user_id.toString()
+      });
     });
 
-    // Cálculos estatísticos gerais baseados no acúmulo real do banco de dados
-    const totalCompleted = progress.reduce((sum, item) => sum + item.completed_questions, 0);
-    const totalCorrect = progress.reduce((sum, item) => sum + item.correct_answers, 0);
-    
-    // O tempo total de estudo prioriza a linha geral, senão soma o tempo de cada matéria
-    const totalStudyTime = generalProgress 
-      ? generalProgress.study_time_seconds 
-      : progress.reduce((sum, item) => sum + item.study_time_seconds, 0);
-
-    const accuracy = totalCompleted > 0 
-      ? Math.round((totalCorrect / totalCompleted) * 100) 
+    const accuracy = totalCompleted > 0
+      ? Math.round((totalCorrect / totalCompleted) * 100)
       : 0;
 
-    // Converte os BigInts internos da lista para string antes de enviar para o Frontend
-    const formattedProgress = progress.map(item => ({
-      ...item,
-      id: item.id.toString(),
-      user_id: item.user_id.toString()
-    }));
-
-    // Substitui por completo a resposta enviando os dados estruturados sem BigInts ocultos
     return res.json({
+      totalCorrect,
       totalCompleted,
       totalStudyTime,
       accuracy,
@@ -128,7 +124,6 @@ export async function getDashboard(req, res) {
   }
 }
 
-// REGISTRAR O TEMPO DE TELA GLOBAL
 export async function trackTime(req, res) {
   try {
     const { userId, seconds } = req.body;
@@ -140,7 +135,6 @@ export async function trackTime(req, res) {
     const userIdBigInt = BigInt(userId);
     const secondsInt = parseInt(seconds);
 
-    // Verifica se já existe a linha de acumulação "Geral" do usuário
     const existingProgress = await prisma.user_topic_progress.findFirst({
       where: {
         user_id: userIdBigInt,
@@ -149,11 +143,12 @@ export async function trackTime(req, res) {
     });
 
     if (existingProgress) {
-      // Usando o operador incremental nativo por segurança e performance
       await prisma.user_topic_progress.update({
         where: { id: existingProgress.id },
         data: {
-          study_time_seconds: { increment: secondsInt },
+          study_time_seconds: {
+            increment: secondsInt
+          },
           updated_at: new Date()
         }
       });
@@ -170,10 +165,12 @@ export async function trackTime(req, res) {
       });
     }
 
-    return res.json({ success: true });
+    return res.status(200).send('Tempo computado com sucesso');
 
   } catch (error) {
-    console.error('Erro no trackTime:', error);
-    return res.status(500).json({ error: 'Erro interno ao rastrear tempo' });
+    console.error(error);
+    return res.status(500).json({
+      error: 'Erro ao salvar tempo de tela'
+    });
   }
 }
