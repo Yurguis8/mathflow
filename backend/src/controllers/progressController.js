@@ -68,7 +68,7 @@ export async function saveProgress(req, res) {
   }
 }
 
-// BUSCAR DASHBOARD
+// BUSCAR DASHBOARD (Corrigido para evitar quebra de BigInt)
 export async function getDashboard(req, res) {
   try {
     const { userId } = req.params;
@@ -112,6 +112,7 @@ export async function getDashboard(req, res) {
       user_id: item.user_id.toString()
     }));
 
+    // Substitui por completo a resposta enviando os dados estruturados sem BigInts ocultos
     return res.json({
       totalCompleted,
       totalStudyTime,
@@ -148,7 +149,7 @@ export async function trackTime(req, res) {
     });
 
     if (existingProgress) {
-      // Também modificado para usar o operador incremental nativo por segurança
+      // Usando o operador incremental nativo por segurança e performance
       await prisma.user_topic_progress.update({
         where: { id: existingProgress.id },
         data: {
