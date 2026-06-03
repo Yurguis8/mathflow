@@ -122,29 +122,30 @@ export default function ExercisePlayer() {
     };
   }, [areaId, topicId, targetedLevel, onlyEnem, targetedYear]);
 
-  // SALVA PROGRESSO
-  const saveProgressToDB = async (isFinal = false) => {
-    if (!user.id) return;
+ // SALVA PROGRESSO
+const saveProgressToDB = async (isFinal = false) => {
+  if (!user.id) return;
 
-    const progressData = {
-      user_id: user.id,
-      topic_name: topicId,
-      completed_questions: currentIndex + (isFinal ? 1 : 0),
-      correct_answers: score,
-      last_question_index: currentIndex,
-      study_time_seconds: seconds,
-    };
-
-    try {
-      await fetch("https://mathflow-l58o.onrender.com/progress/save", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(progressData),
-      });
-    } catch (error) {
-      console.error("Erro ao salvar progresso:", error);
-    }
+  const progressData = {
+    user_id: user.id,
+    topic_name: topicId,
+    completed_questions: currentIndex + (isFinal ? 1 : 0),
+    correct_answers: score,
+    last_question_index: currentIndex,
+    study_time_seconds: seconds,
+    accumulate: false
   };
+
+  try {
+    await fetch("https://mathflow-l58o.onrender.com/progress/save", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(progressData),
+    });
+  } catch (error) {
+    console.error("Erro ao salvar progresso:", error);
+  }
+};
 
   const handleOptionSelect = (idx: number) => {
     if (isConfirmed) return;

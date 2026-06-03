@@ -8,50 +8,72 @@ export async function saveProgress(req, res) {
       completed_questions,
       correct_answers,
       last_question_index,
-      study_time_seconds
+      study_time_seconds,
+      accumulate = false
     } = req.body;
 
     const userIdBigInt = BigInt(user_id);
 
-    // Busca se já existe progresso desse usuário para este tópico específico
     const existingProgress = await prisma.user_topic_progress.findFirst({
       where: {
         user_id: userIdBigInt,
-        topic_name: topic_name
+        topic_name
       }
     });
 
     let result;
 
     if (existingProgress) {
-      // Se existir, atualiza os dados
-      result = await prisma.user_topic_progress.update({
-        where: {
-          id: existingProgress.id
-        },
-        data: {
-          completed_questions,
-          correct_answers,
-          last_question_index,
-          study_time_seconds,
-          updated_at: new Date()
-        }
-      });
+
+      if (accumulate) {
+        result = await prisma.user_topic_progress.update({
+          where: {
+            id: existingProgress.id
+          },
+          data: {
+            completed_questions: {
+              increment: parseInt(completed_questions || 0)
+            },
+            correct_answers: {
+              increment: parseInt(correct_answers || 0)
+            },
+            study_time_seconds: {
+              increment: parseInt(study_time_seconds || 0)
+            },
+            last_question_index: parseInt(last_question_index || 0),
+            updated_at: new Date()
+          }
+        });
+      } else {
+        result = await prisma.user_topic_progress.update({
+          where: {
+            id: existingProgress.id
+          },
+          data: {
+            completed_questions: parseInt(completed_questions || 0),
+            correct_answers: parseInt(correct_answers || 0),
+            last_question_index: parseInt(last_question_index || 0),
+            study_time_seconds: parseInt(study_time_seconds || 0),
+            updated_at: new Date()
+          }
+        });
+      }
+
     } else {
-      // Se não existir, cria um novo registro
+
       result = await prisma.user_topic_progress.create({
         data: {
           user_id: userIdBigInt,
           topic_name,
-          completed_questions,
-          correct_answers,
-          last_question_index,
-          study_time_seconds
+          completed_questions: parseInt(completed_questions || 0),
+          correct_answers: parseInt(correct_answers || 0),
+          last_question_index: parseInt(last_question_index || 0),
+          study_time_seconds: parseInt(study_time_seconds || 0)
         }
       });
+
     }
 
-    // Retorna o resultado convertendo BigInt para String para não quebrar o JSON
     return res.json({
       ...result,
       id: result.id.toString(),
