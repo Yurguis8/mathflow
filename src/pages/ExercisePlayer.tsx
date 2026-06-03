@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams, Link, useLocation } from "react-router-dom"; // Importado useLocation
+import { useParams, Link, useLocation } from "react-router-dom";
 import {
   ArrowLeft,
   CheckCircle2,
@@ -22,7 +22,7 @@ export default function ExercisePlayer() {
   // Captura os filtros configurados no Modal (caso não existam, assume o padrão "Todos" e "false")
   const targetedLevel = location.state?.selectedLevel || "Todos";
   const onlyEnem = location.state?.onlyEnem || false;
-  const targetedYear = location.state?.selectedYear || "Todos"; // <- ADICIONADO
+  const targetedYear = location.state?.selectedYear || "Todos";
 
   const [exercises, setExercises] = useState<Exercise[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -39,8 +39,6 @@ export default function ExercisePlayer() {
   const [score, setScore] = useState(0);
   const [seconds, setSeconds] = useState(0);
 
-
-
   const user = JSON.parse(localStorage.getItem("user") || "{}");
 
   // CRONÔMETRO
@@ -54,7 +52,7 @@ export default function ExercisePlayer() {
     return () => clearInterval(timer);
   }, [finished]);
 
-  // SEU CARREGAMENTO DINÂMICO CUSTOMIZADO COM OS NOVOS FILTROS DE QUESTÕES
+  // CARREGAMENTO DINÂMICO CUSTOMIZADO COM OS NOVOS FILTROS DE QUESTÕES
   useEffect(() => {
     let isMounted = true;
 
@@ -96,7 +94,7 @@ export default function ExercisePlayer() {
           );
         }
 
-        // 4. ADICIONADO: Filtra pelo Ano procurando dentro do ID ou do Enunciado da questão
+        // 4. Filtra pelo Ano procurando dentro do ID ou do Enunciado da questão
         if (targetedYear !== "Todos") {
           filtered = filtered.filter((exercise: any) => {
             const exerciseId = String(exercise.id || "");
@@ -180,7 +178,7 @@ export default function ExercisePlayer() {
     }
   };
 
-  // FUNÇÃO AUXILIAR PARA DEFINIR AS CORES DA DIFICULDADE (TOTALMENTE BLINDADA)
+  // FUNÇÃO AUXILIAR PARA DEFINIR AS CORES DA DIFICULDADE
   const getDifficultyColors = (difficulty: string) => {
     const diff = String(difficulty || "Mista")
       .normalize("NFD")
@@ -200,54 +198,54 @@ export default function ExercisePlayer() {
     if (diff === "olimpico") {
       return "bg-purple-600 text-amber-300 border-purple-700 font-extrabold dark:bg-purple-900 dark:text-amber-400 dark:border-purple-800";
     }
-    return "bg-blue-50 text-blue-700 border-blue-100 dark:bg-blue-900/20 dark:text-blue-400 dark:border-blue-900/40";
+    return "bg-slate-50 text-slate-700 border-slate-100 dark:bg-slate-900/20 dark:text-slate-400 dark:border-slate-900/40";
   };
 
   if (loading) {
     return <div className="h-screen flex items-center justify-center">Carregando exercícios...</div>;
   }
 
-  // TELA DE REGRESSO SE NÃO HOUVER QUESTÕES COM ESSE FILTRO COMBINADO
+  // TELA DE ERRO SE NÃO HOUVER QUESTÕES COM ESSE FILTRO COMBINADO
   if (!exercises.length) {
     return (
-      <div className="p-8 text-center text-slate-500 max-w-lg mx-auto mt-24 bg-white rounded-3xl border border-slate-200 shadow-sm">
-        <p className="text-xl font-bold text-slate-800 mb-2">Nenhuma questão disponível</p>
-        <p className="text-sm text-slate-400 mb-6">
-          Não existem exercícios de nível <span className="font-semibold text-blue-600">"{targetedLevel}"</span> {onlyEnem && "vindos do ENEM "}cadastrados para este assunto ainda.
+      <div className="p-8 text-center text-slate-500 max-w-lg mx-auto mt-24 bg-white dark:bg-slate-900 rounded-custom-lg border border-slate-200 dark:border-slate-800 shadow-sm">
+        <p className="text-xl font-bold text-slate-800 dark:text-slate-100 mb-2 font-display">Nenhuma questão disponível</p>
+        <p className="text-sm text-slate-400 dark:text-slate-500 mb-6">
+          Não existem exercícios de nível <span className="font-semibold text-brand-main">"{targetedLevel}"</span> {onlyEnem && "vindos do ENEM "}cadastrados para este assunto ainda.
         </p>
-        <Link to="/exercises" className="inline-block bg-slate-900 text-white px-6 py-3 rounded-xl font-bold text-sm hover:bg-slate-800 transition-colors">
+        <Link to="/exercises" className="inline-block bg-slate-900 dark:bg-slate-800 text-white px-6 py-3 rounded-custom-md font-bold text-sm hover:bg-slate-800 dark:hover:bg-slate-700 transition-colors">
           Voltar aos Tópicos
         </Link>
       </div>
     );
   }
 
-  // FINALIZADO
+  // TELA FINALIZADO
   if (finished) {
     return (
       <div className="max-w-2xl mx-auto py-12 px-4">
-        <div className="bg-white rounded-3xl p-10 border border-slate-200 text-center">
-          <div className="w-20 h-20 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center mx-auto mb-6">
+        <div className="bg-white dark:bg-slate-900 rounded-custom-lg p-10 border border-slate-200 dark:border-slate-800 text-center shadow-sm">
+          <div className="w-20 h-20 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-400 rounded-full flex items-center justify-center mx-auto mb-6">
             <Trophy className="w-10 h-10" />
           </div>
 
-          <h2 className="text-3xl font-bold mb-2">Excelente trabalho!</h2>
-          <p className="text-slate-600 mb-8">Seu progresso foi salvo.</p>
+          <h2 className="text-3xl font-bold mb-2 font-display">Excelente trabalho!</h2>
+          <p className="text-slate-600 dark:text-slate-400 mb-8">Seu progresso foi salvo.</p>
 
-          <div className="bg-slate-50 rounded-2xl p-6 mb-8 flex justify-around">
+          <div className="bg-slate-50 dark:bg-slate-800/40 rounded-custom-lg p-6 mb-8 flex justify-around border border-slate-100 dark:border-slate-800">
             <div>
-              <p className="text-xs text-slate-400 uppercase font-bold">Acertos</p>
-              <p className="text-3xl font-bold text-blue-600">{score} / {exercises.length}</p>
+              <p className="text-xs text-slate-400 uppercase font-bold tracking-wider">Acertos</p>
+              <p className="text-3xl font-bold text-brand-main">{score} / {exercises.length}</p>
             </div>
             <div>
-              <p className="text-xs text-slate-400 uppercase font-bold">Tempo</p>
+              <p className="text-xs text-slate-400 uppercase font-bold tracking-wider">Tempo</p>
               <p className="text-3xl font-bold text-green-600">{Math.floor(seconds / 60)}m {seconds % 60}s</p>
             </div>
           </div>
 
           <div className="flex gap-4">
-            <Link to="/exercises" className="flex-1 bg-slate-100 py-4 rounded-xl font-bold text-center">Voltar</Link>
-            <Link to="/" className="flex-1 bg-blue-600 text-white py-4 rounded-xl font-bold text-center">Dashboard</Link>
+            <Link to="/exercises" className="flex-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 py-4 rounded-custom-md font-bold text-center hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">Voltar</Link>
+            <Link to="/" className="flex-1 bg-brand-main text-white py-4 rounded-custom-md font-bold text-center hover:bg-brand-dark transition-colors shadow-sm">Dashboard</Link>
           </div>
         </div>
       </div>
@@ -257,12 +255,10 @@ export default function ExercisePlayer() {
   const currentExercise = exercises[currentIndex];
   const progress = ((currentIndex + 1) / exercises.length) * 100;
 
-  
-
   return (
     <div className="max-w-4xl mx-auto px-4 pb-24">
       <div className="flex items-center justify-between mb-8 pt-4">
-        {/* BOTÃO DE ABANDONAR QUE ATIVA O MODAL CUSTOMIZADO */}
+        {/* BOTÃO DE ABANDONAR QUE ATIVA O MODAL */}
         <button 
           type="button"
           onClick={() => setShowLeaveModal(true)} 
@@ -274,7 +270,7 @@ export default function ExercisePlayer() {
         {/* METADADOS/BADGES DINÂMICAS DA QUESTÃO */}
         <div className="flex items-center gap-2">
           {currentExercise.source?.toLowerCase() === "enem" && (
-            <span className="flex items-center gap-1 text-[10px] bg-amber-50 text-amber-700 border border-amber-200 px-2 py-0.5 rounded-sm font-bold uppercase tracking-wider">
+            <span className="flex items-center gap-1 text-[10px] bg-amber-50 text-amber-700 border border-amber-200 dark:bg-amber-950/20 dark:text-amber-400 dark:border-amber-900/40 px-2 py-0.5 rounded-sm font-bold uppercase tracking-wider">
               <GraduationCap className="w-3 h-3" /> ENEM
             </span>
           )}
@@ -284,11 +280,10 @@ export default function ExercisePlayer() {
         </div>
 
         <div className="flex items-center gap-3">
-
           <button
             type="button"
             onClick={() => setShowQuestionNavigator(true)}
-            className="flex items-center gap-2 px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
+            className="flex items-center gap-2 px-3 py-2 rounded-custom-md border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
           >
             <Menu className="w-4 h-4" />
             <span className="text-xs sm:text-sm font-bold text-slate-600 dark:text-slate-300">
@@ -296,15 +291,14 @@ export default function ExercisePlayer() {
             </span>
           </button>
 
-          <span className="text-xs sm:text-sm font-bold text-slate-400 uppercase">
+          <span className="text-xs sm:text-sm font-bold text-slate-400 uppercase tracking-wider">
             {currentIndex + 1} / {exercises.length}
           </span>
-
         </div>
       </div>
 
-      <div className="w-full h-2 bg-slate-200 rounded-full mb-10 overflow-hidden">
-        <motion.div animate={{ width: `${progress}%` }} className="h-full bg-blue-600" />
+      <div className="w-full h-1.5 bg-slate-100 dark:bg-slate-800 mb-10 overflow-hidden rounded-none">
+        <motion.div animate={{ width: `${progress}%` }} className="h-full bg-brand-main" />
       </div>
 
       <AnimatePresence mode="wait">
@@ -313,37 +307,35 @@ export default function ExercisePlayer() {
           initial={{ opacity: 0, x: 10 }}
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -10 }}
-          className="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm"
+          className="bg-white dark:bg-slate-900 rounded-custom-lg p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-sm"
         >
-          <h2 className="text-base sm:text-xl md:text-2xl font-semibold mb-6 whitespace-pre-wrap text-slate-800 tracking-tight leading-relaxed">
+          <h2 className="text-base sm:text-md md:text-2xl font-semibold mb-6 whitespace-pre-wrap text-slate-800 dark:text-slate-100 tracking-tight leading-relaxed font-display">
             {currentExercise.question}
           </h2>
 
-          {/* RENDERIZAÇÃO CONDICIONAL DE LINK EXTERNO DE IMAGEM */}
+          {/* RETÂNGULO DE IMAGEM */}
           {currentExercise.image && (
-            <div className="mb-8 overflow-hidden rounded-md border border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/20 p-4 flex justify-center shadow-inner">
+            <div className="mb-8 overflow-hidden rounded-custom-md border border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/10 p-4 flex justify-center">
               <img
                 src={currentExercise.image}
                 alt={`Imagem de suporte para o exercício ${currentExercise.id}`}
-                className="max-h-72 object-contain rounded-sm"
+                className="max-h-72 object-contain"
                 loading="lazy"
               />
             </div>
           )}
 
-          {/* ALTERNATIVAS COM SUPORTE A IMAGENS E TEXTOS */}
+          {/* ALTERNATIVAS */}
           <div className="grid grid-cols-1 gap-3">
             {currentExercise.options.map((option, idx) => {
               const isSelected = selectedOption === idx;
               const isCorrectTarget = idx === currentExercise.correctIndex;
-
-              // Detecta se a alternativa atual é um link de imagem (começa com http ou https)
               const isImageOption = typeof option === "string" && (option.startsWith("http://") || option.startsWith("https://"));
 
-              let style = "border-slate-200 dark:border-slate-800 hover:border-blue-400 hover:bg-blue-50/50 dark:hover:bg-blue-950/20";
+              let style = "border-slate-200 dark:border-slate-800 hover:border-brand-main dark:hover:border-brand-main hover:bg-brand-light dark:hover:bg-brand-main/5";
 
               if (selectedOption !== null && !isConfirmed) {
-                if (isSelected) style = "border-blue-500 bg-blue-50/60 text-blue-700 dark:bg-blue-950/40 dark:text-blue-400 font-medium";
+                if (isSelected) style = "border-brand-main bg-brand-light text-brand-dark dark:bg-brand-main/10 dark:text-brand-main font-medium";
                 else style = "border-slate-200 dark:border-slate-800 opacity-60";
               }
               else if (isConfirmed) {
@@ -358,11 +350,9 @@ export default function ExercisePlayer() {
                   type="button"
                   onClick={() => handleOptionSelect(idx)}
                   disabled={isConfirmed}
-                  className={`w-full p-4 rounded-md border text-left transition-all text-sm ${style}`}
+                  className={`w-full p-4 rounded-custom-md border text-left transition-all text-sm bg-white dark:bg-slate-900 ${style}`}
                 >
                   <div className="flex justify-between items-center gap-4">
-                    
-                    {/* SE FOR IMAGEM, RENDERIZA A TAG DE IMAGEM; SE NÃO, RENDERIZA O TEXTO NORMAL */}
                     {isImageOption ? (
                       <div className="bg-white dark:bg-slate-800 p-2 rounded-sm border border-slate-100 dark:border-slate-700 max-w-[200px] max-h-[120px] flex items-center justify-center overflow-hidden">
                         <img 
@@ -384,14 +374,14 @@ export default function ExercisePlayer() {
             })}
           </div>
 
-          {/* PAINEL DE AÇÕES (CONFIRMAR / PRÓXIMA QUESTÃO) - DE VOLTA AO LUGAR CORRETO */}
+          {/* PAINEL DE AÇÕES */}
           <div className="flex flex-col gap-3 mt-6">
             {!isConfirmed ? (
               <button
                 type="button"
                 onClick={handleConfirmAnswer}
                 disabled={selectedOption === null}
-                className="w-full bg-blue-600 hover:bg-blue-700 disabled:opacity-50 text-white py-3.5 rounded-md font-bold text-sm transition-all shadow-md text-center"
+                className="w-full bg-brand-main hover:bg-brand-dark disabled:opacity-50 text-white py-3.5 rounded-custom-md font-bold text-sm transition-all shadow-sm text-center"
               >
                 Confirmar Resposta
               </button>
@@ -400,14 +390,14 @@ export default function ExercisePlayer() {
                 <button
                   type="button"
                   onClick={() => setShowResolution(!showResolution)}
-                  className="flex-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 py-3.5 rounded-md font-bold text-sm hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors border border-slate-200 dark:border-slate-700"
+                  className="flex-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 py-3.5 rounded-custom-md font-bold text-sm hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors border border-slate-200 dark:border-slate-700"
                 >
                   {showResolution ? "Esconder Explicação" : "Ver Resolução"}
                 </button>
                 <button
                   type="button"
                   onClick={handleNext}
-                  className="flex-1 bg-slate-900 dark:bg-slate-700 hover:bg-slate-800 text-white py-3.5 rounded-md font-bold text-sm transition-all shadow-md flex items-center justify-center gap-2"
+                  className="flex-1 bg-slate-900 dark:bg-slate-700 hover:bg-slate-800 text-white py-3.5 rounded-custom-md font-bold text-sm transition-all shadow-sm flex items-center justify-center gap-2"
                 >
                   {currentIndex + 1 === exercises.length ? "Finalizar" : "Próxima Questão"}
                   <ChevronRight className="w-4 h-4" />
@@ -416,7 +406,7 @@ export default function ExercisePlayer() {
             )}
           </div>
 
-          {/* SEÇÃO DA RESOLUÇÃO COMENTADA */}
+          {/* RESOLUÇÃO COMENTADA */}
           <AnimatePresence>
             {showResolution && isConfirmed && (
               <motion.div
@@ -425,7 +415,7 @@ export default function ExercisePlayer() {
                 exit={{ height: 0, opacity: 0 }}
                 className="overflow-hidden"
               >
-                <div className="mt-6 p-5 bg-slate-50 dark:bg-slate-800/40 rounded-md border border-slate-200 dark:border-slate-800 whitespace-pre-wrap text-sm text-slate-600 dark:text-slate-400">
+                <div className="mt-6 p-5 bg-slate-50 dark:bg-slate-800/40 rounded-custom-md border border-slate-200 dark:border-slate-800 whitespace-pre-wrap text-sm text-slate-600 dark:text-slate-400">
                   <p className="font-bold mb-2 text-slate-800 dark:text-slate-200">Explicação:</p>
                   {currentExercise.resolution}
                 </div>
@@ -434,123 +424,119 @@ export default function ExercisePlayer() {
           </AnimatePresence>
         </motion.div>
       </AnimatePresence>
+
       {/* MODAL DE SAÍDA */}
-<AnimatePresence>
-  {showLeaveModal && (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      className="fixed inset-0 z-50 bg-black/40 flex items-center justify-center p-4"
-    >
-      <motion.div
-        initial={{ scale: 0.95, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        exit={{ scale: 0.95, opacity: 0 }}
-        className="bg-white dark:bg-slate-900 rounded-2xl p-6 w-full max-w-md border border-slate-200 dark:border-slate-800 shadow-2xl"
-      >
-        <h3 className="text-xl font-bold mb-2 text-slate-800 dark:text-slate-100">
-          Sair da sessão?
-        </h3>
-
-        <p className="text-sm text-slate-500 dark:text-slate-400 mb-6">
-          Seu progresso atual será salvo automaticamente.
-        </p>
-
-        <div className="flex gap-3">
-          <button
-            type="button"
-            onClick={() => setShowLeaveModal(false)}
-            className="flex-1 py-3 rounded-xl bg-slate-100 dark:bg-slate-800 font-semibold"
+      <AnimatePresence>
+        {showLeaveModal && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4"
           >
-            Cancelar
-          </button>
+            <motion.div
+              initial={{ scale: 0.95, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.95, opacity: 0 }}
+              className="bg-white dark:bg-slate-900 rounded-custom-xl p-6 w-full max-w-md border border-slate-200 dark:border-slate-800 shadow-xl"
+            >
+              <h3 className="text-xl font-bold mb-2 text-slate-900 dark:text-white font-display">
+                Sair da sessão?
+              </h3>
 
-          <Link
-            to="/exercises"
-            className="flex-1 py-3 rounded-xl bg-red-600 hover:bg-red-700 text-white font-semibold text-center"
+              <p className="text-sm text-slate-500 dark:text-slate-400 mb-6">
+                Seu progresso atual será salvo automaticamente.
+              </p>
+
+              <div className="flex gap-3">
+                <button
+                  type="button"
+                  onClick={() => setShowLeaveModal(false)}
+                  className="flex-1 py-3 rounded-custom-md bg-slate-100 dark:bg-slate-800 font-semibold hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors text-sm"
+                >
+                  Cancelar
+                </button>
+
+                <Link
+                  to="/exercises"
+                  className="flex-1 py-3 rounded-custom-md bg-red-600 hover:bg-red-700 text-white font-semibold text-center transition-colors text-sm shadow-sm"
+                >
+                  Sair
+                </Link>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* MODAL NAVEGAÇÃO DE QUESTÕES */}
+      <AnimatePresence>
+        {showQuestionNavigator && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4"
           >
-            Sair
-          </Link>
-        </div>
-      </motion.div>
-    </motion.div>
-  )}
-</AnimatePresence>
+            <motion.div
+              initial={{ scale: 0.95, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.95, opacity: 0 }}
+              className="bg-white dark:bg-slate-900 rounded-custom-xl w-full max-w-lg p-6 border border-slate-200 dark:border-slate-800 shadow-xl"
+            >
+              <div className="flex items-center justify-between mb-6">
+                <h3 className="text-lg font-bold text-slate-800 dark:text-slate-100 font-display">
+                  Navegar Questões
+                </h3>
 
-{/* MODAL NAVEGAÇÃO DE QUESTÕES */}
-<AnimatePresence>
-  {showQuestionNavigator && (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      className="fixed inset-0 z-50 bg-black/40 flex items-center justify-center p-4"
-    >
-      <motion.div
-        initial={{ scale: 0.95, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        exit={{ scale: 0.95, opacity: 0 }}
-        className="bg-white dark:bg-slate-900 rounded-3xl w-full max-w-lg p-6 border border-slate-200 dark:border-slate-800 shadow-2xl"
-      >
-        <div className="flex items-center justify-between mb-6">
-          <h3 className="text-lg font-bold text-slate-800 dark:text-slate-100">
-            Navegar Questões
-          </h3>
+                <button
+                  type="button"
+                  onClick={() => setShowQuestionNavigator(false)}
+                  className="text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 font-bold"
+                >
+                  ✕
+                </button>
+              </div>
 
-          <button
-            type="button"
-            onClick={() => setShowQuestionNavigator(false)}
-            className="text-slate-400 hover:text-slate-600 dark:hover:text-slate-300"
-          >
-            ✕
-          </button>
-        </div>
+              <div className="grid grid-cols-5 sm:grid-cols-6 gap-3 max-h-[60vh] overflow-y-auto pr-1">
+                {exercises.map((_, idx) => {
+                  const isActive = idx === currentIndex;
 
-        <div className="grid grid-cols-5 sm:grid-cols-6 gap-3 max-h-[60vh] overflow-y-auto pr-1">
-
-          {exercises.map((_, idx) => {
-
-            const isActive = idx === currentIndex;
-
-            return (
-              <button
-                key={idx}
-                type="button"
-                onClick={() => {
-
-                  setCurrentIndex(idx);
-
-                  setSelectedOption(null);
-                  setIsConfirmed(false);
-                  setIsCorrect(null);
-                  setShowResolution(false);
-
-                  setShowQuestionNavigator(false);
-                }}
-                className={`
-                  h-12
-                  rounded-xl
-                  text-sm
-                  font-bold
-                  transition-all
-                  border
-                  ${
-                    isActive
-                      ? "bg-blue-600 text-white border-blue-600"
-                      : "bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 hover:border-blue-400"
-                  }
-                `}
-              >
-                {idx + 1}
-              </button>
-            );
-          })}
-        </div>
-      </motion.div>
-    </motion.div>
-  )}
-</AnimatePresence>
+                  return (
+                    <button
+                      key={idx}
+                      type="button"
+                      onClick={() => {
+                        setCurrentIndex(idx);
+                        setSelectedOption(null);
+                        setIsConfirmed(false);
+                        setIsCorrect(null);
+                        setShowResolution(false);
+                        setShowQuestionNavigator(false);
+                      }}
+                      className={`
+                        h-12
+                        rounded-custom-md
+                        text-sm
+                        font-bold
+                        transition-all
+                        border
+                        ${
+                          isActive
+                            ? "bg-brand-main text-white border-brand-main shadow-sm"
+                            : "bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 hover:border-brand-main"
+                        }
+                      `}
+                    >
+                      {idx + 1}
+                    </button>
+                  );
+                })}
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

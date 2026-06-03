@@ -15,72 +15,23 @@ import logaritmosTopicsData from "../data/areas/logaritmos/topics.json";
 import calculoTopicsData from "../data/areas/calculo/topics.json";
 
 const areasMap: Record<string, { title: string; topics: any[] }> = {
-  algebra: {
-    title: "Álgebra",
-    topics: algebraTopicsData as any[],
-  },
-
-  aritmetica: {
-    title: "Aritmética",
-    topics: aritmeticaTopicsData as any[],
-  },
-
-  "geometria-plana": {
-    title: "Geometria Plana",
-    topics: geometriaPlanaTopicsData as any[],
-  },
-
-  "geometria-espacial": {
-    title: "Geometria Espacial",
-    topics: geometriaEspacialTopicsData as any[],
-  },
-
-  funcoes: {
-    title: "Funções",
-    topics: funcoesTopicsData as any[],
-  },
-
-  trigonometria: {
-    title: "Trigonometria",
-    topics: trigonometriaTopicsData as any[],
-  },
-
-  "probabilidade-estatistica": {
-    title: "Probabilidade e Estatística",
-    topics: probabilidadeEstatisticaTopicsData as any[],
-  },
-
-  "analise-combinatoria": {
-    title: "Análise Combinatória",
-    topics: analiseCombinatoriaTopicsData as any[],
-  },
-
-  "geometria-analitica": {
-    title: "Geometria Analítica",
-    topics: geometriaAnaliticaTopicsData as any[],
-  },
-
-  matrizes: {
-    title: "Matrizes",
-    topics: matrizesTopicsData as any[],
-  },
-
-  logaritmos: {
-    title: "Logaritmos",
-    topics: logaritmosTopicsData as any[],
-  },
-
-  calculo: {
-    title: "Cálculo",
-    topics: calculoTopicsData as any[],
-  },
+  algebra: { title: "Álgebra", topics: algebraTopicsData as any[] },
+  aritmetica: { title: "Aritmética", topics: aritmeticaTopicsData as any[] },
+  "geometria-plana": { title: "Geometria Plana", topics: geometriaPlanaTopicsData as any[] },
+  "geometria-espacial": { title: "Geometria Espacial", topics: geometriaEspacialTopicsData as any[] },
+  funcoes: { title: "Funções", topics: funcoesTopicsData as any[] },
+  trigonometria: { title: "Trigonometria", topics: trigonometriaTopicsData as any[] },
+  "probabilidade-estatistica": { title: "Probabilidade e Estatística", topics: probabilidadeEstatisticaTopicsData as any[] },
+  "analise-combinatoria": { title: "Análise Combinatória", topics: analiseCombinatoriaTopicsData as any[] },
+  "geometria-analitica": { title: "Geometria Analítica", topics: geometriaAnaliticaTopicsData as any[] },
+  matrizes: { title: "Matrizes", topics: matrizesTopicsData as any[] },
+  logaritmos: { title: "Logaritmos", topics: logaritmosTopicsData as any[] },
+  calculo: { title: "Cálculo", topics: calculoTopicsData as any[] },
 };
 
 export default function AreaDetail() {
   const { id } = useParams();
-
   const area = areasMap[id || ""];
-
   const topics = area?.topics || [];
   const title = area?.title || "Área";
 
@@ -90,7 +41,6 @@ export default function AreaDetail() {
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white mb-4">
           {title}
         </h1>
-
         <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400">
           Explore os assuntos desta área da matemática.
         </p>
@@ -103,7 +53,8 @@ export default function AreaDetail() {
           ))}
         </div>
       ) : (
-        <div className="bg-white dark:bg-slate-900 border border-dashed border-slate-300 dark:border-slate-700 rounded-3xl p-10 text-center">
+        /* Trocado rounded-3xl para rounded-custom-lg (Sincronizado com o Painel de Design) */
+        <div className="bg-white dark:bg-slate-900 border border-dashed border-slate-300 dark:border-slate-700 rounded-custom-lg p-10 text-center">
           <p className="text-slate-500 dark:text-slate-400">
             Nenhum assunto encontrado nesta área.
           </p>

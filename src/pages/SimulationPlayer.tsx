@@ -14,12 +14,28 @@ import {
 } from "lucide-react";
 
 export default function SimulationPlayer() {
+  console.log("SimulationPlayer renderizou");
+
   const location = useLocation();
   const state = location.state;
 
-  // Proteção contra acesso direto via URL sem dados do simulado
-  if (!state || !state.questions) {
-    return <Navigate to="/simulados" replace />;
+  // Proteção robusta contra acesso direto via URL ou perda de estado do simulado
+  if (!state || !state.questions || !Array.isArray(state.questions) || state.questions.length === 0) {
+    return (
+      <div className="min-h-screen flex flex-col items-center justify-center bg-slate-50 dark:bg-slate-950 p-4 text-center">
+        <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-2 font-display">Nenhum simulado ativo</h2>
+        <p className="text-slate-500 dark:text-slate-400 mb-6 max-w-sm text-sm">
+          Selecione os tópicos e configure os filtros na página de simulados para iniciar um treino.
+        </p>
+        <Link 
+          to="/simulados" 
+          replace
+          className="bg-brand-main hover:bg-brand-dark text-white font-bold px-6 py-2.5 rounded-custom-md transition-colors shadow-sm text-sm"
+        >
+          Ir para Simulados
+        </Link>
+      </div>
+    );
   }
 
   const questions = state.questions;
@@ -35,17 +51,19 @@ export default function SimulationPlayer() {
   useEffect(() => {
     if (finished) return;
 
-    if (timeLeft <= 0) {
-      setFinished(true);
-      return;
-    }
-
     const timer = setInterval(() => {
-      setTimeLeft((prev) => (prev <= 1 ? 0 : prev - 1));
+      setTimeLeft((prev) => {
+        if (prev <= 1) {
+          clearInterval(timer);
+          setFinished(true);
+          return 0;
+        }
+        return prev - 1;
+      });
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [timeLeft, finished]);
+  }, [finished]);
 
   const totalQuestions = questions.length;
   const currentQuestion = questions[currentIndex];
@@ -86,7 +104,6 @@ export default function SimulationPlayer() {
   // ================= TELA 1: RESULTADOS E GABARITO =================
   const [expandedQuestions, setExpandedQuestions] = useState<{ [key: number]: boolean }>({});
 
-  // FUNÇÃO AUXILIAR PARA DEFINIR AS CORES DA DIFICULDADE
   const getDifficultyColors = (difficulty: string) => {
     const diff = String(difficulty || "Mista")
       .normalize("NFD")
@@ -106,7 +123,7 @@ export default function SimulationPlayer() {
     if (diff === "olimpico") {
       return "bg-purple-600 text-amber-300 border-purple-700 font-extrabold dark:bg-purple-900 dark:text-amber-400 dark:border-purple-800";
     }
-    return "bg-blue-50 text-blue-700 border-blue-100 dark:bg-blue-900/20 dark:text-blue-400 dark:border-blue-900/40";
+    return "bg-slate-50 text-slate-700 border-slate-100 dark:bg-slate-900/20 dark:text-slate-400 dark:border-slate-900/40";
   };
 
   if (finished) {
@@ -120,18 +137,18 @@ export default function SimulationPlayer() {
     return (
       <div className="max-w-4xl mx-auto px-4 py-10 pb-24">
         {/* CARD DE RENDIMENTO / SCORE */}
-        <div className="bg-white dark:bg-slate-900 rounded-md p-6 sm:p-10 border border-slate-200 dark:border-slate-800 shadow-sm text-center mb-8">
-          <div className="w-14 h-14 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-400 rounded-md flex items-center justify-center mx-auto mb-4">
+        <div className="bg-white dark:bg-slate-900 rounded-custom-lg p-6 sm:p-10 border border-slate-200 dark:border-slate-800 shadow-sm text-center mb-8">
+          <div className="w-14 h-14 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-400 rounded-custom-md flex items-center justify-center mx-auto mb-4">
             <Trophy className="w-7 h-7" />
           </div>
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-2">
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-2 font-display">
             Simulado Concluído!
           </h2>
           <p className="text-slate-500 dark:text-slate-400 text-sm max-w-md mx-auto mb-8">
             Veja abaixo o seu desempenho geral e a revisão de cada questão respondida.
           </p>
 
-          <div className="grid grid-cols-3 gap-4 max-w-xl mx-auto bg-slate-50 dark:bg-slate-800/40 p-4 sm:p-6 rounded-md border border-slate-100 dark:border-slate-800">
+          <div className="grid grid-cols-3 gap-4 max-w-xl mx-auto bg-slate-50 dark:bg-slate-800/40 p-4 sm:p-6 rounded-custom-md border border-slate-100 dark:border-slate-800">
             <div className="text-center">
               <span className="block text-xs font-bold text-slate-400 uppercase tracking-wider">Acertos</span>
               <span className="text-2xl sm:text-3xl font-black text-green-600 mt-1 block">{results.correctCount}</span>
@@ -147,17 +164,17 @@ export default function SimulationPlayer() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-3 justify-center mt-10 max-w-sm mx-auto">
-            <Link to="/simulados" className="flex-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 py-3 rounded-md font-bold text-sm text-center hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+            <Link to="/simulados" className="flex-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 py-3 rounded-custom-md font-bold text-sm text-center hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
               Voltar ao Início
             </Link>
-            <Link to="/" className="flex-1 bg-blue-600 text-white py-3 rounded-md font-bold text-sm text-center hover:bg-blue-700 transition-colors shadow-md">
+            <Link to="/" className="flex-1 bg-brand-main text-white py-3 rounded-custom-md font-bold text-sm text-center hover:bg-brand-dark transition-colors shadow-sm">
               Dashboard
             </Link>
           </div>
         </div>
 
-        {/* LISTAGEM DE REVISÃO DO GABARITO (ESTILO ACCORDION) */}
-        <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-4 px-1">Revisão das Questões</h3>
+        {/* LISTAGEM DE REVISÃO DO GABARITO */}
+        <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-4 px-1 font-display">Revisão das Questões</h3>
         
         <div className="space-y-3">
           {questions.map((q: any, idx: number) => {
@@ -168,9 +185,8 @@ export default function SimulationPlayer() {
             return (
               <div 
                 key={q.id || idx} 
-                className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-md shadow-sm overflow-hidden"
+                className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-custom-lg shadow-sm overflow-hidden"
               >
-                {/* BARRINHA DO TOPO (CLICKÁVEL) */}
                 <button
                   type="button"
                   onClick={() => toggleQuestion(idx)}
@@ -181,7 +197,6 @@ export default function SimulationPlayer() {
                       Questão {(idx + 1).toString().padStart(2, "0")}
                     </span>
                     
-                    {/* METADADOS */}
                     <div className="flex items-center gap-1.5">
                       <span className="text-[9px] bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 px-1.5 py-0.5 rounded-sm font-bold uppercase tracking-wider border border-slate-200/60 dark:border-slate-700">
                         {q.source || "Geral"}
@@ -191,17 +206,16 @@ export default function SimulationPlayer() {
                       </span>
                     </div>
 
-                    {/* STATUS DE ACERTO/ERRO */}
                     {isCorrect ? (
-                      <span className="text-xs font-bold text-green-600 bg-green-50 dark:bg-green-950/30 px-2.5 py-0.5 rounded-md flex items-center gap-1">
+                      <span className="text-xs font-bold text-green-600 bg-green-50 dark:bg-green-950/30 px-2.5 py-0.5 rounded-custom-md flex items-center gap-1">
                         <CheckCircle2 className="w-3 h-3" /> Acertou
                       </span>
                     ) : userAnswer === undefined ? (
-                      <span className="text-xs font-bold text-slate-400 bg-slate-50 dark:bg-slate-800 px-2.5 py-0.5 rounded-md">
+                      <span className="text-xs font-bold text-slate-400 bg-slate-50 dark:bg-slate-800 px-2.5 py-0.5 rounded-custom-md">
                         Em Branco
                       </span>
                     ) : (
-                      <span className="text-xs font-bold text-red-500 bg-red-50 dark:bg-red-950/30 px-2.5 py-0.5 rounded-md flex items-center gap-1">
+                      <span className="text-xs font-bold text-red-500 bg-red-50 dark:bg-red-950/30 px-2.5 py-0.5 rounded-custom-md flex items-center gap-1">
                         <XCircle className="w-3 h-3" /> Errou
                       </span>
                     )}
@@ -212,21 +226,18 @@ export default function SimulationPlayer() {
                   </div>
                 </button>
 
-                {/* CONTEÚDO EXPANSÍVEL */}
                 {isOpen && (
                   <div className="border-t border-slate-100 dark:border-slate-800 p-6 bg-white dark:bg-slate-900">
                     <p className="text-slate-800 dark:text-slate-200 font-semibold mb-4 text-base whitespace-pre-wrap">
                       {q.question}
                     </p>
 
-                    {/* IMAGENS DE SUPORTE NO GABARITO */}
                     {q.image && (
-                      <div className="mb-4 border border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/20 p-3 flex justify-center rounded-md">
+                      <div className="mb-4 border border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/20 p-3 flex justify-center rounded-custom-md">
                         <img src={q.image} alt="Suporte" className="max-h-48 object-contain rounded-sm" loading="lazy" />
                       </div>
                     )}
 
-                    {/* OPÇÕES DA QUESTÃO NA REVISÃO com suporte a imagem */}
                     <div className="space-y-2 mb-4">
                       {(q.options || []).map((opt: string, oIdx: number) => {
                         const isCorrectOption = oIdx === q.correctIndex;
@@ -238,7 +249,7 @@ export default function SimulationPlayer() {
                         else if (isUserChoice && !isCorrectOption) optStyle = "border-red-400 bg-red-50/50 dark:bg-red-950/20 text-red-600 dark:text-red-400 opacity-100";
 
                         return (
-                          <div key={oIdx} className={`p-3.5 border rounded-md text-sm ${optStyle} flex justify-between items-center gap-4`}>
+                          <div key={oIdx} className={`p-3.5 border rounded-custom-md text-sm ${optStyle} flex justify-between items-center gap-4`}>
                             {isImageOption ? (
                               <div className="bg-white dark:bg-slate-800 p-2 rounded-sm border border-slate-100 dark:border-slate-700 max-w-[200px] max-h-[120px] flex items-center justify-center overflow-hidden">
                                 <img 
@@ -258,8 +269,7 @@ export default function SimulationPlayer() {
                       })}
                     </div>
 
-                    {/* EXPLICAÇÃO / RESOLUÇÃO */}
-                    <div className="p-4 bg-slate-50 dark:bg-slate-800/40 rounded-md border border-slate-100 dark:border-slate-800 whitespace-pre-wrap text-sm text-slate-600 dark:text-slate-400">
+                    <div className="p-4 bg-slate-50 dark:bg-slate-800/40 rounded-custom-md border border-slate-100 dark:border-slate-800 whitespace-pre-wrap text-sm text-slate-600 dark:text-slate-400">
                       <span className="font-bold block text-slate-800 dark:text-slate-200 mb-1">Resolução comentada:</span>
                       {q.resolution}
                     </div>
@@ -294,7 +304,7 @@ export default function SimulationPlayer() {
 
             return (
               <div
-                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md border font-mono text-sm font-bold transition-colors ${
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-custom-md border font-mono text-sm font-bold transition-colors ${
                   isTimeCritical
                     ? "bg-red-100 border-red-300 text-red-700 dark:bg-red-950/40 dark:border-red-900 dark:text-red-400 animate-pulse"
                     : "bg-slate-50 border-slate-200 text-slate-700 dark:bg-slate-800/60 dark:border-slate-700 dark:text-slate-300"
@@ -314,7 +324,7 @@ export default function SimulationPlayer() {
       {/* BARRA DE PROGRESSO RETANGULAR */}
       <div className="w-full h-1.5 bg-slate-100 dark:bg-slate-800 mb-8 overflow-hidden rounded-none">
         <div
-          className="h-full bg-blue-600 transition-all duration-300"
+          className="h-full bg-brand-main transition-all duration-300"
           style={{ width: `${((currentIndex + 1) / totalQuestions) * 100}%` }}
         />
       </div>
@@ -330,11 +340,11 @@ export default function SimulationPlayer() {
               key={idx}
               type="button"
               onClick={() => setCurrentIndex(idx)}
-              className={`w-9 h-9 font-bold text-xs rounded-md border transition-all ${
+              className={`w-9 h-9 font-bold text-xs rounded-custom-md border transition-all ${
                 isCurrent
-                  ? "bg-blue-600 border-blue-600 text-white shadow-sm"
+                  ? "bg-brand-main border-brand-main text-white shadow-sm"
                   : isAnswered
-                  ? "bg-blue-50 border-blue-200 text-blue-600 dark:bg-blue-950/30 dark:border-blue-900/50 dark:text-blue-400"
+                  ? "bg-brand-light border-brand-main/30 text-brand-main dark:bg-brand-main/10 dark:border-brand-main/30 dark:text-brand-main"
                   : "bg-white border-slate-200 text-slate-600 dark:bg-slate-900 dark:border-slate-800 dark:text-slate-400 hover:border-slate-300"
               }`}
             >
@@ -345,75 +355,79 @@ export default function SimulationPlayer() {
       </div>
 
       {/* BOX DO ENUNCIADO ATUAL */}
-      <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-md p-6 sm:p-8 shadow-sm mb-6">
+      <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-custom-lg p-4 sm:p-8 shadow-sm mb-4 sm:mb-6">
         
-        <div className="flex items-center gap-1.5 mb-4">
+        <div className="flex items-center gap-1.5 mb-3 sm:mb-4">
           <span className="text-[10px] bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700 px-2 py-0.5 rounded-sm font-bold uppercase">
-            {currentQuestion.source || "Geral"}
+            {currentQuestion?.source || "Geral"}
           </span>
-          <span className={`text-[10px] border px-2 py-0.5 rounded-sm font-bold uppercase tracking-wider ${getDifficultyColors(currentQuestion.difficulty)}`}>
-            {currentQuestion.difficulty || "Mista"}
+          <span className={`text-[10px] border px-2 py-0.5 rounded-sm font-bold uppercase tracking-wider ${getDifficultyColors(currentQuestion?.difficulty || "Mista")}`}>
+            {currentQuestion?.difficulty || "Mista"}
           </span>
         </div>
 
-        <h2 className="text-xl sm:text-2xl font-semibold text-slate-800 dark:text-slate-100 mb-6 whitespace-pre-wrap tracking-tight">
-          {currentQuestion.question}
+        <h2 className="text-sm sm:text-2xl font-semibold text-slate-800 dark:text-slate-100 mb-4 sm:mb-6 whitespace-pre-wrap tracking-tight leading-relaxed font-display">
+          {currentQuestion?.question || "Questão não encontrada ou indisponível"} 
         </h2>
 
-        {currentQuestion.image && (
-          <div className="mb-6 border border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/10 p-4 flex justify-center rounded-md">
+        {currentQuestion?.image && (
+          <div className="mb-3 sm:mb-6 border border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/10 p-2 sm:p-4 flex justify-center rounded-custom-md">
             <img
               src={currentQuestion.image}
               alt={`Suporte Visual ${currentQuestion.id || currentIndex}`}
-              className="max-h-64 object-contain"
+              className="max-h-36 sm:max-h-64 object-contain"
               loading="lazy"
             />
           </div>
         )}
 
-        {/* SELEÇÃO DAS ALTERNATIVAS ADAPTADA PARA SUPORTAR IMAGENS */}
+        {/* SELEÇÃO DAS ALTERNATIVAS */}
         <div className="space-y-3">
-          {currentQuestion.options.map((option: string, idx: number) => {
-            const isSelected = userAnswers[currentIndex] === idx;
-            const isImageOption = typeof option === "string" && (option.startsWith("http://") || option.startsWith("https://"));
+          {currentQuestion && Array.isArray(currentQuestion.options) ? (
+            currentQuestion.options.map((option: any, idx: number) => {
+              const isSelected = userAnswers[currentIndex] === idx;
+              const isImageOption = typeof option === "string" && 
+                (option.startsWith("http://") || option.startsWith("https://"));
 
-            return (
-              <button
-                key={idx}
-                type="button"
-                onClick={() => handleSelectOption(idx)}
-                className={`w-full p-4 sm:p-5 rounded-md border text-left text-sm sm:text-base transition-all ${
-                  isSelected
-                    ? "border-blue-500 bg-blue-50/40 dark:bg-blue-900/20 text-blue-700 dark:text-blue-400 font-medium"
-                    : "border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 text-slate-700 dark:text-slate-300 bg-white dark:bg-slate-900"
-                }`}
-              >
-                <div className="flex items-center gap-3 justify-between">
-                  <div className="flex items-center gap-3 flex-1">
-                    <div className={`w-5 h-5 rounded-sm border flex items-center justify-center text-xs font-bold shrink-0 ${
-                      isSelected ? "bg-blue-600 border-blue-600 text-white" : "border-slate-300 text-slate-400"
-                    }`}>
-                      {String.fromCharCode(65 + idx)}
-                    </div>
-                    
-                    {/* Renderização dinâmica: Imagem ou Texto */}
-                    {isImageOption ? (
-                      <div className="bg-white dark:bg-slate-800 p-2 rounded-sm border border-slate-100 dark:border-slate-700 max-w-[200px] max-h-[120px] flex items-center justify-center overflow-hidden">
-                        <img 
-                          src={option} 
-                          alt={`Alternativa ${String.fromCharCode(65 + idx)}`} 
-                          className="max-w-full max-h-full object-contain mix-blend-multiply dark:mix-blend-normal"
-                          loading="lazy"
-                        />
+              return (
+                <button
+                  key={idx}
+                  type="button"
+                  onClick={() => handleSelectOption(idx)}
+                  className={`w-full p-4 sm:p-5 rounded-custom-md border text-left text-sm sm:text-base transition-all ${
+                    isSelected
+                      ? "border-brand-main bg-brand-light dark:bg-brand-main/10 text-brand-dark dark:text-brand-main font-medium"
+                      : "border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 text-slate-700 dark:text-slate-300 bg-white dark:bg-slate-900"
+                  }`}
+                >
+                  <div className="flex items-center gap-3 justify-between">
+                    <div className="flex items-center gap-3 flex-1">
+                      <div className={`w-5 h-5 rounded-sm border flex items-center justify-center text-xs font-bold shrink-0 transition-all ${
+                        isSelected ? "bg-brand-main border-brand-main text-white" : "border-slate-300 text-slate-400"
+                      }`}>
+                        {String.fromCharCode(65 + idx)}
                       </div>
-                    ) : (
-                      <span className="flex-1">{option}</span>
-                    )}
+                      
+                      {isImageOption ? (
+                        <div className="bg-white dark:bg-slate-800 p-2 rounded-sm border border-slate-100 dark:border-slate-700 max-w-[200px] max-h-[120px] flex items-center justify-center overflow-hidden">
+                          <img 
+                            src={option} 
+                            alt={`Alternativa ${String.fromCharCode(65 + idx)}`} 
+                            className="max-w-full max-h-full object-contain mix-blend-multiply dark:mix-blend-normal"
+                            loading="lazy"
+                          />
+                        </div>
+                      ) : (
+                        <span className="flex-1">{String(option ?? "")}</span>
+                      )}
+                    </div>
                   </div>
-                </div>
-              </button>
-            );
-          })}
+                </button>
+              );
+            })
+          ) : (
+            <p className="text-red-500 text-sm">Estrutura das alternativas dessa questão está corrompida.</p>
+          )}
         </div>
       </div>
 
@@ -423,7 +437,7 @@ export default function SimulationPlayer() {
           type="button"
           onClick={() => setCurrentIndex((prev) => Math.max(0, prev - 1))}
           disabled={currentIndex === 0}
-          className="w-full sm:w-auto px-5 py-3 border border-slate-200 dark:border-slate-800 dark:text-slate-300 bg-white dark:bg-slate-900 rounded-md font-bold text-sm hover:bg-slate-50 dark:hover:bg-slate-800/50 disabled:opacity-40 flex items-center justify-center gap-2 transition-all"
+          className="w-full sm:w-auto px-5 py-3 border border-slate-200 dark:border-slate-800 dark:text-slate-300 bg-white dark:bg-slate-900 rounded-custom-md font-bold text-sm hover:bg-slate-50 dark:hover:bg-slate-800/50 disabled:opacity-40 flex items-center justify-center gap-2 transition-all"
         >
           <ChevronLeft className="w-4 h-4" /> Anterior
         </button>
@@ -437,7 +451,7 @@ export default function SimulationPlayer() {
                   setFinished(true);
                 }
               }}
-              className="w-full sm:w-auto bg-green-600 hover:bg-green-700 text-white px-8 py-3.5 rounded-md font-bold text-sm transition-all shadow-md"
+              className="w-full sm:w-auto bg-green-600 hover:bg-green-700 text-white px-8 py-3.5 rounded-custom-md font-bold text-sm transition-all shadow-sm"
             >
               Finalizar Simulado
             </button>
@@ -445,7 +459,7 @@ export default function SimulationPlayer() {
             <button
               type="button"
               onClick={() => setCurrentIndex((prev) => prev + 1)}
-              className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-8 py-3.5 rounded-md font-bold text-sm flex items-center justify-center gap-2 transition-all sm:ml-auto"
+              className="w-full sm:w-auto bg-brand-main hover:bg-brand-dark text-white px-8 py-3.5 rounded-custom-md font-bold text-sm flex items-center justify-center gap-2 transition-all sm:ml-auto shadow-sm"
             >
               Próxima <ChevronRight className="w-4 h-4" />
             </button>
@@ -456,8 +470,8 @@ export default function SimulationPlayer() {
       {/* MODAL DE CONFIRMAÇÃO DE SAÍDA */}
       {showLeaveModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm p-4">
-          <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-md max-w-md w-full p-6 shadow-xl animate-in fade-in zoom-in-95 duration-150">
-            <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">
+          <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-custom-xl max-w-md w-full p-6 shadow-xl animate-in fade-in zoom-in-95 duration-150">
+            <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 font-display">
               Abandonar Simulado?
             </h3>
             <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6">
@@ -468,14 +482,14 @@ export default function SimulationPlayer() {
               <button
                 type="button"
                 onClick={() => setShowLeaveModal(false)}
-                className="px-4 py-2 text-sm font-semibold rounded-md border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 bg-white dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
+                className="px-4 py-2 text-sm font-semibold rounded-custom-md border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 bg-white dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
               >
                 Continuar Simulado
               </button>
               <button
                 type="button"
                 onClick={() => window.history.back()}
-                className="px-4 py-2 text-sm font-semibold rounded-md bg-red-600 hover:bg-red-700 text-white shadow-md transition-colors"
+                className="px-4 py-2 text-sm font-semibold rounded-custom-md bg-red-600 hover:bg-red-700 text-white shadow-sm transition-colors"
               >
                 Sair
               </button>

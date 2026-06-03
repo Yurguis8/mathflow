@@ -9,7 +9,6 @@ export default function Header() {
   const userData = JSON.parse(localStorage.getItem('user') || '{"name": "Estudante"}');
 
   useEffect(() => {
-    // 1. Lógica do Tema
     const savedTheme = localStorage.getItem('theme');
     const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     
@@ -18,18 +17,12 @@ export default function Header() {
       document.documentElement.classList.add('dark');
     }
 
-    // 2. Busca o progresso real usando a rota do seu Controller
     if (userData.id) {
       fetch(`https://mathflow-l58o.onrender.com/progress/dashboard/${userData.id}`)
         .then(res => res.json())
         .then(data => {
-          // Usando o 'totalCompleted' que seu backend já calcula!
           const feito = data.totalCompleted || 0;
-          
-          // Defina aqui o total de questões que existem na sua plataforma
-          // Se você tem 2 tópicos com 5 questões cada, a meta é 10.
           const metaTotal = 100; 
-          
           const calculo = (feito / metaTotal) * 100;
           setPercentDone(calculo > 100 ? 100 : calculo);
         })
@@ -51,12 +44,13 @@ export default function Header() {
           <p className="text-sm font-bold text-slate-800 dark:text-slate-200">Olá, {userData.name.split(' ')[0]}!</p>
           <div className="flex items-center gap-2">
             <div className="w-32 h-1.5 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+              {/* Barra de progresso usando a cor brand-main */}
               <div 
-                className="h-full bg-blue-600 rounded-full transition-all duration-1000 ease-out"
+                className="h-full bg-brand-main rounded-full transition-all duration-1000 ease-out"
                 style={{ width: `${percentDone}%` }}
               ></div>
             </div>
-            <span className="text-[10px] font-bold text-blue-600 uppercase tracking-tighter">
+            <span className="text-[10px] font-bold text-brand-main uppercase tracking-tighter">
               {Math.round(percentDone)}% concluído
             </span>
           </div>
@@ -64,112 +58,56 @@ export default function Header() {
       </div>
 
       <div className="flex items-center gap-3 md:gap-6">
-        <button onClick={toggleTheme} className="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-all shadow-sm">
+        {/* Botão de tema usando borda customizada menor */}
+        <button onClick={toggleTheme} className="p-2.5 rounded-custom-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-brand-hover transition-all shadow-sm">
           {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
         </button>
 
         <div className="relative">
-  <button
-    onClick={() => setShowNotifications(!showNotifications)}
-    className={`relative p-2 sm:p-2.5 rounded-xl transition-all ${
-      showNotifications
-        ? "bg-blue-600 text-white"
-        : "bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400"
-    }`}
-  >
-    <Bell className="w-5 h-5" />
-
-    <span className="absolute top-1.5 right-1.5 w-2 h-2 bg-red-500 border-2 border-white dark:border-slate-900 rounded-full"></span>
-  </button>
-
-  {showNotifications && (
-    <>
-      {/* Backdrop Mobile */}
-      <div
-        className="fixed inset-0 z-40 bg-black/20 backdrop-blur-[1px] sm:hidden"
-        onClick={() => setShowNotifications(false)}
-      />
-
-      {/* Notificações */}
-      <div
-        className="
-          fixed sm:absolute
-          top-20 sm:top-auto
-          left-3 right-3 sm:left-auto
-          sm:right-0 sm:mt-3
-          w-auto sm:w-80
-          max-h-[75vh] overflow-y-auto
-          bg-white dark:bg-slate-800
-          rounded-2xl
-          shadow-2xl
-          border border-slate-200 dark:border-slate-700
-          py-3 sm:py-4
-          z-50
-          animate-in fade-in zoom-in duration-200
-        "
-      >
-        {/* Header */}
-        <div className="px-4 mb-3 flex items-center justify-between">
-          <h3 className="font-bold text-slate-800 dark:text-slate-100 text-sm sm:text-base">
-            Notificações
-          </h3>
-
           <button
-            onClick={() => setShowNotifications(false)}
-            className="sm:hidden text-xs text-slate-500 font-medium"
+            onClick={() => setShowNotifications(!showNotifications)}
+            className={`relative p-2 sm:p-2.5 rounded-custom-md transition-all ${
+              showNotifications
+                ? "bg-brand-main text-white"
+                : "bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400"
+            }`}
           >
-            Fechar
+            <Bell className="w-5 h-5" />
+            <span className="absolute top-1.5 right-1.5 w-2 h-2 bg-red-500 border-2 border-white dark:border-slate-900 rounded-full"></span>
           </button>
+
+          {showNotifications && (
+            <>
+              <div className="fixed inset-0 z-40 bg-black/20 backdrop-blur-[1px] sm:hidden" onClick={() => setShowNotifications(false)} />
+              <div className="fixed sm:absolute top-20 sm:top-auto left-3 right-3 sm:left-auto sm:right-0 sm:mt-3 w-auto sm:w-80 max-h-[75vh] overflow-y-auto bg-white dark:bg-slate-800 rounded-custom-lg shadow-2xl border border-slate-200 dark:border-slate-700 py-3 sm:py-4 z-50 animate-in fade-in zoom-in duration-200">
+                <div className="px-4 mb-3 flex items-center justify-between">
+                  <h3 className="font-bold text-slate-800 dark:text-slate-100 text-sm sm:text-base">Notificações</h3>
+                  <button onClick={() => setShowNotifications(false)} className="sm:hidden text-xs text-slate-500 font-medium">Fechar</button>
+                </div>
+
+                <div className="space-y-1">
+                  <div className="px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-700/50 flex gap-3 transition-colors">
+                    <div className="w-9 h-9 rounded-custom-md bg-green-100 text-green-600 flex items-center justify-center shrink-0">
+                      <CheckCircle className="w-4 h-4" />
+                    </div>
+                    <div className="min-w-0">
+                      <p className="text-sm font-bold dark:text-slate-200 break-words">Plataforma Ativa!</p>
+                      <p className="text-xs text-slate-500 leading-relaxed break-words">Seu sistema de progresso está rodando localmente.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </>
+          )}
         </div>
-
-        {/* Lista */}
-        <div className="space-y-1">
-          {/* Notificação */}
-          <div className="px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-700/50 flex gap-3 transition-colors">
-            <div className="w-9 h-9 rounded-xl bg-green-100 text-green-600 flex items-center justify-center shrink-0">
-              <CheckCircle className="w-4 h-4" />
-            </div>
-
-            <div className="min-w-0">
-              <p className="text-sm font-bold dark:text-slate-200 break-words">
-                Plataforma Ativa!
-              </p>
-
-              <p className="text-xs text-slate-500 leading-relaxed break-words">
-                Seu sistema de progresso está rodando localmente.
-              </p>
-            </div>
-          </div>
-
-          {/* Notificação */}
-          <div className="px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-700/50 flex gap-3 transition-colors">
-            <div className="w-9 h-9 rounded-xl bg-orange-100 text-orange-600 flex items-center justify-center shrink-0">
-              <Flame className="w-4 h-4" />
-            </div>
-
-            <div className="min-w-0">
-              <p className="text-sm font-bold dark:text-slate-200 break-words">
-                Primeiro Passo!
-              </p>
-
-              <p className="text-xs text-slate-500 leading-relaxed break-words">
-                Bem-vindo ao MathFlow. Comece a estudar hoje.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  )}
-</div>
 
         <div className="flex items-center gap-3 pl-4 border-l border-slate-200 dark:border-slate-800">
           <div className="text-right hidden sm:block">
             <p className="text-sm font-bold text-slate-800 dark:text-slate-200">{userData.name}</p>
-            <p className="text-[10px] font-bold text-blue-600 uppercase">Estudante</p>
+            <p className="text-[10px] font-bold text-brand-main uppercase">Estudante</p>
           </div>
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-600 p-0.5 shadow-lg shadow-blue-500/20">
-            <img src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${userData.name}`} alt="Avatar" className="w-full h-full rounded-[10px] bg-white dark:bg-slate-800" />
+          <div className="w-10 h-10 rounded-custom-md bg-gradient-to-tr from-brand-main to-brand-dark p-0.5 shadow-lg shadow-brand-main/20">
+            <img src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${userData.name}`} alt="Avatar" className="w-full h-full rounded-custom-sm bg-white dark:bg-slate-800" />
           </div>
         </div>
       </div>

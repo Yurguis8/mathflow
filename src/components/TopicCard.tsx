@@ -14,10 +14,11 @@ export default function TopicCard({ topic }: { topic: Topic; key?: string }) {
       id={`topic-${topic.id}`}
     >
       <div className="flex items-start justify-between mb-4">
-        <div className="bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 p-3 rounded-md group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+        {/* Ícone utilizando a cor da marca e efeitos de hover integrados */}
+        <div className="bg-brand-light dark:bg-brand-main/10 text-brand-main p-3 rounded-custom-md group-hover:bg-brand-main group-hover:text-white dark:group-hover:text-slate-950 transition-colors duration-300">
           <Icon className="w-6 h-6" />
         </div>
-        <span className={`text-[10px] uppercase font-bold tracking-widest px-2 py-1 rounded-md ${
+        <span className={`text-[10px] uppercase font-bold tracking-widest px-2 py-1 rounded-custom-md ${
           topic.difficulty === "Fácil" ? "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400" :
           topic.difficulty === "Médio" ? "bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400" :
           "bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400"
@@ -26,7 +27,7 @@ export default function TopicCard({ topic }: { topic: Topic; key?: string }) {
         </span>
       </div>
       
-      <h3 className="text-xl font-display font-bold text-slate-800 dark:text-white mb-2 group-hover:text-blue-600 transition-colors">
+      <h3 className="text-xl font-display font-bold text-slate-800 dark:text-white mb-2 group-hover:text-brand-main transition-colors">
         {topic.title}
       </h3>
       
@@ -34,7 +35,7 @@ export default function TopicCard({ topic }: { topic: Topic; key?: string }) {
         {topic.description}
       </p>
       
-      <div className="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-widest">
+      <div className="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs font-bold text-brand-main uppercase tracking-widest">
         <span>Estudar agora</span>
         <LucideIcons.ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
       </div>

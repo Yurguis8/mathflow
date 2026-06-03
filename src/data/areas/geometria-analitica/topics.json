@@ -68,23 +68,6 @@
     }
   },
   {
-    "id": "circunferencia",
-    "title": "Circunferência",
-    "description": "Equações e propriedades da circunferência no plano cartesiano.",
-    "icon": "Circle",
-    "difficulty": "Médio",
-    "area": "geometria-analitica",
-    "content": {
-      "explanation": "Não cadastrado",
-      "formulas": [
-        "(x-a)^2+(y-b)^2=r^2"
-      ],
-      "example": "Não cadastrado",
-      "videoUrl": "#",
-      "pdfUrl": "#"
-    }
-  },
-  {
     "id": "conicas",
     "title": "Cônicas",
     "description": "Estudo da parábola, elipse e hipérbole.",

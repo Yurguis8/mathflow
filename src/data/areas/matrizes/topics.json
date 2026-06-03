@@ -49,22 +49,5 @@
       "videoUrl": "#",
       "pdfUrl": "#"
     }
-  },
-  {
-    "id": "sistemas-lineares",
-    "title": "Sistemas Lineares",
-    "description": "Resolução de sistemas utilizando matrizes.",
-    "icon": "Braces",
-    "difficulty": "Médio",
-    "area": "matrizes",
-    "content": {
-      "explanation": "Não cadastrado",
-      "formulas": [
-        "AX=B"
-      ],
-      "example": "Não cadastrado",
-      "videoUrl": "#",
-      "pdfUrl": "#"
-    }
   }
 ]

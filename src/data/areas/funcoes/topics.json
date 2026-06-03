@@ -102,24 +102,6 @@
     }
   },
   {
-    "id": "funcoes-trigonometricas",
-    "title": "Funções Trigonométricas",
-    "description": "Estudo das funções seno, cosseno e tangente.",
-    "icon": "Waves",
-    "difficulty": "Difícil",
-    "area": "funcoes",
-    "content": {
-      "explanation": "Não cadastrado",
-      "formulas": [
-        "f(x)=\\sin(x)",
-        "f(x)=\\cos(x)"
-      ],
-      "example": "Não cadastrado",
-      "videoUrl": "#",
-      "pdfUrl": "#"
-    }
-  },
-  {
     "id": "composicao-e-inversa",
     "title": "Composição e Inversa",
     "description": "Composição de funções e cálculo da função inversa.",
