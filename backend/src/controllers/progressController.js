@@ -24,22 +24,16 @@ export async function saveProgress(req, res) {
     let result;
 
     if (existingProgress) {
-      // Agora acumula os dados em vez de substituir
+      // Se existir, atualiza os dados
       result = await prisma.user_topic_progress.update({
         where: {
           id: existingProgress.id
         },
         data: {
-          completed_questions: {
-            increment: parseInt(completed_questions || 0)
-          },
-          correct_answers: {
-            increment: parseInt(correct_answers || 0)
-          },
-          study_time_seconds: {
-            increment: parseInt(study_time_seconds || 0)
-          },
-          last_question_index: parseInt(last_question_index || 0),
+          completed_questions,
+          correct_answers,
+          last_question_index,
+          study_time_seconds,
           updated_at: new Date()
         }
       });
@@ -49,14 +43,15 @@ export async function saveProgress(req, res) {
         data: {
           user_id: userIdBigInt,
           topic_name,
-          completed_questions: parseInt(completed_questions || 0),
-          correct_answers: parseInt(correct_answers || 0),
-          last_question_index: parseInt(last_question_index || 0),
-          study_time_seconds: parseInt(study_time_seconds || 0)
+          completed_questions,
+          correct_answers,
+          last_question_index,
+          study_time_seconds
         }
       });
     }
 
+    // Retorna o resultado convertendo BigInt para String para não quebrar o JSON
     return res.json({
       ...result,
       id: result.id.toString(),
@@ -87,15 +82,20 @@ export async function getDashboard(req, res) {
 
     const formattedProgress = [];
 
+    // Formata o array para o frontend (converte BigInt para String)
     progress.forEach(item => {
-      totalStudyTime += Number(item.study_time_seconds);
+      // O tempo de estudo acumula de TODOS os registos (incluindo o "Geral")
+      totalStudyTime += item.study_time_seconds;
 
+      // Se for o registo do tempo global da plataforma, não o adicionamos 
+      // à listagem visual de tópicos para não estragar os teus gráficos/listas
       if (item.topic_name === 'Geral') {
         return;
       }
 
-      totalCorrect += Number(item.correct_answers);
-      totalCompleted += Number(item.completed_questions);
+      // Dados de exercícios contam apenas para os tópicos reais de estudo
+      totalCorrect += item.correct_answers;
+      totalCompleted += item.completed_questions;
 
       formattedProgress.push({
         ...item,
@@ -111,9 +111,9 @@ export async function getDashboard(req, res) {
     return res.json({
       totalCorrect,
       totalCompleted,
-      totalStudyTime,
+      totalStudyTime, // Tempo Total = Tempo de Exercícios + Tempo de Plataforma Aberta
       accuracy,
-      progress: formattedProgress
+      progress: formattedProgress // Removeu o tópico "Geral" da lista visual
     });
 
   } catch (error) {
@@ -124,6 +124,7 @@ export async function getDashboard(req, res) {
   }
 }
 
+// NOVA FUNÇÃO: Rota simplificada para registrar o tempo de tela
 export async function trackTime(req, res) {
   try {
     const { userId, seconds } = req.body;
@@ -135,6 +136,7 @@ export async function trackTime(req, res) {
     const userIdBigInt = BigInt(userId);
     const secondsInt = parseInt(seconds);
 
+    // Verifica se já existe a linha de acumulação "Geral" do usuário
     const existingProgress = await prisma.user_topic_progress.findFirst({
       where: {
         user_id: userIdBigInt,
@@ -146,9 +148,7 @@ export async function trackTime(req, res) {
       await prisma.user_topic_progress.update({
         where: { id: existingProgress.id },
         data: {
-          study_time_seconds: {
-            increment: secondsInt
-          },
+          study_time_seconds: existingProgress.study_time_seconds + secondsInt,
           updated_at: new Date()
         }
       });
@@ -166,11 +166,8 @@ export async function trackTime(req, res) {
     }
 
     return res.status(200).send('Tempo computado com sucesso');
-
   } catch (error) {
     console.error(error);
-    return res.status(500).json({
-      error: 'Erro ao salvar tempo de tela'
-    });
+    return res.status(500).json({ error: 'Erro ao salvar tempo de tela' });
   }
 }
